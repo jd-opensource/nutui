@@ -2053,7 +2053,7 @@
             },
             {
               "name": "close-on-click-overlay",
-              "default": "`true`",
+              "default": "`false`",
               "description": "点击蒙层是否关闭对话框",
               "value": {
                 "type": "boolean",
@@ -2126,7 +2126,7 @@
             {
               "name": "text-align",
               "default": "`\"center\"`",
-              "description": "文字对齐方向，可选值同 `css` 的 `text-align `",
+              "description": "文字对齐方向，可选值同 `css` 的 `text-align`",
               "value": {
                 "type": "string",
                 "kind": "expression"

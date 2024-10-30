@@ -10890,7 +10890,7 @@ var __async = (__this, __arguments, generator) => {
     props: __spreadProps(__spreadValues({}, popupProps), {
       closeOnClickOverlay: {
         type: Boolean,
-        default: true
+        default: false
       },
       title: {
         type: String,

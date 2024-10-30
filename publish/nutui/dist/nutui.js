@@ -8561,7 +8561,7 @@ const l1 = /* @__PURE__ */ le(n1, [["render", o1]]), { create: s1 } = ne("dialog
   props: pe(G({}, Nt), {
     closeOnClickOverlay: {
       type: Boolean,
-      default: !0
+      default: !1
     },
     title: {
       type: String,
@@ -8648,7 +8648,7 @@ const l1 = /* @__PURE__ */ le(n1, [["render", o1]]), { create: s1 } = ne("dialog
     }, r = () => {
       t("ok"), e.okAutoClose && s("ok");
     }, i = () => {
-      e.closeOnClickOverlay && s("");
+      console.log(1), console.log(e.closeOnClickOverlay), e.closeOnClickOverlay && (console.log(2), s(""));
     }, f = S(() => ({
       textAlign: e.textAlign
     }));

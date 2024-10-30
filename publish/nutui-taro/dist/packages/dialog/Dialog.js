@@ -35,7 +35,7 @@ const _sfc_main = create({
   props: __spreadProps(__spreadValues({}, popupProps), {
     closeOnClickOverlay: {
       type: Boolean,
-      default: true
+      default: false
     },
     title: {
       type: String,
