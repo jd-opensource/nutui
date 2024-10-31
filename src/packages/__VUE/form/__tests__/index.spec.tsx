@@ -1,6 +1,6 @@
 import { DOMWrapper, mount } from '@vue/test-utils'
 import { nextTick, ref } from 'vue'
-import { Form, FormItem, Button, Textarea, Switch, Checkbox, Rate, InputNumber, Range, Uploader } from '@nutui/nutui'
+import { Form, FormItem, Button, Textarea, Switch, Checkbox, Rate, InputNumber, Range, Uploader, FormInstance } from '@nutui/nutui'
 
 test('base Form', () => {
   const wrapper = mount(() => {
@@ -47,9 +47,9 @@ test('base Dynamic Form', async () => {
       value: ''
     })
   })
-  const formRef = ref()
+  const formRef = ref<FormInstance>()
   const submit = () => {
-    formRef.value.validate().then(({ valid }: any) => {
+    formRef.value!.validate().then(({ valid }) => {
       if (valid) {
         // console.log('success', dynamicForm);
       } else {
@@ -58,7 +58,7 @@ test('base Dynamic Form', async () => {
     })
   }
   const reset = () => {
-    formRef.value.reset()
+    formRef.value!.reset()
   }
   const remove = () => {
     val.value.tels.pop()

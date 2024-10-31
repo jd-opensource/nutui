@@ -143,7 +143,7 @@ const checkRule = async (item: FormRule): Promise<FormErrorMessage | boolean> =>
  * @param customProp 指定校验，用于用户自定义场景时触发，例如 blur、change 事件
  * @returns
  */
-const validate = (customProp = '') => {
+const validate = (customProp = ''): Promise<{ valid: boolean, errors: any[] }> => {
   return new Promise((resolve, reject) => {
     try {
       const task = getTaskFromChildren()
