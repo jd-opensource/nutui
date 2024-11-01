@@ -37,7 +37,8 @@
           :key="item[columnFieldNames.value] ?? index"
           class="nut-picker-roller-item-tarotile"
           :class="{
-            [item[columnFieldNames.className]]: item[columnFieldNames.className]
+            [item[columnFieldNames.className]]: item[columnFieldNames.className],
+            'nut-picker-roller-item-tarotile--selected': index === defaultIndexes[columnIndex]
           }"
           :style="{
             lineHeight: pxCheck(optionHeight)
