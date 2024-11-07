@@ -26,7 +26,7 @@
       </view>
     </view>
 
-    <view v-if="$slots.extra" class="nut-collapse__item-extraWrapper">
+    <view v-if="$slots.extra" class="nut-collapse__item-extraWrapper" :class="{ transition: transition }">
       <div class="nut-collapse__item-extraWrapper__extraRender">
         <slot name="extra"></slot>
       </div>
@@ -34,6 +34,7 @@
     <view
       ref="wrapperRef"
       class="nut-collapse__item-wrapper"
+      :class="{ transition: transition }"
       :style="{
         willChange: 'height',
         height: wrapperHeight
@@ -65,6 +66,7 @@ export type CollapseItemProps = Partial<{
   border: boolean
   icon: any
   rotate: string | number
+  transition: boolean
 }>
 
 const props = withDefaults(defineProps<CollapseItemProps>(), {
@@ -75,7 +77,8 @@ const props = withDefaults(defineProps<CollapseItemProps>(), {
   name: -1,
   border: true,
   icon: () => DownArrow,
-  rotate: 180
+  rotate: 180,
+  transition: true
 })
 
 const slots = useSlots()
@@ -136,7 +139,8 @@ const expanded = computed(() => {
   return false
 })
 
-const wrapperHeight = ref(expanded.value ? 'auto' : '0px')
+const initial = 'initial'
+const wrapperHeight = ref(expanded.value ? initial : '0px')
 
 const handleClick = () => {
   if (!inAnimation.value) {
@@ -150,8 +154,8 @@ const toggle = (open: boolean) => {
     clearTimeout(timeoutId.value)
     timeoutId.value = ''
   }
-  const start = open ? '0px' : currentHeight.value
-  const end = open ? currentHeight.value : '0px'
+  const start = open ? '0px' : initial
+  const end = open ? initial : '0px'
   inAnimation.value = true
   wrapperHeight.value = start
   setTimeout(() => {
@@ -159,7 +163,7 @@ const toggle = (open: boolean) => {
     inAnimation.value = false
     if (open) {
       timeoutId.value = setTimeout(() => {
-        wrapperHeight.value = 'auto'
+        wrapperHeight.value = initial
       }, 300)
     }
   }, 100)

@@ -91,7 +91,9 @@
     position: relative;
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    &.transition {
+      transition: height 0.3s ease-in-out;
+    }
     .nut-collapse__item-wrapper__content,
     .nut-collapse__item-extraWrapper__extraRender {
       display: block;

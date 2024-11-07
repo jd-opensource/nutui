@@ -23,7 +23,7 @@
       </view>
     </view>
 
-    <view v-if="$slots.extra" class="nut-collapse__item-extraWrapper">
+    <view v-if="$slots.extra" class="nut-collapse__item-extraWrapper" :class="{ transition: transition }">
       <div class="nut-collapse__item-extraWrapper__extraRender">
         <slot name="extra"></slot>
       </div>
@@ -31,6 +31,7 @@
     <view
       ref="wrapperRef"
       class="nut-collapse__item-wrapper"
+      :class="{ transition: transition }"
       :style="{
         willChange: 'height',
         height: wrapperHeight
@@ -62,6 +63,7 @@ export type CollapseItemProps = Partial<{
   border: boolean
   icon: any
   rotate: string | number
+  transition: boolean
 }>
 
 const props = withDefaults(defineProps<CollapseItemProps>(), {
@@ -72,7 +74,8 @@ const props = withDefaults(defineProps<CollapseItemProps>(), {
   name: -1,
   border: true,
   icon: () => DownArrow,
-  rotate: 180
+  rotate: 180,
+  transition: true
 })
 
 // 获取 DOM 元素
