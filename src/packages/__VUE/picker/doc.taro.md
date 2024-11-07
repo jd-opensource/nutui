@@ -60,7 +60,7 @@ Picker 通常作为用于辅助表单填写，可以搭配 Popup 实现效果。
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| v-model:value | 默认选中项 | Array | `[]` |
+| v-model | 默认选中项 | Array | `[]` |
 | columns | 对象数组，配置每一列显示的数据 | PickerOption[] \| PickerOption[][] | - |
 | field-names`v4.1.4` | 自定义 columns 中的字段 | object | `{ text: 'text', value: 'value', children: 'children', className: 'className' }` |
 | title | 设置标题 | string | - |
