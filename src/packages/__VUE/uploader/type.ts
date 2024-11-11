@@ -11,5 +11,5 @@ export class FileItem {
   type?: string
   path?: string
   percentage: string | number = 0
-  formData: any = {}
+  sourceFile?: File
 }

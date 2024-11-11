@@ -282,8 +282,8 @@ const clearUpload = () => {
 | uid | 文件的唯一标识 | `new Date().getTime().toString()` |
 | name | 文件名称 | - |
 | url | 文件路径 | - |
-| formData | 上传所需的 data | `{}` |
 | percentage | 上传百分比 | `0` |
+| sourceFile | 上传所需的 file（仅WEB） | - |
 
 ### Events
 
