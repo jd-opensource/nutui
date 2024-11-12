@@ -21,9 +21,7 @@
       <view class="nut-elevator__list__fixed-title">{{ indexList?.[currentIndex]?.[acceptKey] }}</view>
     </view>
     <view v-show="scrollStart" v-if="indexList.length" class="nut-elevator__code--current">
-      {{
-        indexList[codeIndex][acceptKey]
-      }}
+      {{ indexList[codeIndex][acceptKey] }}
     </view>
     <view class="nut-elevator__bars" @touchstart="touchStart" @touchmove.stop.prevent="touchMove" @touchend="touchEnd">
       <view class="nut-elevator__bars__inner">
@@ -36,8 +34,7 @@
           @click="handleClickIndex(item[acceptKey])"
         >
           {{ item[acceptKey] }}
-        </view
-        >
+        </view>
       </view>
     </view>
   </view>
@@ -96,9 +93,7 @@ export default create({
       fixedTop: 0
     })
 
-    const clientHeight = computed(() => {
-      return listview.value.clientHeight
-    })
+    const clientHeight = computed(() => listview.value.clientHeight)
 
     const getData = (el: HTMLElement, name: string): string | void => {
       const prefix = 'data-'
@@ -106,11 +101,9 @@ export default create({
     }
 
     const setListGroup = (el: any) => {
-      nextTick(() => {
-        if (!state.listGroup.includes(el) && el != null) {
-          state.listGroup.push(el)
-        }
-      })
+      if (!state.listGroup.includes(el) && el != null) {
+        state.listGroup.push(el)
+      }
     }
 
     const calculateHeight = () => {
@@ -118,7 +111,7 @@ export default create({
       state.listHeight.push(height)
       for (let i = 0; i < state.listGroup.length; i++) {
         let item = state.listGroup[i]
-        height += Math.floor(item.clientHeight)
+        height += Math.round(item.clientHeight)
         state.listHeight.push(height)
       }
     }
@@ -166,20 +159,18 @@ export default create({
     }
 
     const listViewScroll = (e: Event) => {
-      let target = e.target as Element
-      let scrollTop = target.scrollTop
+      const target = e.target as Element
+      const scrollTop = target.scrollTop
       const listHeight = state.listHeight
-      state.scrollY = scrollTop
+      state.scrollY = Math.round(scrollTop)
       for (let i = 0; i < listHeight.length - 1; i++) {
-        let height1 = listHeight[i]
-        let height2 = listHeight[i + 1]
-        if (state.scrollY >= height1 && state.scrollY < height2) {
+        const [startHeight, endHeight] = [listHeight[i], listHeight[i + 1]]
+        if (state.scrollY >= startHeight && state.scrollY < endHeight) {
           state.currentIndex = i
-          state.diff = height2 - state.scrollY
+          state.diff = endHeight - state.scrollY
           return
         }
       }
-
       state.currentIndex = listHeight.length - 2
     }
 

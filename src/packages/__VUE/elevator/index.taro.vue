@@ -48,14 +48,13 @@
           @click="handleClickIndex(item[acceptKey])"
         >
           {{ item[acceptKey] }}
-        </view
-        >
+        </view>
       </view>
     </view>
   </view>
 </template>
 <script lang="ts">
-import { computed, reactive, toRefs, nextTick, ref, Ref, watch, PropType } from 'vue'
+import { computed, reactive, toRefs, ref, Ref, watch, PropType } from 'vue'
 import { createComponent } from '@/packages/utils/create'
 import { ElevatorData } from './type'
 const { create } = createComponent('elevator')
@@ -117,9 +116,7 @@ export default create({
       scrollY: 0
     })
 
-    const clientHeight = computed(() => {
-      return listview.value.clientHeight
-    })
+    const clientHeight = computed(() => listview.value.clientHeight)
 
     const fixedStyle = computed(() => {
       return {
@@ -135,11 +132,9 @@ export default create({
     }
 
     const setListGroup = (el: any) => {
-      nextTick(() => {
-        if (!state.listGroup.includes(el) && el != null) {
-          state.listGroup.push(el)
-        }
-      })
+      if (!state.listGroup.includes(el) && el != null) {
+        state.listGroup.push(el)
+      }
     }
 
     const calculateHeight = () => {
@@ -149,7 +144,7 @@ export default create({
       for (let i = 0; i < state.listGroup.length; i++) {
         state.query.selectAll(`.elevator__item__${i}`).boundingClientRect()
         state.query.exec((res) => {
-          height += Math.floor(res[i][0].height)
+          height += Math.round(res[i][0].height)
           state.listHeight.push(height)
         })
       }
@@ -167,8 +162,8 @@ export default create({
 
     const touchStart = (e: TouchEvent) => {
       state.scrollStart = true
-      let index = getData(e.target as HTMLElement)
-      let firstTouch = e.touches[0]
+      const index = getData(e.target as HTMLElement)
+      const firstTouch = e.touches[0]
       state.touchState.y1 = firstTouch.pageY
       state.anchorIndex = +index
       state.codeIndex = +index
@@ -198,14 +193,15 @@ export default create({
     }
 
     const listViewScroll = (e: Event) => {
-      let target = e.target as Element
-      let scrollTop = target.scrollTop
+      const target = e.target as Element
+      const scrollTop = target.scrollTop
       const listHeight = state.listHeight
-      state.scrollY = Math.floor(scrollTop)
-      for (let i = 0; i < listHeight.length - 1; i++) {
-        let height1 = listHeight[i]
-        let height2 = listHeight[i + 1]
-        if (state.scrollY >= height1 && state.scrollY < height2) {
+      const listTotal = listHeight.length
+      state.scrollY = Math.round(scrollTop)
+
+      for (let i = 0; i < listTotal - 1; i++) {
+        const [startHeight, endHeight] = [listHeight[i], listHeight[i + 1]]
+        if (state.scrollY >= startHeight && state.scrollY < endHeight) {
           state.currentIndex = i
           return
         }
