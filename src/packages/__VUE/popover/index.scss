@@ -103,9 +103,19 @@
 
     &-group {
       display: block;
-      // position: relative;
       height: 100%;
       width: 100%;
+    }
+
+    &-enter-from,
+    &-leave-to {
+      transform: scale(var(--transform-scale));
+      opacity: 0;
+    }
+
+    &-enter-active,
+    &-leave-active {
+      transition-timing-function: ease;
     }
 
     .nut-popover-menu-item {
@@ -224,20 +234,6 @@
       }
     }
   }
-}
-
-.nut-popover-enter-from,
-.nut-popover-leave-active {
-  transform: scale(0.8);
-  opacity: 0;
-}
-
-.nut-popover-enter-active {
-  transition-timing-function: ease-out;
-}
-
-.nut-popover-leave-active {
-  transition-timing-function: ease-in;
 }
 
 .nut-popover-content-bg {
