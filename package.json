@@ -98,7 +98,7 @@
     "eslint": "^9.6.0",
     "eslint-config-flat-gitignore": "^0.1.5",
     "fs-extra": "^11.2.0",
-    "happy-dom": "^14.12.3",
+    "happy-dom": "^15.11.7",
     "husky": "^9.0.11",
     "inquirer": "^10.0.1",
     "lzutf8": "^0.6.3",
