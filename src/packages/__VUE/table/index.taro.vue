@@ -138,7 +138,8 @@ export default create({
       () => props.data,
       (val) => {
         state.curData = val.slice()
-      }
+      },
+	  {deep: true}
     )
 
     return {
