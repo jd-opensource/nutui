@@ -33,7 +33,7 @@ jobs:
         run: pnpm copy:taro
 
       - name: Sync
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        uses: JamesIves/github-pages-deploy-action@v4.7.2
         with:
           branch: new-site # action 应该部署到的分支 。
           folder: site_docs #操作应该部署的文件夹 。
