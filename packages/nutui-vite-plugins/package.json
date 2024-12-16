@@ -33,13 +33,13 @@
     "fs-extra": "^11.2.0",
     "lzutf8": "^0.6.3",
     "markdown-it-container": "^4.0.0",
-    "unplugin-vue-markdown": "^0.26.2"
+    "unplugin-vue-markdown": "^0.28.0"
   },
   "devDependencies": {
-    "@shikijs/markdown-it": "^1.6.0",
+    "@shikijs/markdown-it": "^1.24.2",
     "@types/fs-extra": "^11.0.4",
     "@types/markdown-it-container": "^2.0.10",
-    "tsup": "^8.0.2",
+    "tsup": "^8.3.5",
     "typescript": "^5.4.5"
   }
 }

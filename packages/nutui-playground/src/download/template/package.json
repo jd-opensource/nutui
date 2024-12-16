@@ -7,13 +7,13 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.27",
-    "@nutui/nutui": "^4.3.8",
+    "vue": "^3.5.13",
+    "@nutui/nutui": "^4.3.13",
     "@nutui/touch-emulator": "^1.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.2.11",
-    "unplugin-vue-components": "^0.27.0"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.4.11",
+    "unplugin-vue-components": "^0.28.0"
   }
 }
