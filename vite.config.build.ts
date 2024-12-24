@@ -10,7 +10,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // example : additionalData: `@import "./src/design/styles/variables";`
+        api: 'modern', // 启用现代 Sass API
+        // example : additionalData: `@use "./src/design/styles/index" as *;`
         // dont need include file extend .scss
         additionalData: `@use "@/packages/styles/index.scss" as *;`
       }

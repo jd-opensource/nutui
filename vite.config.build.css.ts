@@ -1,6 +1,13 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern' // 启用现代 Sass API
+      }
+    }
+  },
   build: {
     minify: true,
     lib: {

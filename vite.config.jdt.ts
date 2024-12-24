@@ -14,12 +14,12 @@ export default defineConfig({
       '/devServer': {
         target: 'https://nutui.jd.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/devServer/, '')
+        rewrite: path => path.replace(/^\/devServer/, '')
       },
       '/devTheme': {
         target: 'https://nutui.jd.com/theme/source',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/devTheme/, '')
+        rewrite: path => path.replace(/^\/devTheme/, '')
       }
     }
   },
@@ -29,9 +29,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // example : additionalData: `@import "./src/design/styles/variables";`
+        api: 'modern', // 启用现代 Sass API
+        // example : additionalData: `@use "./src/design/styles/index" as *;`
         // dont need include file extend .scss
-        additionalData: `@import "@/packages/styles/variables-jdt.scss";@import "@/sites/assets/styles/variables.scss";`
+        additionalData: `@use "@/packages/styles/index-jdt.scss"  as *;@import "@/sites/assets/styles/index.scss" as *;`
       }
     },
     postcss: {
@@ -47,7 +48,8 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/]
     }),
     markdown({
-      docRoot: path.resolve(__dirname, './src/packages/__VUE')
+      docRoot: path.resolve(__dirname, './src/packages/__VUE'),
+      docTaroRoot: path.resolve(__dirname, './packages/nutui-taro-demo/src')
     })
   ],
   build: {
