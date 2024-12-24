@@ -1,11 +1,13 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-trend-arrow {
   display: inline-block;
-  font-size: $trendarrow-font-size;
+  font-size: vars.$trendarrow-font-size;
   &-icon-before {
-    margin-right: $trendarrow-before-icon-margin;
+    margin-right: vars.$trendarrow-before-icon-margin;
   }
   &-icon-after {
-    margin-left: $trendarrow-before-icon-margin;
+    margin-left: vars.$trendarrow-before-icon-margin;
   }
   &-rate {
     vertical-align: middle;

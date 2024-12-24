@@ -38,7 +38,7 @@ const info = {
 </script>
 
 <style lang="scss" scoped>
-@import '@/sites/assets/styles/reset.scss';
+
 .index {
   height: 100%;
   width: 100%;

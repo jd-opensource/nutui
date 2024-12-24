@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-avatar {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -21,24 +23,24 @@
   }
 }
 .nut-avatar-large {
-  width: $avatar-large-width;
-  height: $avatar-large-height;
-  line-height: $avatar-large-height;
+  width: vars.$avatar-large-width;
+  height: vars.$avatar-large-height;
+  line-height: vars.$avatar-large-height;
 }
 .nut-avatar-small {
-  width: $avatar-small-width;
-  height: $avatar-small-height;
-  line-height: $avatar-small-height;
+  width: vars.$avatar-small-width;
+  height: vars.$avatar-small-height;
+  line-height: vars.$avatar-small-height;
 }
 .nut-avatar-normal {
-  width: $avatar-normal-width;
-  height: $avatar-normal-height;
-  line-height: $avatar-normal-height;
+  width: vars.$avatar-normal-width;
+  height: vars.$avatar-normal-height;
+  line-height: vars.$avatar-normal-height;
 }
 .nut-avatar-round {
   border-radius: 50%;
   overflow: hidden;
 }
 .nut-avatar-square {
-  border-radius: $avatar-square;
+  border-radius: vars.$avatar-square;
 }

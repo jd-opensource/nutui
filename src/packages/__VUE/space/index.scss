@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-space {
   display: inline-flex;
 
@@ -9,7 +11,7 @@
     flex-direction: column;
     > .nut-space-item {
       &:not(:last-child) {
-        margin-bottom: $space-gap;
+        margin-bottom: vars.$space-gap;
       }
     }
   }
@@ -18,14 +20,14 @@
     flex-direction: row;
     > .nut-space-item {
       &:not(:last-child) {
-        margin-right: $space-gap;
+        margin-right: vars.$space-gap;
       }
     }
     &.nut-space-wrap {
       flex-wrap: wrap;
-      margin-bottom: calc(#{$space-gap} * -1);
+      margin-bottom: calc(#{vars.$space-gap} * -1);
       > .nut-space-item {
-        padding-bottom: $space-gap;
+        padding-bottom: vars.$space-gap;
       }
     }
   }

@@ -1,9 +1,11 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-side-navbar {
   overflow: auto;
   display: block;
   &__content {
     position: relative;
-    background-color: $sidenavbar-content-bg-color;
+    background-color: vars.$sidenavbar-content-bg-color;
     display: block;
     &__list {
       width: 100%;

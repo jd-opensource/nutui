@@ -1,62 +1,64 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-tag {
   padding: 0 4px;
   display: inline-flex;
   align-items: center;
-  font-size: $tag-font-size;
-  border-radius: $tag-default-border-radius;
-  height: $tag-height;
+  font-size: vars.$tag-font-size;
+  border-radius: vars.$tag-default-border-radius;
+  height: vars.$tag-height;
   &--default {
-    color: $tag-default-color;
-    background: $tag-default-background-color;
-    border: $tag-border-width solid transparent;
+    color: vars.$tag-default-color;
+    background: vars.$tag-default-background-color;
+    border: vars.$tag-border-width solid transparent;
     &.nut-tag--plain {
-      color: $tag-default-background-color;
-      border: $tag-border-width solid $tag-default-background-color;
+      color: vars.$tag-default-background-color;
+      border: vars.$tag-border-width solid vars.$tag-default-background-color;
     }
   }
 
   &--primary {
-    color: $tag-default-color;
-    background: $tag-primary-background-color;
-    border: $tag-border-width solid transparent;
+    color: vars.$tag-default-color;
+    background: vars.$tag-primary-background-color;
+    border: vars.$tag-border-width solid transparent;
     &.nut-tag--plain {
-      color: $tag-primary-background-color;
-      border: $tag-border-width solid $tag-primary-background-color;
+      color: vars.$tag-primary-background-color;
+      border: vars.$tag-border-width solid vars.$tag-primary-background-color;
     }
   }
 
   &--success {
-    color: $tag-default-color;
-    background: $tag-success-background-color;
-    border: $tag-border-width solid transparent;
+    color: vars.$tag-default-color;
+    background: vars.$tag-success-background-color;
+    border: vars.$tag-border-width solid transparent;
     &.nut-tag--plain {
-      color: $tag-success-background-color;
-      border: $tag-border-width solid $tag-success-background-color;
+      color: vars.$tag-success-background-color;
+      border: vars.$tag-border-width solid vars.$tag-success-background-color;
     }
   }
 
   &--danger {
-    color: $tag-default-color;
-    background: $tag-danger-background-color;
-    border: $tag-border-width solid transparent;
+    color: vars.$tag-default-color;
+    background: vars.$tag-danger-background-color;
+    border: vars.$tag-border-width solid transparent;
     &.nut-tag--plain {
-      color: $tag-danger-background-color-plain;
-      border: $tag-border-width solid $tag-danger-background-color-plain;
+      color: vars.$tag-danger-background-color-plain;
+      border: vars.$tag-border-width solid vars.$tag-danger-background-color-plain;
     }
   }
 
   &--warning {
-    color: $tag-default-color;
-    background: $tag-warning-background-color;
-    border: $tag-border-width solid transparent;
+    color: vars.$tag-default-color;
+    background: vars.$tag-warning-background-color;
+    border: vars.$tag-border-width solid transparent;
     &.nut-tag--plain {
-      color: $tag-warning-background-color;
-      border: $tag-border-width solid $tag-warning-background-color;
+      color: vars.$tag-warning-background-color;
+      border: vars.$tag-border-width solid vars.$tag-warning-background-color;
     }
   }
 
   &--round {
-    border-radius: $tag-round-border-radius;
+    border-radius: vars.$tag-round-border-radius;
   }
 
   &--mark {

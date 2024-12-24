@@ -1,11 +1,13 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-sub-side-navbar {
-    background-color: $dark-background2;
+    background-color: vars.$dark-background2;
     &__title {
-      background-color: $dark-background3;
-      color: $dark-color;
+      background-color: vars.$dark-background3;
+      color: vars.$dark-color;
       &__text {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
     }
   }
@@ -17,22 +19,22 @@
   position: relative;
   &__title {
     display: block;
-    width: $sidenavbar-sub-title-width;
-    height: $sidenavbar-sub-title-height;
+    width: vars.$sidenavbar-sub-title-width;
+    height: vars.$sidenavbar-sub-title-height;
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     box-sizing: border-box;
-    border-bottom: 1px solid $sidenavbar-sub-title-border-color;
-    color: $sidenavbar-sub-title-text-color;
-    font-size: $sidenavbar-sub-title-font-size;
-    background-color: $sidenavbar-sub-title-bg-color;
-    border-radius: $sidenavbar-sub-title-radius;
-    border: $sidenavbar-sub-title-border;
+    border-bottom: 1px solid vars.$sidenavbar-sub-title-border-color;
+    color: vars.$sidenavbar-sub-title-text-color;
+    font-size: vars.$sidenavbar-sub-title-font-size;
+    background-color: vars.$sidenavbar-sub-title-bg-color;
+    border-radius: vars.$sidenavbar-sub-title-radius;
+    border: vars.$sidenavbar-sub-title-border;
     &__text {
-      line-height: $sidenavbar-sub-title-text-line-height;
-      color: $sidenavbar-sub-title-text-color;
+      line-height: vars.$sidenavbar-sub-title-text-line-height;
+      color: vars.$sidenavbar-sub-title-text-color;
     }
     &__icon {
       position: absolute;

@@ -1,3 +1,5 @@
+@use '../mixins/index' as *;
+
 @keyframes nutZoomIn {
   from {
     opacity: 0;

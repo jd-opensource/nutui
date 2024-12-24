@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-barrage {
   position: absolute;
   left: 0;
@@ -46,7 +48,7 @@
 .nut-theme-dark {
   .nut-barrage {
     .nut-barrage__item {
-      color: $dark-color-gray;
+      color: vars.$dark-color-gray;
     }
   }
 }

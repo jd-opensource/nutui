@@ -1,15 +1,17 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-elevator {
-    background-color: $dark-background2;
+    background-color: vars.$dark-background2;
     &__list {
       &__item {
-        color: $dark-color;
+        color: vars.$dark-color;
         &__code {
-          color: $dark-color;
+          color: vars.$dark-color;
         }
       }
       &__fixed {
-        background-color: $dark-background2;
+        background-color: vars.$dark-background2;
       }
     }
   }
@@ -28,36 +30,36 @@
     }
     &__item {
       display: block;
-      font-size: $elevator-list-item-font-size;
-      color: $elevator-list-item-font-color;
+      font-size: vars.$elevator-list-item-font-size;
+      color: vars.$elevator-list-item-font-color;
       &__code {
         display: flex;
         position: relative;
-        height: $elevator-list-item-code-height;
-        line-height: $elevator-list-item-code-line-height;
-        font-size: $elevator-list-item-code-font-size;
-        color: $elevator-list-item-code-font-color;
-        padding: $elevator-list-item-code-padding;
-        font-weight: $elevator-list-item-code-font-weight;
+        height: vars.$elevator-list-item-code-height;
+        line-height: vars.$elevator-list-item-code-line-height;
+        font-size: vars.$elevator-list-item-code-font-size;
+        color: vars.$elevator-list-item-code-font-color;
+        padding: vars.$elevator-list-item-code-padding;
+        font-weight: vars.$elevator-list-item-code-font-weight;
         box-sizing: border-box;
         &::after {
           content: ' ';
-          width: $elevator-list-item-code-after-width;
-          height: $elevator-list-item-code-after-height;
+          width: vars.$elevator-list-item-code-after-width;
+          height: vars.$elevator-list-item-code-after-height;
           position: absolute;
           left: 0;
           bottom: 0;
-          background-color: $elevator-list-item-code-after-bg-color;
+          background-color: vars.$elevator-list-item-code-after-bg-color;
         }
       }
       &__name {
         display: flex;
         align-items: center;
-        padding: $elevator-list-item-name-padding;
-        height: $elevator-list-item-name-height;
-        line-height: $elevator-list-item-name-line-height;
+        padding: vars.$elevator-list-item-name-padding;
+        height: vars.$elevator-list-item-name-height;
+        line-height: vars.$elevator-list-item-name-line-height;
         &--highcolor {
-          color: $elevator-list-item-highcolor;
+          color: vars.$elevator-list-item-highcolor;
         }
       }
     }
@@ -66,48 +68,48 @@
       position: absolute;
       top: 0;
       left: 0;
-      padding: $elevator-list-item-code-padding;
-      height: $elevator-list-item-code-height;
-      line-height: $elevator-list-item-code-line-height;
-      font-size: $elevator-list-item-code-font-size;
-      color: $elevator-list-fixed-color;
-      font-weight: $elevator-list-item-code-font-weight;
-      background-color: $elevator-list-fixed-bg-color;
+      padding: vars.$elevator-list-item-code-padding;
+      height: vars.$elevator-list-item-code-height;
+      line-height: vars.$elevator-list-item-code-line-height;
+      font-size: vars.$elevator-list-item-code-font-size;
+      color: vars.$elevator-list-fixed-color;
+      font-weight: vars.$elevator-list-item-code-font-weight;
+      background-color: vars.$elevator-list-fixed-bg-color;
       box-sizing: border-box;
-      box-shadow: $elevator-list-fixed-box-shadow;
+      box-shadow: vars.$elevator-list-fixed-box-shadow;
       z-index: 1;
     }
   }
   &__code--current {
-    position: $elevator-list-item-code-current-position;
-    right: $elevator-list-item-code-current-right;
-    top: $elevator-list-item-code-current-top;
-    transform: $elevator-list-item-code-current-transform;
-    width: $elevator-list-item-code-current-width;
-    height: $elevator-list-item-code-current-height;
-    line-height: $elevator-list-item-code-current-line-height;
-    border-radius: $elevator-list-item-code-current-border-radius;
-    background: $elevator-list-item-code-current-bg-color;
-    box-shadow: $elevator-list-item-code-current-box-shadow;
-    text-align: $elevator-list-item-code-current-text-align;
+    position: vars.$elevator-list-item-code-current-position;
+    right: vars.$elevator-list-item-code-current-right;
+    top: vars.$elevator-list-item-code-current-top;
+    transform: vars.$elevator-list-item-code-current-transform;
+    width: vars.$elevator-list-item-code-current-width;
+    height: vars.$elevator-list-item-code-current-height;
+    line-height: vars.$elevator-list-item-code-current-line-height;
+    border-radius: vars.$elevator-list-item-code-current-border-radius;
+    background: vars.$elevator-list-item-code-current-bg-color;
+    box-shadow: vars.$elevator-list-item-code-current-box-shadow;
+    text-align: vars.$elevator-list-item-code-current-text-align;
   }
   &__bars {
-    position: $elevator-list-item-bars-position;
-    right: $elevator-list-item-bars-right;
-    top: $elevator-list-item-bars-top;
-    transform: $elevator-list-item-bars-transform;
-    padding: $elevator-list-item-bars-padding;
-    background-color: $elevator-list-item-bars-background-color;
-    border-radius: $elevator-list-item-bars-border-radius;
-    text-align: $elevator-list-item-bars-text-align;
-    z-index: $elevator-list-item-bars-z-index;
+    position: vars.$elevator-list-item-bars-position;
+    right: vars.$elevator-list-item-bars-right;
+    top: vars.$elevator-list-item-bars-top;
+    transform: vars.$elevator-list-item-bars-transform;
+    padding: vars.$elevator-list-item-bars-padding;
+    background-color: vars.$elevator-list-item-bars-background-color;
+    border-radius: vars.$elevator-list-item-bars-border-radius;
+    text-align: vars.$elevator-list-item-bars-text-align;
+    z-index: vars.$elevator-list-item-bars-z-index;
     &__inner {
       &__item {
         display: block;
-        padding: $elevator-list-item-bars-inner-item-padding;
-        font-size: $elevator-list-item-bars-inner-item-font-size;
+        padding: vars.$elevator-list-item-bars-inner-item-padding;
+        font-size: vars.$elevator-list-item-bars-inner-item-font-size;
         &.active {
-          color: $elevator-list-item-bars-inner-item-active-color;
+          color: vars.$elevator-list-item-bars-inner-item-active-color;
         }
       }
     }

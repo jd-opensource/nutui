@@ -1,4 +1,4 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-fade-enter-active {
   transition: opacity 1s;
@@ -16,31 +16,31 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: $notify-padding;
-  color: $notify-text-color;
-  font-size: $notify-font-size;
+  padding: vars.$notify-padding;
+  color: vars.$notify-text-color;
+  font-size: vars.$notify-font-size;
   white-space: pre-wrap;
   text-align: center;
   word-wrap: break-word;
-  height: $notify-height;
-  line-height: $notify-line-height;
+  height: vars.$notify-height;
+  line-height: vars.$notify-line-height;
   &--base {
-    background: $notify-base-background-color;
+    background: vars.$notify-base-background-color;
   }
   &--primary {
-    background: $notify-primary-background-color;
+    background: vars.$notify-primary-background-color;
   }
 
   &--success {
-    background: $notify-success-background-color;
+    background: vars.$notify-success-background-color;
   }
 
   &--danger {
-    background: $notify-danger-background-color;
+    background: vars.$notify-danger-background-color;
   }
 
   &--warning {
-    background: $notify-warning-background-color;
+    background: vars.$notify-warning-background-color;
   }
   view {
     width: 100%;

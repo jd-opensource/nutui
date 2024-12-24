@@ -1,22 +1,22 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-number-keyboard {
-    background-color: $dark-background4;
+    background-color: vars.$dark-background4;
 
     .nut-key__wrapper {
       .nut-key {
-        color: $dark-color;
-        background-color: $dark-background5;
+        color: vars.$dark-color;
+        background-color: vars.$dark-background5;
       }
     }
   }
 }
 
 .nut-number-keyboard {
-  width: $numberkeyboard-width;
-  padding: $numberkeyboard-padding;
-  background-color: $numberkeyboard-background-color;
+  width: vars.$numberkeyboard-width;
+  padding: vars.$numberkeyboard-padding;
+  background-color: vars.$numberkeyboard-background-color;
   user-select: none;
 
   .nut-number-keyboard__header {
@@ -25,10 +25,10 @@
     align-items: center;
     justify-content: center;
     box-sizing: content-box;
-    height: $numberkeyboard-header-height;
-    padding: $numberkeyboard-header-padding;
-    color: $numberkeyboard-header-color;
-    font-size: $numberkeyboard-header-font-size;
+    height: vars.$numberkeyboard-header-height;
+    padding: vars.$numberkeyboard-header-padding;
+    color: vars.$numberkeyboard-header-color;
+    font-size: vars.$numberkeyboard-header-font-size;
 
     .nut-number-keyboard__title {
       display: inline-block;
@@ -38,10 +38,10 @@
       position: absolute;
       display: block;
       right: 0;
-      padding: $numberkeyboard-header-close-padding;
-      color: $numberkeyboard-header-close-color;
-      font-size: $numberkeyboard-header-close-font-size;
-      background-color: $numberkeyboard-header-close-background-color;
+      padding: vars.$numberkeyboard-header-close-padding;
+      color: vars.$numberkeyboard-header-close-color;
+      font-size: vars.$numberkeyboard-header-close-font-size;
+      background-color: vars.$numberkeyboard-header-close-background-color;
       border: none;
       cursor: pointer;
     }
@@ -72,13 +72,13 @@
         }
 
         .nut-key--finish {
-          font-size: $numberkeyboard-key-finish-font-size;
-          color: $numberkeyboard-key-finish-font-size-color;
-          background-color: $numberkeyboard-key-finish-background-color;
+          font-size: vars.$numberkeyboard-key-finish-font-size;
+          color: vars.$numberkeyboard-key-finish-font-size-color;
+          background-color: vars.$numberkeyboard-key-finish-background-color;
         }
 
         .activeFinsh {
-          background-color: $numberkeyboard-key-activeFinsh-background-color;
+          background-color: vars.$numberkeyboard-key-activeFinsh-background-color;
         }
       }
     }
@@ -99,17 +99,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: $numberkeyboard-key-height;
-    font-size: $numberkeyboard-key-font-size;
-    line-height: $numberkeyboard-key-line-height;
-    background-color: $numberkeyboard-key-background-color;
-    color: $numberkeyboard-key-font-size-color;
-    border-radius: $numberkeyboard-key-border-radius;
+    height: vars.$numberkeyboard-key-height;
+    font-size: vars.$numberkeyboard-key-font-size;
+    line-height: vars.$numberkeyboard-key-line-height;
+    background-color: vars.$numberkeyboard-key-background-color;
+    color: vars.$numberkeyboard-key-font-size-color;
+    border-radius: vars.$numberkeyboard-key-border-radius;
     cursor: pointer;
   }
 
   .nut-key--active {
-    background-color: $numberkeyboard-key-active-background-color;
+    background-color: vars.$numberkeyboard-key-active-background-color;
   }
 
   img {

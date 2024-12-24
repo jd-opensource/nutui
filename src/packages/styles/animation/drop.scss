@@ -1,3 +1,5 @@
+@use '../mixins/index' as *;
+
 @keyframes nutDropIn {
   0% {
     opacity: 0;

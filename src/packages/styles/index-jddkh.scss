@@ -1,0 +1,9 @@
+// src/packages/styles/index.scss
+// 增加@forward 转发 放弃@import 方式
+// 转发变量
+
+@forward 'variables-jddkh';
+// 转发动画
+@forward 'animation/index';
+// 转发混合器
+@forward 'mixins/index';

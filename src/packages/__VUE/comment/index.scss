@@ -1,39 +1,40 @@
-@import '../rate/index.scss';
+@use '../../styles/mixins/index.scss' as *;
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-comment {
     &-header {
       &__user {
         &-name {
-          color: $dark-color;
+          color: vars.$dark-color;
         }
 
         &-default {
           &-name {
-            color: $dark-color;
+            color: vars.$dark-color;
           }
         }
       }
     }
     &__follow {
       &-title {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
     }
     &-bottom {
       &__cpx {
-        color: $dark-color;
+        color: vars.$dark-color;
 
         &-item {
           span {
-            color: $dark-color;
+            color: vars.$dark-color;
           }
         }
       }
     }
 
     .nut-comment-shop {
-      border-top: 1px solid $dark-color;
+      border-top: 1px solid vars.$dark-color;
     }
   }
 }
@@ -68,7 +69,7 @@
         @include oneline-ellipsis();
         margin-right: 5px;
         font-size: 12px;
-        color: $comment-header-user-name-color;
+        color: vars.$comment-header-user-name-color;
         width: auto;
         max-width: 80px;
       }
@@ -82,7 +83,7 @@
 
           @include oneline-ellipsis();
           font-size: 12px;
-          color: $comment-header-user-name-color;
+          color: vars.$comment-header-user-name-color;
 
           > span {
             margin-right: 8px;
@@ -93,7 +94,7 @@
       &-complex {
         display: flex;
         align-items: center;
-        color: $comment-header-user-name-color;
+        color: vars.$comment-header-user-name-color;
 
         &-name {
           margin-right: 10px;
@@ -123,7 +124,7 @@
       width: 100px;
       text-align: right;
       font-size: 12px;
-      color: $comment-header-time-color;
+      color: vars.$comment-header-time-color;
     }
 
     &__complex-score {
@@ -145,7 +146,7 @@
         display: inline-block;
         width: 1px;
         height: 6px;
-        background: $text-color;
+        background: vars.$text-color;
         opacity: 0.4;
         font-style: inherit;
       }
@@ -264,14 +265,14 @@
       position: relative;
       font-size: 14px;
       font-weight: bold;
-      color: $black;
+      color: vars.$black;
       padding-left: 8px;
 
       svg {
         position: absolute;
         left: 0;
         top: 13%;
-        color: $primary-color;
+        color: vars.$primary-color;
         transform: rotate(90deg);
         opacity: 0.4;
       }
@@ -290,7 +291,7 @@
   &-bottom {
     display: flex;
     justify-content: space-between;
-    color: $comment-bottom-label-color;
+    color: vars.$comment-bottom-label-color;
     margin-right: 5px;
 
     &__lable {
@@ -302,7 +303,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      color: $black;
+      color: vars.$black;
 
       &-item {
         position: relative;
@@ -311,7 +312,7 @@
         align-items: center;
 
         span {
-          color: $black;
+          color: vars.$black;
           margin-right: 5px;
         }
 
@@ -324,9 +325,9 @@
           top: 35px;
           right: 18px;
           width: max-content;
-          background: $white;
+          background: vars.$white;
           padding: 10px;
-          box-shadow: 0 0 6px $disable-color;
+          box-shadow: 0 0 6px vars.$disable-color;
           border-radius: 5px 0 5px 5px;
 
           &::after {
@@ -339,7 +340,7 @@
             border-left: 14px solid transparent;
             border-right: 0px solid transparent;
             border-top: 10px solid transparent;
-            border-bottom: 10px solid $white;
+            border-bottom: 10px solid vars.$white;
           }
 
           &::before {
@@ -389,7 +390,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     @include moreline-ellipsis(6);
     span {
-      color: $comment-shop-color;
+      color: vars.$comment-shop-color;
     }
   }
 }

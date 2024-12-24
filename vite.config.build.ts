@@ -12,7 +12,7 @@ export default defineConfig({
       scss: {
         // example : additionalData: `@import "./src/design/styles/variables";`
         // dont need include file extend .scss
-        additionalData: `@import "@/packages/styles/variables.scss";`
+        additionalData: `@use "@/packages/styles/index.scss" as *;`
       }
     },
     postcss: {

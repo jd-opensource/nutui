@@ -1,7 +1,9 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-price {
   font-size: 0;
   display: inline;
-  color: $primary-color;
+  color: vars.$primary-color;
   &--strike {
     [class*='nut-price'] {
       text-decoration: line-through;
@@ -9,46 +11,46 @@
   }
   &--symbol {
     display: inline-block;
-    font-size: $font-size-3;
+    font-size: vars.$font-size-3;
   }
   &--large {
     display: inline-block;
-    font-size: $price-big-size;
+    font-size: vars.$price-big-size;
   }
   &--point {
     display: inline-block;
-    font-size: $price-big-size;
+    font-size: vars.$price-big-size;
   }
   &--decimal-large {
     display: inline-block;
-    font-size: $price-decimal-big-size;
+    font-size: vars.$price-decimal-big-size;
   }
   &--symbol-large {
     display: inline-block;
-    font-size: $price-symbol-big-size;
+    font-size: vars.$price-symbol-big-size;
   }
   &--normal {
     display: inline-block;
-    font-size: $price-medium-size;
+    font-size: vars.$price-medium-size;
   }
   &--decimal-normal {
     display: inline-block;
-    font-size: $price-decimal-medium-size;
+    font-size: vars.$price-decimal-medium-size;
   }
   &--symbol-normal {
     display: inline-block;
-    font-size: $price-symbol-medium-size;
+    font-size: vars.$price-symbol-medium-size;
   }
   &--small {
     display: inline-block;
-    font-size: $price-small-size;
+    font-size: vars.$price-small-size;
   }
   &--decimal-small {
     display: inline-block;
-    font-size: $price-decimal-small-size;
+    font-size: vars.$price-decimal-small-size;
   }
   &--symbol-small {
     display: inline-block;
-    font-size: $price-symbol-small-size;
+    font-size: vars.$price-symbol-small-size;
   }
 }

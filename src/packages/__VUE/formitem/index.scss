@@ -1,11 +1,11 @@
-@import '../cell/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-form-item {
     &__body {
       &__slots {
         .nut-input-text {
-          color: $dark-color;
+          color: vars.$dark-color;
         }
       }
     }
@@ -26,7 +26,7 @@
   &.error {
     &.line {
       &::before {
-        border-bottom: 1px solid $form-item-error-line-color;
+        border-bottom: 1px solid vars.$form-item-error-line-color;
         transform: scaleX(1);
         transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
       }
@@ -34,22 +34,22 @@
   }
 
   &__label {
-    font-size: $form-item-label-font-size;
+    font-size: vars.$form-item-label-font-size;
     font-weight: normal;
-    width: $form-item-label-width;
-    margin-right: $form-item-label-margin-right;
+    width: vars.$form-item-label-width;
+    margin-right: vars.$form-item-label-margin-right;
     flex: none !important;
     display: inline-block !important;
     word-wrap: break-word;
-    text-align: $form-item-label-text-align;
+    text-align: vars.$form-item-label-text-align;
     &.nut-cell__title {
       min-width: auto;
     }
     &.required {
       &::before {
         content: '*';
-        color: $form-item-required-color;
-        margin-right: $form-item-required-margin-right;
+        color: vars.$form-item-required-color;
+        margin-right: vars.$form-item-required-margin-right;
       }
       &.nut-form-item__star-right {
         &::before {
@@ -57,8 +57,8 @@
         }
         &::after {
           content: '*';
-          color: $form-item-required-color;
-          margin-left: $form-item-required-margin-right;
+          color: vars.$form-item-required-color;
+          margin-left: vars.$form-item-required-margin-right;
         }
       }
     }
@@ -68,11 +68,11 @@
     display: flex !important;
     flex-direction: column;
     &__slots {
-      text-align: $form-item-body-slots-text-align;
+      text-align: vars.$form-item-body-slots-text-align;
       .nut-input {
-        font-size: $form-item-body-font-size;
-        text-align: $form-item-body-input-text-align;
-        color: $black;
+        font-size: vars.$form-item-body-font-size;
+        text-align: vars.$form-item-body-input-text-align;
+        color: vars.$black;
         width: 100%;
         outline: 0 none;
         border: 0;
@@ -85,14 +85,14 @@
       .nut-textarea {
         padding: 0 !important;
         .nut-textarea__textarea {
-          text-align: $form-item-body-input-text-align;
+          text-align: vars.$form-item-body-input-text-align;
         }
       }
     }
     &__tips {
-      text-align: $form-item-tip-text-align;
-      font-size: $form-item-tip-font-size;
-      color: $form-item-error-message-color;
+      text-align: vars.$form-item-tip-text-align;
+      font-size: vars.$form-item-tip-font-size;
+      color: vars.$form-item-error-message-color;
     }
   }
 

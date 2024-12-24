@@ -1,9 +1,11 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-switch {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  background-color: $primary-color;
-  border-radius: $switch-border-radius;
+  background-color: vars.$primary-color;
+  border-radius: vars.$switch-border-radius;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -16,18 +18,18 @@
   }
 
   &.nut-switch-close {
-    background-color: $switch-close-bg-color;
+    background-color: vars.$switch-close-bg-color;
   }
   .nut-switch-button {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: $white;
+    background: vars.$white;
     transition: transform 0.3s;
     .nut-switch-label {
-      color: $white;
-      font-size: $font-size-1;
+      color: vars.$white;
+      font-size: vars.$font-size-1;
       &.open {
         transform: translateX(-16px);
       }
@@ -40,18 +42,18 @@
     opacity: 0.6;
   }
   &.nut-switch-base {
-    min-width: $switch-width;
-    height: $switch-height;
-    line-height: $switch-line-height;
+    min-width: vars.$switch-width;
+    height: vars.$switch-height;
+    line-height: vars.$switch-line-height;
     overflow: hidden;
     .nut-switch-button {
-      height: $switch-inside-height;
-      width: $switch-inside-width;
-      transform: $switch-inside-close-transform;
+      height: vars.$switch-inside-height;
+      width: vars.$switch-inside-width;
+      transform: vars.$switch-inside-close-transform;
     }
     &.nut-switch-open {
       .nut-switch-button {
-        transform: $switch-inside-open-transform;
+        transform: vars.$switch-inside-open-transform;
       }
     }
   }

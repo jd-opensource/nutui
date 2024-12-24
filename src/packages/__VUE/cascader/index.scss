@@ -1,24 +1,25 @@
-@import '../popup/index.scss';
-@import '../tabs/index.scss';
-@import '../tabpane/index.scss';
+// @import '../tabs/index.scss';
+// @import '../tabpane/index.scss';
+@use '../../styles/mixins/index.scss' as *;
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-cascader__bar {
-    background: $dark-background2;
-    color: $dark-color;
+    background: vars.$dark-background2;
+    color: vars.$dark-color;
   }
   .nut-tabs__titles {
-    background: $dark-background3 !important;
+    background: vars.$dark-background3 !important;
   }
   .nut-cascader-item {
-    color: $dark-color-gray;
+    color: vars.$dark-color-gray;
   }
 }
 
 .nut-cascader {
   width: 100%;
-  font-size: $cascader-font-size;
-  line-height: $cascader-line-height;
+  font-size: vars.$cascader-font-size;
+  line-height: vars.$cascader-line-height;
 
   .nut-tab-pane {
     padding: 0;
@@ -26,12 +27,12 @@
 
   &.nut-tabs.horizontal .nut-tabs__titles .nut-tabs__titles-item {
     flex: initial;
-    padding: $cascader-tabs-item-padding;
+    padding: vars.$cascader-tabs-item-padding;
     white-space: nowrap;
   }
 
   .nut-tabs__titles {
-    padding: $cascader-tabs-item-padding;
+    padding: vars.$cascader-tabs-item-padding;
     background: #fff;
   }
 
@@ -39,12 +40,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $cascader-bar-padding;
+    padding: vars.$cascader-bar-padding;
     text-align: center;
     font-weight: bold;
-    line-height: $cascader-bar-line-height;
-    color: $cascader-bar-color;
-    font-size: $cascader-bar-font-size;
+    line-height: vars.$cascader-bar-line-height;
+    color: vars.$cascader-bar-color;
+    font-size: vars.$cascader-bar-font-size;
   }
 
   &-pane {
@@ -61,11 +62,11 @@
   &-item {
     display: flex;
     align-items: center;
-    padding: $cascader-item-padding;
+    padding: vars.$cascader-item-padding;
     margin: 0;
     cursor: pointer;
-    font-size: $cascader-item-font-size;
-    color: $cascader-item-color;
+    font-size: vars.$cascader-item-font-size;
+    color: vars.$cascader-item-color;
 
     &__title {
       flex: 1;
@@ -81,12 +82,12 @@
     }
 
     &.active:not(.disabled) {
-      color: $cascader-item-active-color;
+      color: vars.$cascader-item-active-color;
     }
 
     &.active &__icon-check {
       visibility: visible;
-      color: $cascader-item-active-color;
+      color: vars.$cascader-item-active-color;
     }
 
     &.disabled {

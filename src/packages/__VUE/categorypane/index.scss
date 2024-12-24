@@ -1,24 +1,26 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-category-pane {
     &__childTitle {
-      color: $white;
+      color: vars.$white;
     }
     &__cateListRight {
-      background: $dark-background2;
+      background: vars.$dark-background2;
     }
   }
 }
 .nut-category-pane {
   &__cateListRight {
     padding-left: 15px;
-    background: $category-bg-color;
+    background: vars.$category-bg-color;
   }
   &__childTitle {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 13px;
     font-weight: 500;
-    color: $category-pane-title-color;
+    color: vars.$category-pane-title-color;
   }
 
   &__childItemList {
@@ -41,11 +43,11 @@
     margin-right: 10px;
     width: 75px;
     height: 40px;
-    border: 1px solid $category-pane-border-color;
+    border: 1px solid vars.$category-pane-border-color;
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
-    color: $category-pane-gray-color;
+    color: vars.$category-pane-gray-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +63,7 @@
   &__skuImg {
     font-size: 12px;
     font-weight: normal;
-    color: $category-pane-gray-color;
+    color: vars.$category-pane-gray-color;
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;

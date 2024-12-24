@@ -1,4 +1,4 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-popover {
   position: absolute;
@@ -13,14 +13,14 @@
 
     &-top {
       bottom: 0;
-      border-top-color: $popover-white-background-color;
+      border-top-color: vars.$popover-white-background-color;
       border-bottom-width: 0;
       margin-bottom: -8px;
     }
 
     &-bottom {
       top: 0px;
-      border-bottom-color: $popover-white-background-color;
+      border-bottom-color: vars.$popover-white-background-color;
       border-top-width: 0;
       margin-top: -8px;
 
@@ -42,7 +42,7 @@
 
     &-left {
       right: 0px;
-      border-left-color: $popover-white-background-color;
+      border-left-color: vars.$popover-white-background-color;
       border-right-width: 0;
       margin-right: -8px;
 
@@ -64,7 +64,7 @@
 
     &-right {
       left: 0px;
-      border-right-color: $popover-white-background-color;
+      border-right-color: vars.$popover-white-background-color;
       border-left-width: 0;
       margin-left: -8px;
 
@@ -112,7 +112,7 @@
       display: flex;
       align-items: center;
       padding: 8px;
-      border-bottom: 1px solid $popover-border-bottom-color;
+      border-bottom: 1px solid vars.$popover-border-bottom-color;
 
       &:first-child {
         margin-top: 15px;
@@ -135,7 +135,7 @@
       }
 
       &.nut-popover-menu-disabled {
-        color: $popover-disable-color;
+        color: vars.$popover-disable-color;
         cursor: not-allowed;
       }
     }
@@ -189,14 +189,14 @@
 
 .nut-popover--dark {
   .nut-popover-content {
-    background: $popover-dark-background-color;
-    color: $popover-white-background-color;
+    background: vars.$popover-dark-background-color;
+    color: vars.$popover-white-background-color;
 
     &--bottom,
     &--bottom-start,
     &--bottom-end {
       .nut-popover-arrow {
-        border-bottom-color: $popover-dark-background-color;
+        border-bottom-color: vars.$popover-dark-background-color;
       }
     }
 
@@ -204,7 +204,7 @@
     &--top-start,
     &--top-end {
       .nut-popover-arrow {
-        border-top-color: $popover-dark-background-color;
+        border-top-color: vars.$popover-dark-background-color;
       }
     }
 
@@ -212,7 +212,7 @@
     &--left-start,
     &--left-end {
       .nut-popover-arrow {
-        border-left-color: $popover-dark-background-color;
+        border-left-color: vars.$popover-dark-background-color;
       }
     }
 
@@ -220,7 +220,7 @@
     &--right-start,
     &--right-end {
       .nut-popover-arrow {
-        border-right-color: $popover-dark-background-color;
+        border-right-color: vars.$popover-dark-background-color;
       }
     }
   }

@@ -1,16 +1,18 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-divider {
   display: flex;
   align-items: center;
-  font-size: $divider-text-font-size;
-  color: $divider-text-color;
-  margin: $divider-margin;
+  font-size: vars.$divider-text-font-size;
+  color: vars.$divider-text-color;
+  margin: vars.$divider-margin;
 
   &::before,
   &::after {
     content: '';
-    border: $divider-line-height solid currentColor;
-    border-width: $divider-line-height 0 0;
-    height: $divider-line-height;
+    border: vars.$divider-line-height solid currentColor;
+    border-width: vars.$divider-line-height 0 0;
+    height: vars.$divider-line-height;
     flex: 1;
   }
 
@@ -18,11 +20,11 @@
   &.nut-divider-left,
   &.nut-divider-right {
     &::before {
-      margin-right: $divider-before-margin-right;
+      margin-right: vars.$divider-before-margin-right;
     }
 
     &::after {
-      margin-left: $divider-after-margin-left;
+      margin-left: vars.$divider-after-margin-left;
     }
   }
 
@@ -54,10 +56,10 @@
 
   &.nut-divider-vertical {
     position: relative;
-    top: $divider-vertical-top;
+    top: vars.$divider-vertical-top;
     display: inline-block;
-    height: $divider-vertical-height;
-    border-left: 1px solid $divider-vertical-border-left;
-    margin: $divider-vertical-margin;
+    height: vars.$divider-vertical-height;
+    border-left: 1px solid vars.$divider-vertical-border-left;
+    margin: vars.$divider-vertical-margin;
   }
 }

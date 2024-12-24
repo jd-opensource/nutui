@@ -1,7 +1,9 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-countup {
-    background: $dark-background;
-    color: $dark-color;
+    background: vars.$dark-background;
+    color: vars.$dark-color;
     box-shadow: none;
   }
 }

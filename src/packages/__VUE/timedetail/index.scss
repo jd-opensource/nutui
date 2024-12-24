@@ -1,13 +1,15 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-time-detail {
-    background-color: $dark-background2;
+    background-color: vars.$dark-background2;
     &__detail {
       &__list {
         &__item {
-          background-color: $dark-background;
-          color: $dark-color;
+          background-color: vars.$dark-background;
+          color: vars.$dark-color;
           &--curr {
-            color: $timeselect-timedetail-item-cur-text-color;
+            color: vars.$timeselect-timedetail-item-cur-text-color;
           }
         }
       }
@@ -17,28 +19,28 @@
 .nut-time-detail {
   display: flex;
   width: 100%;
-  padding: $timeselect-timedetail-padding;
+  padding: vars.$timeselect-timedetail-padding;
   &__detail {
     width: 100%;
     &__list {
       &__item {
         display: inline-block;
-        width: $timeselect-timedetail-item-width;
-        height: $timeselect-timedetail-item-height;
-        line-height: $timeselect-timedetail-item-line-height;
+        width: vars.$timeselect-timedetail-item-width;
+        height: vars.$timeselect-timedetail-item-height;
+        line-height: vars.$timeselect-timedetail-item-line-height;
         text-align: center;
         margin-right: 10px;
         margin-bottom: 10px;
-        background-color: $timeselect-timedetail-item-bg-color;
-        border-radius: $timeselect-timedetail-item-border-radius;
-        color: $timeselect-timedetail-item-text-color;
-        font-size: $timeselect-timedetail-item-text-font-size;
+        background-color: vars.$timeselect-timedetail-item-bg-color;
+        border-radius: vars.$timeselect-timedetail-item-border-radius;
+        color: vars.$timeselect-timedetail-item-text-color;
+        font-size: vars.$timeselect-timedetail-item-text-font-size;
         border: 1px solid transparent;
         font-weight: bold;
         &--curr {
           background-color: transparent;
-          border: 1px solid $timeselect-timedetail-item-cur-border;
-          color: $timeselect-timedetail-item-cur-text-color;
+          border: 1px solid vars.$timeselect-timedetail-item-cur-border;
+          color: vars.$timeselect-timedetail-item-cur-text-color;
           position: relative;
           &::after {
             position: absolute;
@@ -48,7 +50,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $timeselect-timedetail-item-cur-bg-color;
+            background-color: vars.$timeselect-timedetail-item-cur-bg-color;
             opacity: 0.15;
             content: '';
           }

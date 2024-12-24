@@ -1,11 +1,13 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-grid-item {
     &__content {
-      background: $dark-background;
-      color: $dark-color;
+      background: vars.$dark-background;
+      color: vars.$dark-color;
     }
     &__text {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -16,11 +18,11 @@
   $block: &;
 
   &__text {
-    color: $grid-item-text-color;
-    font-size: $grid-item-text-font-size;
+    color: vars.$grid-item-text-color;
+    font-size: vars.$grid-item-text-font-size;
     line-height: 1.5;
     word-break: break-all;
-    margin: $grid-item-text-margin 0 0 0;
+    margin: vars.$grid-item-text-margin 0 0 0;
   }
 
   &__content {
@@ -28,9 +30,9 @@
     flex-direction: column;
     box-sizing: border-box;
     height: 100%;
-    padding: $grid-item-content-padding;
-    background: $grid-item-content-bg-color;
-    border: 0 solid $grid-border-color;
+    padding: vars.$grid-item-content-padding;
+    background: vars.$grid-item-content-bg-color;
+    border: 0 solid vars.$grid-border-color;
 
     &--border {
       border-right-width: 1px;
@@ -58,7 +60,7 @@
       flex-direction: column-reverse;
 
       #{$block}__text {
-        margin: 0 0 $grid-item-text-margin;
+        margin: 0 0 vars.$grid-item-text-margin;
       }
     }
 
@@ -66,14 +68,14 @@
       flex-direction: row;
 
       #{$block}__text {
-        margin: 0 0 0 $grid-item-text-margin;
+        margin: 0 0 0 vars.$grid-item-text-margin;
       }
     }
 
     &--horizontal#{&}--reverse {
       flex-direction: row-reverse;
       #{$block}__text {
-        margin: 0 $grid-item-text-margin 0 0;
+        margin: 0 vars.$grid-item-text-margin 0 0;
       }
     }
 
@@ -86,9 +88,9 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-color: $black;
+        background-color: vars.$black;
         border: inherit;
-        border-color: $black;
+        border-color: vars.$black;
         border-radius: inherit;
         transform: translate(-50%, -50%);
         opacity: 0;

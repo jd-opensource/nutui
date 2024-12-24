@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-pull-refresh {
   height: 100%;
   overflow: hidden;
@@ -23,8 +25,8 @@
         height: 16px;
       }
       &-text {
-        font-size: $font-size-2;
-        color: $text-color;
+        font-size: vars.$font-size-2;
+        color: vars.$text-color;
       }
     }
   }

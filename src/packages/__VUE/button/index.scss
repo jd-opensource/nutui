@@ -1,14 +1,16 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-button {
   position: relative;
   display: inline-block;
   width: auto;
   flex-shrink: 0;
-  height: $button-default-height;
+  height: vars.$button-default-height;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: $button-default-line-height;
-  font-size: $button-default-font-size;
+  line-height: vars.$button-default-line-height;
+  font-size: vars.$button-default-font-size;
   text-align: center;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -28,9 +30,9 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    background-color: $black;
+    background-color: vars.$black;
     border: inherit;
-    border-color: $black;
+    border-color: vars.$black;
     border-radius: inherit;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -57,104 +59,104 @@
     }
   }
   &--default {
-    color: $button-default-color;
-    background: $button-default-bg-color;
+    color: vars.$button-default-color;
+    background: vars.$button-default-bg-color;
     background-origin: border-box;
-    border: $button-border-width solid $button-default-border-color;
+    border: vars.$button-border-width solid vars.$button-default-border-color;
   }
 
   &--primary {
-    color: $button-primary-color;
-    background: $button-primary-background-color;
+    color: vars.$button-primary-color;
+    background: vars.$button-primary-background-color;
     background-origin: border-box;
-    border: $button-border-width solid transparent;
+    border: vars.$button-border-width solid transparent;
   }
 
   &--info {
-    color: $button-info-color;
-    background: $button-info-background-color;
+    color: vars.$button-info-color;
+    background: vars.$button-info-background-color;
     background-origin: border-box;
-    border: $button-border-width solid transparent;
+    border: vars.$button-border-width solid transparent;
   }
 
   &--success {
-    color: $button-success-color;
-    background: $button-success-background-color;
+    color: vars.$button-success-color;
+    background: vars.$button-success-background-color;
     background-origin: border-box;
-    border: $button-border-width solid transparent;
+    border: vars.$button-border-width solid transparent;
   }
 
   &--danger {
-    color: $button-danger-color;
-    background: $button-danger-background-color;
+    color: vars.$button-danger-color;
+    background: vars.$button-danger-background-color;
     background-origin: border-box;
-    border: $button-border-width solid transparent;
+    border: vars.$button-border-width solid transparent;
   }
 
   &--warning {
-    color: $button-warning-color;
-    background: $button-warning-background-color;
+    color: vars.$button-warning-color;
+    background: vars.$button-warning-background-color;
     background-origin: border-box;
-    border: $button-border-width solid transparent;
+    border: vars.$button-border-width solid transparent;
   }
 
   &--plain {
-    background: $button-plain-background-color;
+    background: vars.$button-plain-background-color;
     background-origin: border-box;
 
     &.nut-button--primary {
-      color: $button-primary-border-color;
-      border-color: $button-primary-border-color;
+      color: vars.$button-primary-border-color;
+      border-color: vars.$button-primary-border-color;
     }
 
     &.nut-button--info {
-      color: $button-info-border-color;
-      border-color: $button-info-border-color;
+      color: vars.$button-info-border-color;
+      border-color: vars.$button-info-border-color;
     }
 
     &.nut-button--success {
-      color: $button-success-border-color;
-      border-color: $button-success-border-color;
+      color: vars.$button-success-border-color;
+      border-color: vars.$button-success-border-color;
     }
 
     &.nut-button--danger {
-      color: $button-danger-border-color;
-      border-color: $button-danger-border-color;
+      color: vars.$button-danger-border-color;
+      border-color: vars.$button-danger-border-color;
     }
 
     &.nut-button--warning {
-      color: $button-warning-border-color;
-      border-color: $button-warning-border-color;
+      color: vars.$button-warning-border-color;
+      border-color: vars.$button-warning-border-color;
     }
   }
 
   &--large {
     width: 100%;
-    height: $button-large-height;
-    line-height: $button-large-line-height;
-    font-size: $button-large-font-size;
+    height: vars.$button-large-height;
+    line-height: vars.$button-large-line-height;
+    font-size: vars.$button-large-font-size;
   }
 
   &--normal {
-    padding: $button-default-padding;
-    font-size: $button-default-font-size;
+    padding: vars.$button-default-padding;
+    font-size: vars.$button-default-font-size;
   }
 
   &--small {
-    height: $button-small-height;
-    line-height: $button-small-line-height;
-    padding: $button-small-padding;
-    font-size: $button-small-font-size;
+    height: vars.$button-small-height;
+    line-height: vars.$button-small-line-height;
+    padding: vars.$button-small-padding;
+    font-size: vars.$button-small-font-size;
 
     &.nut-button--round {
-      border-radius: $button-small-round-border-radius;
+      border-radius: vars.$button-small-round-border-radius;
     }
   }
   &--mini {
-    height: $button-mini-height;
-    line-height: $button-mini-line-height;
-    padding: $button-mini-padding;
-    font-size: $button-mini-font-size;
+    height: vars.$button-mini-height;
+    line-height: vars.$button-mini-line-height;
+    padding: vars.$button-mini-padding;
+    font-size: vars.$button-mini-font-size;
   }
 
   &--block {
@@ -164,7 +166,7 @@
 
   &--disabled {
     cursor: not-allowed;
-    opacity: $button-disabled-opacity;
+    opacity: vars.$button-disabled-opacity;
   }
 
   &--loading {
@@ -173,7 +175,7 @@
   }
 
   &--round {
-    border-radius: $button-border-radius;
+    border-radius: vars.$button-border-radius;
   }
 
   &--square {
@@ -181,72 +183,72 @@
   }
 }
 .nut-button--default:not([disabled]):active {
-  color: $button-default-color;
-  background: $button-default-bg-color;
+  color: vars.$button-default-color;
+  background: vars.$button-default-bg-color;
   background-origin: border-box;
-  border: $button-border-width solid $button-default-border-color;
+  border: vars.$button-border-width solid vars.$button-default-border-color;
 }
 .nut-button--primary:not([disabled]):active {
-  color: $button-primary-color;
-  background: $button-primary-background-color;
+  color: vars.$button-primary-color;
+  background: vars.$button-primary-background-color;
   background-origin: border-box;
-  border: $button-border-width solid transparent;
+  border: vars.$button-border-width solid transparent;
 }
 
 .nut-button--info:not([disabled]):active {
-  color: $button-info-color;
-  background: $button-info-background-color;
+  color: vars.$button-info-color;
+  background: vars.$button-info-background-color;
   background-origin: border-box;
-  border: $button-border-width solid transparent;
+  border: vars.$button-border-width solid transparent;
 }
 
 .nut-button--success:not([disabled]):active {
-  color: $button-success-color;
-  background: $button-success-background-color;
+  color: vars.$button-success-color;
+  background: vars.$button-success-background-color;
   background-origin: border-box;
-  border: $button-border-width solid transparent;
+  border: vars.$button-border-width solid transparent;
 }
 
 .nut-button--danger:not([disabled]):active {
-  color: $button-danger-color;
-  background: $button-danger-background-color;
+  color: vars.$button-danger-color;
+  background: vars.$button-danger-background-color;
   background-origin: border-box;
-  border: $button-border-width solid transparent;
+  border: vars.$button-border-width solid transparent;
 }
 
 .nut-button--warning:not([disabled]):active {
-  color: $button-warning-color;
-  background: $button-warning-background-color;
+  color: vars.$button-warning-color;
+  background: vars.$button-warning-background-color;
   background-origin: border-box;
-  border: $button-border-width solid transparent;
+  border: vars.$button-border-width solid transparent;
 }
 .nut-button--plain:not([disabled]):active {
-  background: $button-plain-background-color;
+  background: vars.$button-plain-background-color;
   background-origin: border-box;
 }
 .nut-button--plain {
   &.nut-button--primary:not([disabled]):active {
-    color: $button-primary-border-color;
-    border-color: $button-primary-border-color;
+    color: vars.$button-primary-border-color;
+    border-color: vars.$button-primary-border-color;
   }
 
   &.nut-button--info:not([disabled]):active {
-    color: $button-info-border-color;
-    border-color: $button-info-border-color;
+    color: vars.$button-info-border-color;
+    border-color: vars.$button-info-border-color;
   }
 
   &.nut-button--success:not([disabled]):active {
-    color: $button-success-border-color;
-    border-color: $button-success-border-color;
+    color: vars.$button-success-border-color;
+    border-color: vars.$button-success-border-color;
   }
 
   &.nut-button--danger:not([disabled]):active {
-    color: $button-danger-border-color;
-    border-color: $button-danger-border-color;
+    color: vars.$button-danger-border-color;
+    border-color: vars.$button-danger-border-color;
   }
 
   &.nut-button--warning:not([disabled]):active {
-    color: $button-warning-border-color;
-    border-color: $button-warning-border-color;
+    color: vars.$button-warning-border-color;
+    border-color: vars.$button-warning-border-color;
   }
 }

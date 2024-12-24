@@ -1,10 +1,12 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-infinite-loading {
     .nut-infinite__bottom {
-      color: $dark-color;
+      color: vars.$dark-color;
 
       .bottom-text {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
     }
   }
@@ -19,8 +21,8 @@
     width: 100%;
     height: 50px;
     line-height: 50px;
-    font-size: $font-size-small;
-    color: $infiniteloading-bottom-color;
+    font-size: vars.$font-size-small;
+    color: vars.$infiniteloading-bottom-color;
     text-align: center;
 
     .nut-infinite__bottom-box {
@@ -34,7 +36,7 @@
       }
       &__text {
         font-size: 12px;
-        color: $text-color;
+        color: vars.$text-color;
       }
     }
   }

@@ -1,16 +1,19 @@
+@use '../../styles/mixins/index.scss' as *;
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-picker {
     &__title {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
 
     &-roller {
       &-item {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
 
       &-item-tile {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
     }
 
@@ -23,10 +26,10 @@
     }
 
     &-content {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
     &-item {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -44,25 +47,25 @@
 
   &__left {
     cursor: pointer;
-    padding: $picker-bar-button-padding;
+    padding: vars.$picker-bar-button-padding;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 50px;
     height: 100%;
-    color: $picker-cancel-color;
-    font-size: $picker-bar-cancel-font-size;
+    color: vars.$picker-cancel-color;
+    font-size: vars.$picker-bar-cancel-font-size;
   }
   &__right {
     cursor: pointer;
-    padding: $picker-bar-button-padding;
+    padding: vars.$picker-bar-button-padding;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 50px;
     height: 100%;
-    color: $picker-ok-color;
-    font-size: $picker-bar-ok-font-size;
+    color: vars.$picker-ok-color;
+    font-size: vars.$picker-bar-ok-font-size;
   }
 
   &__column {
@@ -75,7 +78,7 @@
       top: 50%;
       height: var(--lineHeight);
       width: 100%;
-      border: $picker-item-active-line-border;
+      border: vars.$picker-item-active-line-border;
       border-left: 0;
       border-right: 0;
       transform: scale(0.9);
@@ -94,9 +97,9 @@
     flex: 1;
     @include oneline-ellipsis();
     text-align: center;
-    color: $picker-bar-title-color;
-    font-size: $picker-bar-title-font-size;
-    font-weight: $picker-bar-title-font-weight;
+    color: vars.$picker-bar-title-color;
+    font-size: vars.$picker-bar-title-font-size;
+    font-weight: vars.$picker-bar-title-font-weight;
   }
 
   &__wrapper {
@@ -131,10 +134,10 @@
       position: absolute;
       top: 0;
       width: 100%;
-      height: $picker-item-height;
-      line-height: $picker-item-height;
-      color: $picker-item-text-color;
-      font-size: $picker-item-text-font-size;
+      height: vars.$picker-item-height;
+      line-height: vars.$picker-item-height;
+      color: vars.$picker-item-text-color;
+      font-size: vars.$picker-item-text-font-size;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -149,8 +152,8 @@
       display: block;
       text-align: center;
       width: 100%;
-      color: $picker-item-text-color;
-      font-size: $picker-item-text-font-size;
+      color: vars.$picker-item-text-color;
+      font-size: vars.$picker-item-text-font-size;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -160,8 +163,8 @@
       display: block;
       text-align: center;
       width: 100%;
-      color: $picker-item-text-color;
-      font-size: $picker-item-text-font-size;
+      color: vars.$picker-item-text-color;
+      font-size: vars.$picker-item-text-font-size;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

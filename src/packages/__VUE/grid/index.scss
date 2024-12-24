@@ -1,7 +1,9 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-grid {
   display: flex;
   flex-wrap: wrap;
-  border: 0 solid $grid-border-color;
+  border: 0 solid vars.$grid-border-color;
 
   &--border {
     border-top-width: 1px;

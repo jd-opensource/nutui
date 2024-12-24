@@ -1,6 +1,6 @@
 // Animation
-@import 'fade.scss';
-@import 'zoom.scss';
-@import 'ease.scss';
-@import 'drop.scss';
-@import 'rotate.scss';
+@forward 'fade';
+@forward 'zoom';
+@forward 'ease';
+@forward 'drop';
+@forward 'rotate';

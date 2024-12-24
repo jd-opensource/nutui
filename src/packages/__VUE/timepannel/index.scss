@@ -1,26 +1,28 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-time-pannel {
-    background-color: $dark-background3;
-    color: $dark-color-gray;
+    background-color: vars.$dark-background3;
+    color: vars.$dark-color-gray;
     &--curr {
-      background-color: $dark-background2;
-      color: $dark-color;
+      background-color: vars.$dark-background2;
+      color: vars.$dark-color;
     }
   }
 }
 .nut-time-pannel {
   display: flex;
-  width: $timeselect-timepannel-width;
-  height: $timeselect-timepannel-height;
-  padding: $timeselect-timepannel-padding;
+  width: vars.$timeselect-timepannel-width;
+  height: vars.$timeselect-timepannel-height;
+  padding: vars.$timeselect-timepannel-padding;
   align-items: center;
   justify-content: center;
-  color: $timeselect-timepannel-text-color;
-  font-size: $timeselect-timepannel-font-size;
+  color: vars.$timeselect-timepannel-text-color;
+  font-size: vars.$timeselect-timepannel-font-size;
   box-sizing: border-box;
   &--curr {
-    background-color: $timeselect-timepannel-cur-bg-color;
-    color: $timeselect-timepannel-cur-text-color;
+    background-color: vars.$timeselect-timepannel-cur-bg-color;
+    color: vars.$timeselect-timepannel-cur-text-color;
     font-weight: bold;
   }
 }

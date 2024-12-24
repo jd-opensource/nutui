@@ -1,6 +1,8 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-circle-progress__text {
-    color: $dark-color;
+    color: vars.$dark-color;
   }
 }
 
@@ -8,14 +10,14 @@
   position: relative;
 
   &__hover {
-    stroke: $circleprogress-primary-color;
+    stroke: vars.$circleprogress-primary-color;
     transition:
       stroke-dasharray 0.6s ease 0s,
       stroke 0.6s ease 0s;
   }
 
   &__path {
-    stroke: $circleprogress-path-color;
+    stroke: vars.$circleprogress-path-color;
   }
 
   &__text {
@@ -26,7 +28,7 @@
     width: 100%;
     transform: translateY(-50%);
     text-align: center;
-    color: $circleprogress-text-color;
-    font-size: $circleprogress-text-size;
+    color: vars.$circleprogress-text-color;
+    font-size: vars.$circleprogress-text-size;
   }
 }

@@ -1,8 +1,10 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-badge {
     &.show {
-      background: $dark-background;
-      color: $dark-color;
+      background: vars.$dark-background;
+      color: vars.$dark-color;
     }
   }
 }
@@ -13,33 +15,33 @@
     display: flex;
     align-items: center;
     line-height: normal;
-    transform: $badge-content-transform;
+    transform: vars.$badge-content-transform;
     position: absolute;
-    background: $badge-background-color;
-    padding: $badge-icon-padding;
+    background: vars.$badge-background-color;
+    padding: vars.$badge-icon-padding;
     text-align: center;
-    border-radius: $badge-border-radius;
-    z-index: $badge-z-index;
+    border-radius: vars.$badge-border-radius;
+    z-index: vars.$badge-z-index;
   }
   .nut-badge__content {
     display: flex;
     align-items: center;
-    transform: $badge-content-transform;
+    transform: vars.$badge-content-transform;
     &--sup {
       position: absolute;
-      background: $badge-background-color;
-      padding: $badge-padding;
+      background: vars.$badge-background-color;
+      padding: vars.$badge-padding;
       text-align: center;
-      border-radius: $badge-border-radius;
-      font-size: $badge-font-size;
+      border-radius: vars.$badge-border-radius;
+      font-size: vars.$badge-font-size;
       font-weight: normal;
-      color: $badge-color;
+      color: vars.$badge-color;
     }
     &--dot {
-      width: $badge-dot-width;
-      height: $badge-dot-height;
-      border-radius: $badge-dot-border-radius;
-      padding: $badge-dot-padding;
+      width: vars.$badge-dot-width;
+      height: vars.$badge-dot-height;
+      border-radius: vars.$badge-dot-border-radius;
+      padding: vars.$badge-dot-padding;
     }
     &--bubble {
       border-bottom-left-radius: 0;
