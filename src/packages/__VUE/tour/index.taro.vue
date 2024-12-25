@@ -1,5 +1,5 @@
 <template>
-  <view :class="classes">
+  <view class="nut-tour">
     <view v-if="showTour" class="nut-tour-masked" @click="handleClickMask"></view>
 
     <view v-for="(step, i) in steps" :key="i" style="height: 0">
@@ -42,8 +42,7 @@
                       @click="changeStep('prev')"
                     >
                       {{ prevStepTxt }}
-                    </view
-                    >
+                    </view>
                   </slot>
                   <view
                     v-if="steps.length - 1 == active"
@@ -51,8 +50,7 @@
                     @click="close"
                   >
                     {{ completeTxt }}
-                  </view
-                  >
+                  </view>
 
                   <slot name="next-step">
                     <view
@@ -61,8 +59,7 @@
                       @click="changeStep('next')"
                     >
                       {{ nextStepTxt }}
-                    </view
-                    >
+                    </view>
                   </slot>
                 </view>
               </view>
@@ -80,7 +77,7 @@
   </view>
 </template>
 <script lang="ts">
-import { computed, watch, ref, reactive, toRefs, PropType, onMounted } from 'vue'
+import { watch, ref, reactive, toRefs, PropType, onMounted } from 'vue'
 import { PopoverLocation, PopoverTheme } from '../popover/type'
 import { createComponent } from '@/packages/utils/create'
 import { rectTaro, useTaroRectById } from '@/packages/utils/useTaroRect'
@@ -181,15 +178,10 @@ export default create({
 
     let maskStyles = ref<any[]>([])
 
-    const classes = computed(() => {
-      const prefixCls = 'nut-tour'
-      return `${prefixCls}`
-    })
-
     const maskStyle = (index: number) => {
       const { offset, maskWidth, maskHeight } = props
 
-      if (!maskRect[index]) return {}
+      if (!maskRect[index]) return
       const { width, height, left, top } = maskRect[index]
 
       const center = [left + width / 2, top + height / 2] // 中心点 【横，纵】
@@ -209,31 +201,26 @@ export default create({
       const current = state.active
       let next = current
 
-      if (type == 'next') {
-        next = current + 1
-      } else {
-        next = current - 1
-      }
+      next = type == 'next' ? current + 1 : current - 1
       showPopup.value[current] = false
 
       setTimeout(() => {
-        showPopup.value[next] = true
         state.active = next
+        emit('change', state.active)
+        showPopup.value[state.active] = true
       }, 300)
-
-      emit('change', state.active)
     }
 
-    const getRootPosition = () => {
-      props.steps.forEach(async (item, i) => {
-        useTaroRectById(item.target).then(
-          (rect: any) => {
-            maskRect[i] = rect
-            maskStyle(i)
-          },
-          () => {}
-        )
-      })
+    const getRootPosition = async () => {
+      for (const [index, step] of props.steps.entries()) {
+        try {
+          const rect = await useTaroRectById(step.target)
+          maskRect[index] = rect as rectTaro
+          maskStyle(index)
+        } catch (error) {
+          console.warn(`[NutUI] Failed to get rect for step ${index}:`, error)
+        }
+      }
     }
 
     const close = () => {
@@ -248,20 +235,18 @@ export default create({
     }
 
     onMounted(() => {
-      setTimeout(() => {
-        getRootPosition()
-      }, 500)
+      getRootPosition()
     })
 
     watch(
       () => props.modelValue,
-      (val) => {
-        if (val) {
-          state.active = 0
+      (visible) => {
+        if (visible) {
+          state.active = props.type === 'step' ? Math.min(Math.max(0, props.current), props.steps.length - 1) : 0
           getRootPosition()
         }
-        state.showTour = val
-        showPopup.value[state.active] = val
+        state.showTour = visible
+        showPopup.value[state.active] = visible
       }
     )
 
@@ -269,12 +254,11 @@ export default create({
 
     return {
       ...toRefs(state),
-      classes,
       maskStyle,
       changeStep,
-      showPopup,
       close,
       handleClickMask,
+      showPopup,
       maskStyles,
       refRandomId
     }
