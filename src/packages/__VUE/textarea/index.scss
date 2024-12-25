@@ -1,8 +1,10 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-textarea {
-    background: $dark-background;
+    background: vars.$dark-background;
     &__textarea {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -11,25 +13,25 @@
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  background: $white;
-  font-size: $textarea-font;
+  background: vars.$white;
+  font-size: vars.$textarea-font;
   padding: 10px 25px;
   &--disabled {
     .nut-textarea__textarea,
     .nut-textarea__limit {
       cursor: not-allowed;
-      color: $textarea-disabled-color !important;
+      color: vars.$textarea-disabled-color !important;
     }
   }
   &__limit {
     position: absolute;
     right: 15px;
     bottom: 12px;
-    font-size: $textarea-font;
-    color: $textarea-limit-color;
+    font-size: vars.$textarea-font;
+    color: vars.$textarea-limit-color;
   }
   &__textarea {
-    // min-height: $textarea-height;
+    // min-height: vars.$textarea-height;
     outline: none;
     display: block;
     box-sizing: border-box;
@@ -37,8 +39,8 @@
     min-width: 0;
     margin: 0;
     padding: 0;
-    font-size: $textarea-font;
-    color: $textarea-text-color;
+    font-size: vars.$textarea-font;
+    color: vars.$textarea-text-color;
     text-align: left;
     background-color: transparent;
     border: none;

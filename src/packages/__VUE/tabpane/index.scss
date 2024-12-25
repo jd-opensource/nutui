@@ -1,6 +1,8 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-tab-pane {
-    background: $dark-background2;
+    background: vars.$dark-background2;
   }
 }
 .nut-tab-pane {

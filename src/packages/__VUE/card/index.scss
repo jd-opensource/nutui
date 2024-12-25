@@ -1,10 +1,9 @@
-@import '../price/index.scss';
-@import '../tag/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-card {
     .nut-card__right {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -17,8 +16,8 @@
     width: 120px;
     height: 120px;
     flex-shrink: 0;
-    background-color: $card-left-background-color;
-    border-radius: $card-left-border-radius;
+    background-color: vars.$card-left-background-color;
+    border-radius: vars.$card-left-border-radius;
 
     > img {
       display: block;
@@ -90,7 +89,7 @@
         border: none;
         padding: 0 2px;
         margin-right: 5px;
-        font-size: $card-font-size-0;
+        font-size: vars.$card-font-size-0;
       }
     }
 

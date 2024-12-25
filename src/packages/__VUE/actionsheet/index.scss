@@ -1,18 +1,18 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-action-sheet {
     .nut-action-sheet__cancel {
-      border-top: 1px solid $dark-background2;
+      border-top: 1px solid vars.$dark-background2;
     }
     .nut-action-sheet__title {
-      border-bottom: 1px solid $dark-background2;
+      border-bottom: 1px solid vars.$dark-background2;
     }
     .nut-action-sheet__cancel,
     .nut-action-sheet__item,
     .nut-action-sheet__title {
-      background: $dark-background;
-      color: $dark-color;
+      background: vars.$dark-background;
+      color: vars.$dark-color;
     }
   }
 }
@@ -24,10 +24,10 @@
     padding: 10px;
     margin: 0;
     text-align: center;
-    background-color: $white;
-    border-bottom: 1px solid $actionsheet-light-color;
-    font-size: $font-size-base;
-    color: $title-color;
+    background-color: vars.$white;
+    border-bottom: 1px solid vars.$actionsheet-light-color;
+    font-size: vars.$font-size-base;
+    color: vars.$title-color;
   }
   .nut-action-sheet__menu {
     display: block;
@@ -40,24 +40,24 @@
   .nut-action-sheet__item {
     display: block;
     padding: 10px;
-    line-height: $actionsheet-item-line-height;
-    font-size: $actionsheet-item-font-size;
-    color: $actionsheet-item-font-color;
+    line-height: vars.$actionsheet-item-line-height;
+    font-size: vars.$actionsheet-item-font-size;
+    color: vars.$actionsheet-item-font-color;
     text-align: center;
     background-color: #fff;
-    border-bottom: $actionsheet-item-border-bottom;
+    border-bottom: vars.$actionsheet-item-border-bottom;
     cursor: pointer;
   }
 
   .nut-action-sheet__desc {
-    font-size: $actionsheet-item-font-size;
+    font-size: vars.$actionsheet-item-font-size;
     color: #999;
     cursor: default;
   }
 
   .nut-action-sheet__subdesc {
     display: block;
-    font-size: $actionsheet-item-subdesc-font-size;
+    font-size: vars.$actionsheet-item-subdesc-font-size;
     color: #999;
   }
 
@@ -71,6 +71,6 @@
 
   .nut-action-sheet__cancel {
     margin-top: 5px;
-    border-top: $actionsheet-item-cancel-border-top;
+    border-top: vars.$actionsheet-item-cancel-border-top;
   }
 }

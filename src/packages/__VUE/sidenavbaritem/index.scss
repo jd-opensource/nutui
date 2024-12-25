@@ -1,20 +1,22 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-side-navbar-item {
-    background-color: $dark-background2;
+    background-color: vars.$dark-background2;
     &__title {
-      background-color: $dark-background2;
-      color: $dark-color;
+      background-color: vars.$dark-background2;
+      color: vars.$dark-color;
     }
   }
 }
 .nut-side-navbar-item {
-  height: $sidenavbar-item-height;
-  line-height: $sidenavbar-item-line-height;
+  height: vars.$sidenavbar-item-height;
+  line-height: vars.$sidenavbar-item-line-height;
   display: block;
-  font-size: $sidenavbar-item-font-size;
-  background-color: $sidenavbar-item-title-bg-color;
+  font-size: vars.$sidenavbar-item-font-size;
+  background-color: vars.$sidenavbar-item-title-bg-color;
   &__title {
-    color: $sidenavbar-item-title-color;
-    background-color: $sidenavbar-item-title-bg-color;
+    color: vars.$sidenavbar-item-title-color;
+    background-color: vars.$sidenavbar-item-title-bg-color;
   }
 }

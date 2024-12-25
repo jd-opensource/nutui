@@ -1,51 +1,53 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-input-number {
     &__icon {
-      color: $dark-color;
+      color: vars.$dark-color;
       &--disabled {
-        color: $dark-color-gray;
+        color: vars.$dark-color-gray;
       }
     }
     input,
     &__text--readonly {
-      background-color: $dark-background;
-      color: $dark-color;
-      border: 1px solid $dark-color-gray;
+      background-color: vars.$dark-background;
+      color: vars.$dark-color;
+      border: 1px solid vars.$dark-color-gray;
     }
     &--disabled {
       input {
-        color: $dark-color-gray;
+        color: vars.$dark-color-gray;
       }
     }
   }
 }
 .nut-input-number {
-  display: $inputnumber-display;
+  display: vars.$inputnumber-display;
   align-items: center;
-  border: $inputnumber-border;
-  border-radius: $inputnumber-border-radius;
-  height: $inputnumber-height;
-  line-height: $inputnumber-line-height;
-  box-sizing: $inputnumber-border-box;
+  border: vars.$inputnumber-border;
+  border-radius: vars.$inputnumber-border-radius;
+  height: vars.$inputnumber-height;
+  line-height: vars.$inputnumber-line-height;
+  box-sizing: vars.$inputnumber-border-box;
 
   &--disabled {
     input {
-      color: $inputnumber-icon-void-color;
+      color: vars.$inputnumber-icon-void-color;
     }
   }
 
   &__icon {
     display: flex;
     align-items: center;
-    color: $inputnumber-icon-color;
+    color: vars.$inputnumber-icon-color;
     .nut-icon {
-      width: $inputnumber-icon-size;
-      height: $inputnumber-icon-size;
-      font-size: $inputnumber-icon-size;
+      width: vars.$inputnumber-icon-size;
+      height: vars.$inputnumber-icon-size;
+      font-size: vars.$inputnumber-icon-size;
     }
     cursor: pointer;
     &--disabled {
-      color: $inputnumber-icon-void-color;
+      color: vars.$inputnumber-icon-void-color;
       cursor: not-allowed;
     }
   }
@@ -58,19 +60,19 @@
   input,
   &__text--readonly,
   &__text--input {
-    width: $inputnumber-input-width;
+    width: vars.$inputnumber-input-width;
     height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none;
-    border: $inputnumber-input-border;
-    font-size: $inputnumber-input-font-size;
-    color: $inputnumber-input-font-color;
-    margin: $inputnumber-input-margin;
-    background-color: $inputnumber-input-background-color;
-    border-radius: $inputnumber-input-border-radius;
+    border: vars.$inputnumber-input-border;
+    font-size: vars.$inputnumber-input-font-size;
+    color: vars.$inputnumber-input-font-color;
+    margin: vars.$inputnumber-input-margin;
+    background-color: vars.$inputnumber-input-background-color;
+    border-radius: vars.$inputnumber-input-border-radius;
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {

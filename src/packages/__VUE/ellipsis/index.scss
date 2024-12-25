@@ -1,8 +1,10 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-ellipsis {
   display: flex;
   .nut-ellipsis__text {
     cursor: hand;
-    color: $ellipsis-expand-collapse-color;
+    color: vars.$ellipsis-expand-collapse-color;
     display: inline;
   }
 

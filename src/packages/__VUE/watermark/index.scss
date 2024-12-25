@@ -1,6 +1,8 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-watermark {
   position: absolute;
-  z-index: $watermark-z-index;
+  z-index: vars.$watermark-z-index;
   left: 0;
   right: 0;
   top: 0;

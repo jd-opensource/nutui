@@ -1,7 +1,9 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-cell {
-    background: $dark-background2;
-    color: $dark-color;
+    background: vars.$dark-background2;
+    color: vars.$dark-color;
     box-shadow: none;
   }
 }
@@ -9,13 +11,13 @@
   position: relative;
   display: flex;
   width: 100%;
-  line-height: $cell-line-height;
-  padding: $cell-padding;
-  background: $cell-background;
-  border-radius: $cell-border-radius;
-  box-shadow: $cell-box-shadow;
-  font-size: $cell-title-font;
-  color: $cell-color;
+  line-height: vars.$cell-line-height;
+  padding: vars.$cell-padding;
+  background: vars.$cell-background;
+  border-radius: vars.$cell-border-radius;
+  box-shadow: vars.$cell-box-shadow;
+  font-size: vars.$cell-title-font;
+  color: vars.$cell-color;
   margin: 10px 0;
   box-sizing: border-box;
 
@@ -24,10 +26,10 @@
   }
 
   &--large {
-    font-size: $cell-large-title-font;
-    padding: $cell-large-padding;
+    font-size: vars.$cell-large-title-font;
+    padding: vars.$cell-large-padding;
     .nut-cell__title-desc {
-      font-size: $cell-large-title-desc-font;
+      font-size: vars.$cell-large-title-desc-font;
     }
   }
 
@@ -42,7 +44,7 @@
     box-sizing: border-box;
     content: ' ';
     pointer-events: none;
-    right: $cell-after-right;
+    right: vars.$cell-after-right;
     bottom: 0;
     left: 16px;
     transform: scaleY(0.5);
@@ -59,9 +61,9 @@
       left: 50%;
       width: 100%;
       height: 100%;
-      background-color: $black;
+      background-color: vars.$black;
       border: inherit;
-      border-color: $black;
+      border-color: vars.$black;
       border-radius: inherit;
       transform: translate(-50%, -50%);
       opacity: 0;
@@ -72,7 +74,7 @@
   &__icon {
     display: flex;
     flex-direction: row;
-    margin: $cell-default-icon-margin;
+    margin: vars.$cell-default-icon-margin;
     align-items: center;
   }
 
@@ -82,17 +84,17 @@
     flex: 1;
     min-width: 80px;
     &-desc {
-      font-size: $cell-title-desc-font;
+      font-size: vars.$cell-title-desc-font;
     }
   }
   &__value {
     display: inline-block;
     text-align: right;
     flex: 1;
-    font-size: $cell-desc-font;
-    color: $cell-desc-color;
+    font-size: vars.$cell-desc-font;
+    color: vars.$cell-desc-color;
     &--alone {
-      color: $cell-color;
+      color: vars.$cell-color;
     }
   }
   &__link {

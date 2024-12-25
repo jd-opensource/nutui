@@ -1,20 +1,21 @@
+@use '../../styles/variables.scss' as vars;
 .nut-theme-dark {
   .nut-category {
     &__cateList {
-      background: $dark-background2;
+      background: vars.$dark-background2;
     }
 
     &__cateListLeft {
-      background: $dark-background4;
+      background: vars.$dark-background4;
     }
     &__cateListItem {
-      color: $dark-color-gray;
+      color: vars.$dark-color-gray;
     }
     &__cateListItemChecked {
-      color: $dark-color;
-      background: $dark-background2;
+      color: vars.$dark-color;
+      background: vars.$dark-background2;
       &::before {
-        background: $category-list-item-checked-img-bg-color;
+        background: vars.$category-list-item-checked-img-bg-color;
       }
     }
   }
@@ -22,11 +23,11 @@
 .nut-category {
   &__cateList {
     display: flex;
-    background: $category-bg-color;
+    background: vars.$category-bg-color;
   }
 
   &__cateListLeft {
-    background: $category-list-left-bg-color;
+    background: vars.$category-list-left-bg-color;
   }
 
   &__cateListItemChecked,
@@ -35,14 +36,14 @@
     height: 50px;
     font-size: 13px;
     font-weight: normal;
-    color: $category-list-item-color;
+    color: vars.$category-list-item-color;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
   }
   &__cateListItemChecked {
-    background: $category-list-item-checked-color;
+    background: vars.$category-list-item-checked-color;
     font-weight: 500;
     transition: all 0.3s;
     position: relative;
@@ -52,7 +53,7 @@
       left: 0;
       width: 5px;
       height: 18px;
-      background: $category-list-item-checked-img-bg-color;
+      background: vars.$category-list-item-checked-img-bg-color;
     }
   }
 }

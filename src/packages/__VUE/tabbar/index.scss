@@ -1,19 +1,21 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-tabbar {
-    background: $dark-background;
+    background: vars.$dark-background;
   }
 }
 .nut-tabbar {
   border: 0px;
-  box-shadow: $tabbar-box-shadow;
-  border-bottom: $tabbar-border-bottom;
-  border-top: $tabbar-border-top;
+  box-shadow: vars.$tabbar-box-shadow;
+  border-bottom: vars.$tabbar-border-bottom;
+  border-top: vars.$tabbar-border-top;
   width: 100%;
   display: flex;
   align-items: center;
   box-sizing: content-box;
-  background: $white;
-  height: $tabbar-height;
+  background: vars.$white;
+  height: vars.$tabbar-height;
 
   &:last-child {
     border-right: 0;

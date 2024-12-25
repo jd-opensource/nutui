@@ -1,29 +1,31 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-cell-group {
   display: block;
   &__title {
     display: inherit;
-    padding: $cell-group-title-padding;
-    color: $cell-group-title-color;
-    font-size: $cell-group-title-font-size;
-    line-height: $cell-group-title-line-height;
+    padding: vars.$cell-group-title-padding;
+    color: vars.$cell-group-title-color;
+    font-size: vars.$cell-group-title-font-size;
+    line-height: vars.$cell-group-title-line-height;
     margin-top: 30px;
     margin-bottom: 10px;
   }
   &__desc {
     display: inherit;
-    padding: $cell-group-desc-padding;
-    color: $cell-group-desc-color;
-    font-size: $cell-group-desc-font-size;
-    line-height: $cell-group-desc-line-height;
+    padding: vars.$cell-group-desc-padding;
+    color: vars.$cell-group-desc-color;
+    font-size: vars.$cell-group-desc-font-size;
+    line-height: vars.$cell-group-desc-line-height;
     margin-top: 10px;
     margin-bottom: 10px;
   }
   &__wrap {
     display: inherit;
-    border-radius: $cell-border-radius;
-    box-shadow: $cell-box-shadow;
+    border-radius: vars.$cell-border-radius;
+    box-shadow: vars.$cell-box-shadow;
     overflow: hidden;
-    background-color: $cell-group-background-color;
+    background-color: vars.$cell-group-background-color;
     margin: 10px 0;
     .nut-cell {
       margin: 0;
@@ -33,7 +35,7 @@
   }
   .nut-cell {
     &::after {
-      border-bottom: $cell-after-border-bottom;
+      border-bottom: vars.$cell-after-border-bottom;
     }
   }
 }

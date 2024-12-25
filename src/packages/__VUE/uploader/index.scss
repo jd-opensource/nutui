@@ -1,13 +1,15 @@
-@import '../progress/index.scss';
-@import '../button/index.scss';
+// @import '../progress/index.scss';
+// @import '../button/index.scss';
+@use '../../styles/mixins/index.scss' as *;
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-uploader__preview-list {
-    background: $dark-background2;
-    color: $dark-color;
+    background: vars.$dark-background2;
+    color: vars.$dark-color;
   }
   .close {
-    color: $dark-color !important;
+    color: vars.$dark-color !important;
   }
 }
 .nut-uploader {
@@ -21,9 +23,9 @@
 
   &__upload {
     position: relative;
-    background: $uploader-background;
-    width: $uploader-picture-width;
-    height: $uploader-picture-height;
+    background: vars.$uploader-background;
+    width: vars.$uploader-picture-width;
+    height: vars.$uploader-picture-height;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +66,7 @@
       align-items: center;
       justify-content: center;
       &__msg {
-        color: $white;
+        color: vars.$white;
         font-size: 12px;
         margin-top: 6px;
       }
@@ -115,8 +117,8 @@
     }
     &-img {
       position: relative;
-      width: $uploader-picture-width;
-      height: $uploader-picture-height;
+      width: vars.$uploader-picture-width;
+      height: vars.$uploader-picture-height;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -138,7 +140,7 @@
         align-items: center;
         justify-content: center;
         font-size: 12px;
-        color: $white;
+        color: vars.$white;
         height: 0px;
         transition: height 0.3s;
         background: rgba(0, 0, 0, 0.54);
@@ -161,7 +163,7 @@
           display: flex;
           width: 100%;
           font-size: 12px;
-          color: $text-color;
+          color: vars.$text-color;
           padding: 10px;
           height: 100%;
           overflow: hidden;

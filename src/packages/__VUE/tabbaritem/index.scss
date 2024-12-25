@@ -1,9 +1,10 @@
-@import '../badge/index.scss';
+// @import '../badge/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-tabbar-item {
     &__icon--unactive {
-      color: $dark-color-gray;
+      color: vars.$dark-color-gray;
     }
   }
 }
@@ -11,14 +12,14 @@
   flex: 1;
   text-align: center;
   text-decoration: none;
-  color: $primary-color;
+  color: vars.$primary-color;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__icon--unactive {
-    color: $black;
+    color: vars.$black;
   }
 
   &_icon-box {
@@ -36,15 +37,15 @@
 
     &_tips {
       position: absolute;
-      background: $tabbar-active-color;
-      border: 1px solid $white;
+      background: vars.$tabbar-active-color;
+      border: 1px solid vars.$white;
       border-radius: 7px;
       text-align: center;
       top: -2px;
       right: -7px;
-      box-shadow: 0 0 0 1px $white;
-      font-size: $font-size-1;
-      color: $white;
+      box-shadow: 0 0 0 1px vars.$white;
+      font-size: vars.$font-size-1;
+      color: vars.$white;
       z-index: 1;
     }
     &_icon {
@@ -57,13 +58,13 @@
       }
     }
     &_nav-word {
-      font-size: $tabbar-item-text-font-size;
-      line-height: $tabbar-item-text-line-height;
-      margin-top: $tabbar-word-margin-top;
+      font-size: vars.$tabbar-item-text-font-size;
+      line-height: vars.$tabbar-item-text-line-height;
+      margin-top: vars.$tabbar-word-margin-top;
       display: block;
     }
     &_big-word {
-      font-size: $font-size-large;
+      font-size: vars.$font-size-large;
       line-height: 1;
     }
   }

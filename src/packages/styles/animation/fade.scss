@@ -1,3 +1,4 @@
+@use '../mixins/index' as *;
 @keyframes nutFadeIn {
   from {
     opacity: 0;

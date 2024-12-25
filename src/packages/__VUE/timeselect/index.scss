@@ -1,19 +1,19 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-time-select {
-    background-color: $dark-background2;
+    background-color: vars.$dark-background2;
     &__title {
-      background-color: $dark-background2;
-      color: $dark-color;
+      background-color: vars.$dark-background2;
+      color: vars.$dark-color;
     }
     &__content {
       &__pannel {
-        background-color: $dark-background3;
-        color: $dark-color;
+        background-color: vars.$dark-background3;
+        color: vars.$dark-color;
       }
       &__detail {
-        background-color: $dark-background2;
+        background-color: vars.$dark-background2;
       }
     }
   }
@@ -25,12 +25,12 @@
   overflow: hidden;
   &__title {
     display: flex;
-    width: $timeselect-title-width;
-    height: $timeselect-title-height;
-    line-height: $timeselect-title-line-height;
+    width: vars.$timeselect-title-width;
+    height: vars.$timeselect-title-height;
+    line-height: vars.$timeselect-title-line-height;
     padding-bottom: 10px;
-    font-size: $timeselect-title-font-size;
-    color: $timeselect-title-color;
+    font-size: vars.$timeselect-title-font-size;
+    color: vars.$timeselect-title-color;
     text-align: center;
     &__fixed {
       width: 100%;
@@ -39,13 +39,13 @@
   }
   &__content {
     width: 100%;
-    height: calc(100% - $timeselect-title-height - 10px);
+    height: calc(100% - vars.$timeselect-title-height - 10px);
     display: flex;
     &__pannel {
       width: 140px;
       height: 100%;
       overflow: auto;
-      background-color: $timeselect-pannel-bg-color;
+      background-color: vars.$timeselect-pannel-bg-color;
     }
     &__detail {
       width: calc(100% - 140px);

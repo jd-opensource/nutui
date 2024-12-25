@@ -1,4 +1,5 @@
-@import '../avatar/index.scss';
+// @import '../avatar/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-skeleton {
   display: inline-block;
@@ -9,7 +10,7 @@
     display: flex;
     .avatarClass {
       margin-right: 20px;
-      background-color: $skeleton-content-avatar-background-color;
+      background-color: vars.$skeleton-content-avatar-background-color;
     }
 
     .nut-skeleton-content__line {
@@ -19,7 +20,7 @@
       .nut-skeleton-blockLine {
         width: 100%;
         margin-bottom: 10px;
-        background-color: $skeleton-content-line-background-color;
+        background-color: vars.$skeleton-content-line-background-color;
       }
       .nut-skeleton-blockTitle {
         width: 30%;
@@ -46,7 +47,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: $skeleton-animation-background-color;
+    background: vars.$skeleton-animation-background-color;
     background-repeat: no-repeat;
     animation: backpos 2s ease-in-out 0s infinite;
   }

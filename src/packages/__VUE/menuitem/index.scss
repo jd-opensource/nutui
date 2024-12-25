@@ -1,30 +1,30 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-menu-item__content {
     .nut-menu-item__option {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
 
 .nut-menu-item {
   position: fixed;
-  z-index: $menu-bar-opened-z-index;
+  z-index: vars.$menu-bar-opened-z-index;
   left: 0;
   right: 0;
   height: 100vh;
   overflow: hidden;
 
   .active {
-    font-weight: $menu-active-item-font-weight;
-    color: $menu-item-active-text-color !important;
+    font-weight: vars.$menu-active-item-font-weight;
+    color: vars.$menu-item-active-text-color !important;
   }
 }
 
 .nut-menu-item__content {
-  padding: $menu-item-content-padding;
-  max-height: $menu-item-content-max-height;
+  padding: vars.$menu-item-content-padding;
+  max-height: vars.$menu-item-content-max-height;
   display: flex;
   flex-wrap: wrap;
   &.nut-menu-item__overflow {
@@ -36,17 +36,17 @@
   }
 
   .nut-menu-item__option {
-    color: $title-color;
-    font-size: $font-size-2;
-    padding-top: $menu-item-option-padding-top;
-    padding-bottom: $menu-item-option-padding-bottom;
+    color: vars.$title-color;
+    font-size: vars.$font-size-2;
+    padding-top: vars.$menu-item-option-padding-top;
+    padding-bottom: vars.$menu-item-option-padding-bottom;
     display: flex;
     align-items: center;
 
     .nut-menu-item__span {
       display: flex;
       align-items: center;
-      margin-right: $menu-item-option-i-margin-right;
+      margin-right: vars.$menu-item-option-i-margin-right;
     }
   }
 }
@@ -55,6 +55,6 @@
   position: fixed;
   left: 0;
   right: 0;
-  z-index: $menu-bar-opened-z-index;
+  z-index: vars.$menu-bar-opened-z-index;
   background-color: transparent;
 }

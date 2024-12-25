@@ -1,9 +1,11 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-calendarcard {
-  background: $white;
+  background: vars.$white;
   border-radius: 12px;
   overflow: hidden;
-  font-size: $calendar-base-font;
-  color: $black;
+  font-size: vars.$calendar-base-font;
+  color: vars.$black;
 
   &-header {
     display: flex;
@@ -62,30 +64,30 @@
     }
 
     &.weekend {
-      color: $calendar-choose-color;
+      color: vars.$calendar-choose-color;
     }
 
     &.mid {
-      background-color: $calendar-choose-background-color;
-      color: $calendar-choose-color;
+      background-color: vars.$calendar-choose-background-color;
+      color: vars.$calendar-choose-color;
     }
 
     &.active,
     &.start,
     &.end {
-      background-color: $primary-color;
-      color: $white;
+      background-color: vars.$primary-color;
+      color: vars.$white;
     }
 
     .nut-calendar-day-info {
-      color: $calendar-primary-color;
+      color: vars.$calendar-primary-color;
     }
 
     // 上个月、下个月
     &.prev,
     &.next,
     &.disabled {
-      color: $calendar-disable-color;
+      color: vars.$calendar-disable-color;
       cursor: not-allowed;
     }
   }

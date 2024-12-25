@@ -1,5 +1,7 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-countdown {
-  display: $countdown-display;
-  color: $countdown-color;
-  font-size: $countdown-font-size;
+  display: vars.$countdown-display;
+  color: vars.$countdown-color;
+  font-size: vars.$countdown-font-size;
 }

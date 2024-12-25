@@ -1,28 +1,28 @@
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-calendar {
-    background: $dark-background;
-    color: $dark-color;
+    background: vars.$dark-background;
+    color: vars.$dark-color;
     .nut-calendar__header {
-      background: $dark-background;
-      color: $dark-color;
+      background: vars.$dark-background;
+      color: vars.$dark-color;
     }
     .nut-calendar__content {
       .nut-calendar__panel {
         .nut-calendar__days {
           .calendar-month-day {
             &-choose {
-              background-color: $dark-calendar-choose-color;
-              color: $calendar-choose-font-color;
+              background-color: vars.$dark-calendar-choose-color;
+              color: vars.$calendar-choose-font-color;
             }
           }
         }
       }
     }
     .nut-calendar__footer {
-      background: $dark-background2;
-      color: $dark-color;
+      background: vars.$dark-background2;
+      color: vars.$dark-color;
     }
   }
 }
@@ -32,14 +32,14 @@
   flex: 1;
   color: #333333;
   font-size: 16px;
-  background-color: $white;
+  background-color: vars.$white;
   overflow: hidden;
   height: 100%;
   flex-direction: column;
   &.nut-calendar--nopop {
     .nut-calendar__header {
       .nut-calendar__header-title {
-        font-size: $calendar-base-font;
+        font-size: vars.$calendar-base-font;
       }
     }
   }
@@ -59,11 +59,11 @@
     flex-direction: column;
     text-align: center;
     padding-top: 1px;
-    background-color: $white;
+    background-color: vars.$white;
 
     .nut-calendar__header-title {
-      font-size: $calendar-title-font;
-      font-weight: $calendar-title-font-weight;
+      font-size: vars.$calendar-title-font;
+      font-weight: vars.$calendar-title-font-weight;
       line-height: 44px;
     }
     .nut-calendar__header-slot {
@@ -72,7 +72,7 @@
     .nut-calendar__header-subtitle {
       padding: 7px 0;
       line-height: 22px;
-      font-size: $calendar-sub-title-font;
+      font-size: vars.$calendar-sub-title-font;
     }
 
     .nut-calendar__weekdays {
@@ -85,7 +85,7 @@
 
       .nut-calendar__weekday {
         &.weekend {
-          color: $calendar-day67-font-color;
+          color: vars.$calendar-day67-font-color;
         }
       }
     }
@@ -125,15 +125,15 @@
         top: -50px;
         left: 0;
         right: 0;
-        font-size: $calendar-text-font;
-        color: $text-color;
+        font-size: vars.$calendar-text-font;
+        color: vars.$text-color;
       }
 
       .nut-calendar__month-title {
         height: 23px;
         line-height: 23px;
         margin: 8px 0;
-        font-size: $calendar-month-title-font-size;
+        font-size: vars.$calendar-month-title-font-size;
       }
 
       .nut-calendar__days {
@@ -142,7 +142,7 @@
           float: left;
           width: 14.28%;
           height: 64px;
-          font-weight: $calendar-day-font-weight;
+          font-weight: vars.$calendar-day-font-weight;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -150,7 +150,7 @@
           position: relative;
 
           &.weekend {
-            color: $calendar-day67-font-color;
+            color: vars.$calendar-day67-font-color;
           }
 
           .nut-calendar__day-tips {
@@ -171,7 +171,7 @@
             width: 100%;
             font-size: 12px;
             line-height: 14px;
-            color: $calendar-primary-color;
+            color: vars.$calendar-primary-color;
           }
           .nut-calendar__day-tips--top {
             top: 6px;
@@ -180,9 +180,9 @@
             bottom: 6px;
           }
           &--active {
-            background-color: $calendar-primary-color;
-            color: $white !important;
-            border-radius: $calendar-day-active-border-radius;
+            background-color: vars.$calendar-primary-color;
+            color: vars.$white !important;
+            border-radius: vars.$calendar-day-active-border-radius;
 
             .nut-calendar__day-tips {
               visibility: hidden;
@@ -191,23 +191,23 @@
               visibility: hidden;
             }
             .nut-calendar__day-tip {
-              color: $white;
+              color: vars.$white;
             }
           }
 
           &--disabled {
-            color: $calendar-disable-color !important;
+            color: vars.$calendar-disable-color !important;
           }
 
           &--choose {
-            color: $calendar-choose-font-color;
+            color: vars.$calendar-choose-font-color;
             &::after {
               position: absolute;
               top: 0;
               right: 0;
               bottom: 0;
               left: 0;
-              background-color: $calendar-choose-color;
+              background-color: vars.$calendar-choose-color;
               opacity: 0.09;
               content: '';
             }
@@ -215,7 +215,7 @@
 
           .nut-calendar__day-value {
             padding: 2px 0;
-            font-size: $calendar-day-font;
+            font-size: vars.$calendar-day-font;
           }
         }
       }
@@ -227,15 +227,15 @@
     display: flex;
     height: 62px;
     width: 100%;
-    background-color: $white;
+    background-color: vars.$white;
 
     .nut-calendar__confirm {
       height: 44px;
       width: 100%;
       margin: 10px 18px;
       border-radius: 22px;
-      background: $button-primary-background-color;
-      color: $white;
+      background: vars.$button-primary-background-color;
+      color: vars.$white;
       text-align: center;
       line-height: 44px;
     }

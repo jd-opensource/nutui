@@ -1,6 +1,8 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-empty {
-    background: $dark-background;
+    background: vars.$dark-background;
   }
 }
 
@@ -10,11 +12,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: $empty-padding;
+  padding: vars.$empty-padding;
 
   &__box {
-    width: $empty-image-size;
-    height: $empty-image-size;
+    width: vars.$empty-image-size;
+    height: vars.$empty-image-size;
 
     .img {
       width: 100%;
@@ -30,10 +32,10 @@
   }
 
   &__description {
-    margin-top: $empty-description-margin-top;
-    padding: $empty-description-padding;
-    color: $empty-description-color;
-    font-size: $empty-description-font-size;
-    line-height: $empty-description-line-height;
+    margin-top: vars.$empty-description-margin-top;
+    padding: vars.$empty-description-padding;
+    color: vars.$empty-description-color;
+    font-size: vars.$empty-description-font-size;
+    line-height: vars.$empty-description-line-height;
   }
 }

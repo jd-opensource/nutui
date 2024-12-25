@@ -1,12 +1,14 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-input {
-    background: $dark-background;
+    background: vars.$dark-background;
     &__label {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
     .input-text,
     &__text--readonly {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -29,14 +31,14 @@ textarea {
   padding: 10px 25px;
   display: flex;
   line-height: 20px;
-  background: $white;
-  font-size: $input-font-size;
+  background: vars.$white;
+  font-size: vars.$input-font-size;
   box-sizing: border-box;
   &.center {
     align-items: center;
   }
   &--border {
-    border-bottom: 1px solid $input-border-bottom;
+    border-bottom: 1px solid vars.$input-border-bottom;
   }
 
   .input-text,
@@ -54,7 +56,7 @@ textarea {
     flex: 1;
   }
   .input-text {
-    font-size: $input-font-size;
+    font-size: vars.$input-font-size;
     // height: auto;
     // min-height: auto;
   }
@@ -126,24 +128,24 @@ textarea {
     &::before {
       position: absolute;
       left: 14px;
-      color: $input-required-color;
+      color: vars.$input-required-color;
       content: '*';
     }
   }
   &--disabled {
-    color: $input-disabled-color !important;
+    color: vars.$input-disabled-color !important;
     input:disabled {
       background: none;
-      color: $input-disabled-color;
+      color: vars.$input-disabled-color;
       cursor: not-allowed;
       opacity: 1;
-      -webkit-text-fill-color: $input-disabled-color;
+      -webkit-text-fill-color: vars.$input-disabled-color;
     }
   }
   &--error,
   &--error::placeholder {
-    color: $input-required-color;
-    -webkit-text-fill-color: $input-required-color;
+    color: vars.$input-required-color;
+    -webkit-text-fill-color: vars.$input-required-color;
   }
 }
 

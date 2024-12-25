@@ -1,26 +1,28 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-pagination {
     &-prev,
     &-item,
     &-next {
-      background: $dark-background;
-      border-color: $dark-color-gray;
+      background: vars.$dark-background;
+      border-color: vars.$dark-color-gray;
     }
     &-simple {
-      background: $dark-background;
+      background: vars.$dark-background;
     }
     .simple-border {
-      border-color: $dark-color-gray;
+      border-color: vars.$dark-color-gray;
     }
     .disabled {
-      background: $dark-background;
+      background: vars.$dark-background;
     }
   }
 }
 .nut-pagination {
   display: flex;
-  font-size: $pagination-font-size;
-  color: $pagination-color;
+  font-size: vars.$pagination-font-size;
+  color: vars.$pagination-color;
   &-contain {
     display: flex;
   }
@@ -40,9 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $white;
-    border-radius: $pagination-item-border-radius;
-    border: $pagination-item-border-width solid $pagination-item-border-color;
+    background: vars.$white;
+    border-radius: vars.$pagination-item-border-radius;
+    border: vars.$pagination-item-border-width solid vars.$pagination-item-border-color;
     cursor: pointer;
   }
   &-prev,
@@ -51,19 +53,19 @@
   }
   &-prev,
   &-next {
-    padding: $pagination-prev-next-padding;
+    padding: vars.$pagination-prev-next-padding;
   }
   .simple-border {
-    border-right: $pagination-item-border-width solid $pagination-item-border-color;
+    border-right: vars.$pagination-item-border-width solid vars.$pagination-item-border-color;
   }
   .active {
-    color: $white;
+    color: vars.$white;
     border: none;
-    background: $pagination-active-background-color;
+    background: vars.$pagination-active-background-color;
   }
   .disabled {
-    color: $pagination-disable-color;
-    background-color: $pagination-disable-background-color;
+    color: vars.$pagination-disable-color;
+    background-color: vars.$pagination-disable-background-color;
     cursor: not-allowed;
   }
 }

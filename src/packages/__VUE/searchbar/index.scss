@@ -1,32 +1,34 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-searchbar {
-    background: $dark-background;
+    background: vars.$dark-background;
     &__search-label {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
     .nut-searchbar__input-clear {
       & .nut-searchbar__nut-icon-mask-close {
-        color: $dark-color;
+        color: vars.$dark-color;
         &:hover {
           cursor: pointer;
-          color: $dark-color;
+          color: vars.$dark-color;
         }
       }
     }
     &__right-search-icon,
     &__left-search-icon {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
 .nut-searchbar {
   display: flex;
   align-items: center;
-  width: $searchbar-width;
-  padding: $searchbar-padding;
-  background: $searchbar-background;
+  width: vars.$searchbar-width;
+  padding: vars.$searchbar-padding;
+  background: vars.$searchbar-background;
   box-sizing: border-box;
-  color: $searchbar-input-bar-color;
+  color: vars.$searchbar-input-bar-color;
 
   &.safe-area-inset-bottom {
     position: relative;
@@ -40,12 +42,12 @@
       width: 100%;
       height: constant(safe-area-inset-bottom);
       height: env(safe-area-inset-bottom);
-      background: $searchbar-background;
+      background: vars.$searchbar-background;
     }
   }
 
   &::placeholder {
-    color: $searchbar-input-bar-placeholder-color;
+    color: vars.$searchbar-input-bar-placeholder-color;
   }
 
   &__search-label {
@@ -55,13 +57,13 @@
   &__search-input {
     display: flex;
     align-items: center;
-    width: $searchbar-input-width;
-    height: $searchbar-input-height;
+    width: vars.$searchbar-input-width;
+    height: vars.$searchbar-input-height;
     flex: 1;
-    padding: $searchbar-input-padding;
-    border-radius: $searchbar-input-border-radius;
-    box-shadow: $searchbar-input-box-shadow;
-    background: $searchbar-input-background;
+    padding: vars.$searchbar-input-padding;
+    border-radius: vars.$searchbar-input-border-radius;
+    box-shadow: vars.$searchbar-input-box-shadow;
+    background: vars.$searchbar-input-background;
     box-sizing: border-box;
 
     &.square {
@@ -167,6 +169,6 @@
   &__right-search-icon {
     margin-left: 16px;
     font-size: 14px;
-    color: $searchbar-right-out-color;
+    color: vars.$searchbar-right-out-color;
   }
 }

@@ -1,17 +1,19 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-range-container {
-    background: $dark-background;
+    background: vars.$dark-background;
     .nut-range-min,
     .nut-range-max {
-      color: $dark-color-gray;
+      color: vars.$dark-color-gray;
     }
     .nut-range {
       &-mark-text {
-        color: $dark-color-gray;
+        color: vars.$dark-color-gray;
       }
       &-button {
         .number {
-          color: $dark-color;
+          color: vars.$dark-color;
         }
       }
     }
@@ -25,8 +27,8 @@
   align-items: center;
   .nut-range-min,
   .nut-range-max {
-    font-size: $font-size-1;
-    color: $range-tip-font-color;
+    font-size: vars.$font-size-1;
+    color: vars.$range-tip-font-color;
     user-select: none;
   }
   &-vertical {
@@ -84,7 +86,7 @@
         transform: translateY(-50%);
         &-active {
           .nut-range-tick {
-            background: $range-bar-bg-color;
+            background: vars.$range-bar-bg-color;
           }
         }
       }
@@ -96,7 +98,7 @@
         height: 11px;
         margin-left: -0px;
         border-radius: 50%;
-        background-color: $range-bg-color-tick;
+        background-color: vars.$range-bg-color-tick;
       }
     }
   }
@@ -116,7 +118,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $range-bg-color;
+    background-color: vars.$range-bg-color;
     opacity: 0.5;
     content: '';
   }
@@ -126,19 +128,19 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: $range-bar-bg-color;
+    background: vars.$range-bar-bg-color;
     border-radius: inherit;
     transition: all 0.2s;
   }
 
   &-button {
     display: block;
-    width: $range-bar-btn-width;
-    height: $range-bar-btn-height;
-    background-color: $range-bar-btn-bg-color;
+    width: vars.$range-bar-btn-width;
+    height: vars.$range-bar-btn-height;
+    background-color: vars.$range-bar-btn-bg-color;
     border-radius: 50%;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    border: $range-bar-btn-border;
+    border: vars.$range-bar-btn-border;
     outline: none;
 
     &-wrapper,
@@ -167,8 +169,8 @@
       align-items: center;
       justify-content: center;
       user-select: none;
-      font-size: $font-size-1;
-      color: $range-tip-font-color;
+      font-size: vars.$font-size-1;
+      color: vars.$range-tip-font-color;
       transform: translate3d(0, -100%, 0);
     }
   }
@@ -207,7 +209,7 @@
     transform: translateX(-50%);
     &-active {
       .nut-range-tick {
-        background: $range-bar-bg-color;
+        background: vars.$range-bar-bg-color;
       }
     }
   }
@@ -219,6 +221,6 @@
     // margin-left: -11px;
     left: 0px;
     border-radius: 50%;
-    background-color: $range-bg-color-tick;
+    background-color: vars.$range-bg-color-tick;
   }
 }

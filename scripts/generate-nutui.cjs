@@ -27,7 +27,7 @@ config.nav.map((item) => {
         methods.push(`show${name}`)
       }
     }
-    importScssStr += `import './__VUE/${name.toLowerCase()}/index.scss'\n`
+    importScssStr += `@use './__VUE/${name.toLowerCase()}/index.scss' as ${name.toLowerCase()}\n`
     if (exclude != true) {
       packages.push(name)
     }

@@ -1,10 +1,13 @@
+@use '../../styles/mixins/index.scss' as *;
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-menu {
     .nut-menu__bar {
-      background-color: $dark-background;
+      background-color: vars.$dark-background;
 
       .nut-menu__item {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
     }
   }
@@ -13,35 +16,35 @@
 .nut-menu {
   &.scroll-fixed {
     position: fixed;
-    top: $menu-scroll-fixed-top;
-    z-index: $menu-scroll-fixed-z-index;
+    top: vars.$menu-scroll-fixed-top;
+    z-index: vars.$menu-scroll-fixed-z-index;
     width: 100%;
   }
 
   .nut-menu__bar {
     position: relative;
     display: flex;
-    line-height: $menu-bar-line-height;
-    background-color: $white;
-    box-shadow: $menu-bar-box-shadow;
+    line-height: vars.$menu-bar-line-height;
+    background-color: vars.$white;
+    box-shadow: vars.$menu-bar-box-shadow;
 
     &.opened {
-      z-index: $menu-bar-opened-z-index;
+      z-index: vars.$menu-bar-opened-z-index;
     }
 
     .nut-menu__item {
       flex: 1;
       text-align: center;
-      font-size: $menu-item-font-size;
-      color: $menu-item-text-color;
+      font-size: vars.$menu-item-font-size;
+      color: vars.$menu-item-text-color;
       min-width: 0;
 
       &.active {
-        color: $menu-item-active-text-color;
+        color: vars.$menu-item-active-text-color;
       }
 
       &.disabled {
-        color: $menu-item-disabled-color;
+        color: vars.$menu-item-disabled-color;
       }
 
       .nut-menu__title-icon {
@@ -58,8 +61,8 @@
         .nut-menu__title-text {
           @include text-ellipsis;
           display: block;
-          padding-left: $menu-title-text-padding-left;
-          padding-right: $menu-title-text-padding-right;
+          padding-left: vars.$menu-title-text-padding-left;
+          padding-right: vars.$menu-title-text-padding-right;
         }
 
         &.active .nut-menu__title-icon {

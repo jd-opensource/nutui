@@ -1,33 +1,35 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-table {
     &__main {
-      color: $dark-color;
-      background-color: $dark-background2;
+      color: vars.$dark-color;
+      background-color: vars.$dark-background2;
       &--striped {
         .nut-table__main__head {
           &__tr {
-            background-color: $dark-background3;
+            background-color: vars.$dark-background3;
           }
         }
         .nut-table__main__body {
           &__tr:nth-child(odd) {
-            background-color: $dark-color-gray;
+            background-color: vars.$dark-color-gray;
           }
         }
         .nut-table__main__body {
           &__tr:nth-child(even) {
-            background-color: $dark-background3;
+            background-color: vars.$dark-background3;
           }
         }
       }
     }
     &__summary {
-      color: $dark-color;
-      background-color: $dark-background;
+      color: vars.$dark-color;
+      background-color: vars.$dark-background;
     }
     &__nodata {
-      color: $dark-color;
-      background-color: $dark-background;
+      color: vars.$dark-color;
+      background-color: vars.$dark-background;
     }
   }
 }
@@ -35,7 +37,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  font-size: $font-size-2;
+  font-size: vars.$font-size-2;
   &__main {
     display: table;
     width: 100%;
@@ -44,17 +46,17 @@
     &--striped {
       .nut-table__main__head {
         &__tr {
-          background-color: $table-tr-even-bg-color;
+          background-color: vars.$table-tr-even-bg-color;
         }
       }
       .nut-table__main__body {
         &__tr:nth-child(odd) {
-          background-color: $table-tr-odd-bg-color;
+          background-color: vars.$table-tr-odd-bg-color;
         }
       }
       .nut-table__main__body {
         &__tr:nth-child(even) {
-          background-color: $table-tr-even-bg-color;
+          background-color: vars.$table-tr-even-bg-color;
         }
       }
     }
@@ -64,11 +66,11 @@
         display: table-row;
         &__th {
           display: table-cell;
-          padding: $table-cols-padding;
+          padding: vars.$table-cols-padding;
         }
         &__td {
           display: table-cell;
-          padding: $table-cols-padding;
+          padding: vars.$table-cols-padding;
           &__nodata {
             display: flex;
             height: 50px;
@@ -77,7 +79,7 @@
           }
         }
         &--border {
-          border: 1px solid $table-border-color;
+          border: 1px solid vars.$table-border-color;
         }
         &--alignleft,
         &--align {
@@ -102,13 +104,13 @@
     display: flex;
     align-items: center;
     height: 30px;
-    padding: $table-cols-padding;
+    padding: vars.$table-cols-padding;
   }
   &__nodata {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;
-    padding: $table-cols-padding;
+    padding: vars.$table-cols-padding;
   }
 }

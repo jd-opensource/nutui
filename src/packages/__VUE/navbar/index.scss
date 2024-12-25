@@ -1,9 +1,11 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-navbar {
-    background: $dark-background;
-    color: $dark-color;
+    background: vars.$dark-background;
+    color: vars.$dark-color;
     .title {
-      color: $dark-color;
+      color: vars.$dark-color;
     }
   }
 }
@@ -11,13 +13,13 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: $navbar-height;
+  height: vars.$navbar-height;
   box-sizing: border-box;
-  padding: $navbar-padding;
-  background: $navbar-background;
-  box-shadow: $navbar-box-shadow;
-  font-size: $navbar-title-base-font;
-  color: $navbar-color;
+  padding: vars.$navbar-padding;
+  background: vars.$navbar-background;
+  box-shadow: vars.$navbar-box-shadow;
+  font-size: vars.$navbar-title-base-font;
+  color: vars.$navbar-color;
   overflow: hidden;
   &:active::before {
     opacity: 0.1;
@@ -41,8 +43,8 @@
   }
   &--fixed {
     &.nut-navbar--safe-area-inset-top {
-      height: calc($navbar-height + constant(safe-area-inset-top));
-      height: calc($navbar-height + env(safe-area-inset-top));
+      height: calc(vars.$navbar-height + constant(safe-area-inset-top));
+      height: calc(vars.$navbar-height + env(safe-area-inset-top));
     }
   }
   &--clickable {
@@ -53,9 +55,9 @@
       left: 50%;
       width: 100%;
       height: 100%;
-      background-color: $black;
+      background-color: vars.$black;
       border: inherit;
-      border-color: $black;
+      border-color: vars.$black;
       border-radius: inherit;
       transform: translate(-50%, -50%);
       opacity: 0;
@@ -76,10 +78,10 @@
     justify-content: center;
     align-items: center;
     .title {
-      min-width: $navbar-title-width;
-      font-size: $navbar-title-font;
-      font-weight: $navbar-title-font-weight;
-      color: $navbar-title-font-color;
+      min-width: vars.$navbar-title-width;
+      font-size: vars.$navbar-title-font;
+      font-weight: vars.$navbar-title-font-weight;
+      color: vars.$navbar-title-font-color;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 1;
@@ -87,7 +89,7 @@
     }
     &.icon {
       .icon {
-        margin: $navbar-title-icon-margin;
+        margin: vars.$navbar-title-icon-margin;
       }
     }
     .icon {
@@ -97,7 +99,7 @@
       display: inline;
     }
     &-desc {
-      font-size: $cell-title-desc-font;
+      font-size: vars.$cell-title-desc-font;
     }
     .text__title {
       display: inline-block;
@@ -111,8 +113,8 @@
   &__left {
     position: absolute;
     left: 0;
-    font-size: $cell-desc-font;
-    color: $cell-desc-color;
+    font-size: vars.$cell-desc-font;
+    color: vars.$cell-desc-color;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -121,8 +123,8 @@
   &__right {
     position: absolute;
     right: 0;
-    font-size: $cell-desc-font;
-    color: $cell-desc-color;
+    font-size: vars.$cell-desc-font;
+    color: vars.$cell-desc-color;
     display: flex;
     align-items: center;
     padding: 0 16px;

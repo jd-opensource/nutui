@@ -20,9 +20,10 @@ export default defineConfig((env: ConfigEnv) => ({
   css: {
     preprocessorOptions: {
       scss: {
-        // example : additionalData: `@import "./src/design/styles/variables";`
+        api: 'modern', // 启用现代 Sass API
+        // example : additionalData: `@use "./src/design/styles/index" as *;`
         // dont need include file extend .scss
-        additionalData: `@import "@/packages/styles/variables.scss";@import "@/sites/assets/styles/variables.scss";`
+        additionalData: `@use "@/packages/styles/index.scss" as *;@use "@/sites/assets/styles/index.scss" as *;`
       }
     },
     postcss: {

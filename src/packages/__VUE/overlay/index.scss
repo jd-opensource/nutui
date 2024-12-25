@@ -1,3 +1,6 @@
+// @use "../../styles/variables" as *;
+@use '../../styles/variables' as vars;
+
 .overlay-fade-enter-active,
 .overlay-fade-leave-active {
   transition-property: opacity;
@@ -15,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: $overlay-bg-color;
+  background: vars.$overlay-bg-color;
 }
 
 .nut-overflow-hidden {

@@ -1,38 +1,38 @@
-@import '../inputnumber/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-ecard {
-    color: $dark-color3;
+    color: vars.$dark-color3;
 
     ::placeholder {
       color: rgb(29, 31, 32);
     }
 
     .nut-ecard__list__item {
-      background: $dark-background5;
+      background: vars.$dark-background5;
 
       &.active {
-        background: $dark-background6;
-        outline: 1px solid $dark-color2;
-        color: $dark-color2;
+        background: vars.$dark-background6;
+        outline: 1px solid vars.$dark-color2;
+        color: vars.$dark-color2;
       }
     }
 
     .nut-ecard__list__input {
-      color: $dark-color3;
-      background: $dark-background7;
+      color: vars.$dark-color3;
+      background: vars.$dark-background7;
 
       &.active {
-        background: $dark-background7;
+        background: vars.$dark-background7;
 
         > view > input {
-          background: $dark-background7;
+          background: vars.$dark-background7;
         }
       }
 
       .nut-ecard__list__input--con > input {
         background-color: transparent;
-        color: $dark-color3;
+        color: vars.$dark-color3;
       }
     }
   }
@@ -56,7 +56,7 @@
     &__item {
       width: 48%;
       height: 46px;
-      background: $ecard-bg-color;
+      background: vars.$ecard-bg-color;
       border-radius: 4px;
       margin-bottom: 12px;
       display: flex;
@@ -64,8 +64,8 @@
       align-items: center;
 
       &.active {
-        background: $white;
-        outline: 1px solid $primary-color;
+        background: vars.$white;
+        outline: 1px solid vars.$primary-color;
         border-radius: 4px;
       }
     }
@@ -73,7 +73,7 @@
     &__input {
       width: 100%;
       height: 46px;
-      background: $ecard-bg-color;
+      background: vars.$ecard-bg-color;
       color: rgba(0, 0, 0, 0.8);
       border-radius: 4px;
       display: flex;
@@ -88,7 +88,7 @@
         justify-content: flex-end;
 
         input {
-          caret-color: $primary-color; //光标颜色
+          caret-color: vars.$primary-color; //光标颜色
           text-align: right;
           background: transparent;
           margin-right: 10px;
@@ -98,7 +98,7 @@
         }
 
         .nut-ecard-input {
-          caret-color: $primary-color; //光标颜色
+          caret-color: vars.$primary-color; //光标颜色
           text-align: right;
           background: transparent;
           margin-right: 10px;
@@ -109,11 +109,11 @@
       }
 
       &.active {
-        background: $white;
-        outline: 1px solid $primary-color;
+        background: vars.$white;
+        outline: 1px solid vars.$primary-color;
 
         > view > input {
-          background: $white;
+          background: vars.$white;
         }
       }
     }
@@ -125,7 +125,7 @@
       justify-content: space-between;
       font-size: 20px;
       font-weight: normal;
-      color: $primary-color;
+      color: vars.$primary-color;
     }
   }
 }

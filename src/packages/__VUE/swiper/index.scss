@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-swiper {
   position: relative;
   display: flex;
@@ -22,10 +24,10 @@
     bottom: 12px;
     transform: translateX(-50%);
     i {
-      width: $swiper-pagination-item-width;
-      height: $swiper-pagination-item-height;
-      margin-right: $swiper-pagination-item-margin-right;
-      border-radius: $swiper-pagination-item-border-radius;
+      width: vars.$swiper-pagination-item-width;
+      height: vars.$swiper-pagination-item-height;
+      margin-right: vars.$swiper-pagination-item-margin-right;
+      border-radius: vars.$swiper-pagination-item-border-radius;
       &:last-child {
         margin-right: 0;
       }

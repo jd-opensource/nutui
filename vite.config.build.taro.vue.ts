@@ -12,9 +12,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // example : additionalData: `@import "./src/design/styles/variables";`
+        api: 'modern', // 启用现代 Sass API
+        // example : additionalData: `@use "./src/design/styles/index" as *;`
         // dont need include file extend .scss
-        additionalData: `@import "@/packages/styles/variables.scss";@import "@/sites/assets/styles/variables.scss";`
+        additionalData: `@use "@/packages/styles/index.scss" as *; @use "@/sites/assets/styles/index.scss" as *;`
       }
     }
   },
@@ -24,14 +25,14 @@ export default defineConfig({
         compilerOptions: {
           isCustomElement: (tag) => {
             return (
-              tag.startsWith('taro-') ||
-              tag.startsWith('scroll-view') ||
-              tag.startsWith('swiper') ||
-              tag.startsWith('swiper-item') ||
-              tag.startsWith('scroll-view') ||
-              tag.startsWith('picker') ||
-              tag.startsWith('picker-view') ||
-              tag.startsWith('picker-view-column')
+              tag.startsWith('taro-')
+              || tag.startsWith('scroll-view')
+              || tag.startsWith('swiper')
+              || tag.startsWith('swiper-item')
+              || tag.startsWith('scroll-view')
+              || tag.startsWith('picker')
+              || tag.startsWith('picker-view')
+              || tag.startsWith('picker-view-column')
             )
           },
           whitespace: 'preserve'

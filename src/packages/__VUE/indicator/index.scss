@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-indicator {
   &--block {
     display: block;
@@ -25,24 +27,24 @@
   &--dot {
     display: inline-block;
     vertical-align: middle;
-    width: $indicator-dot-size;
-    height: $indicator-dot-size;
+    width: vars.$indicator-dot-size;
+    height: vars.$indicator-dot-size;
     border-radius: 50%;
-    background-color: $indicator-dot-color;
+    background-color: vars.$indicator-dot-color;
   }
   &--number {
     display: inline-block;
     position: relative;
-    width: $indicator-size;
-    height: $indicator-size;
+    width: vars.$indicator-size;
+    height: vars.$indicator-size;
     text-align: center;
-    font-size: $indicator-number-font-size;
-    line-height: $indicator-size;
-    color: $indicator-color;
+    font-size: vars.$indicator-number-font-size;
+    line-height: vars.$indicator-size;
+    color: vars.$indicator-color;
     vertical-align: middle;
-    border: 1px solid $indicator-color;
+    border: 1px solid vars.$indicator-color;
     border-radius: 50%;
-    background-color: $indicator-bg-color;
-    box-shadow: 0 0 1px 1px $indicator-bg-color;
+    background-color: vars.$indicator-bg-color;
+    box-shadow: 0 0 1px 1px vars.$indicator-bg-color;
   }
 }

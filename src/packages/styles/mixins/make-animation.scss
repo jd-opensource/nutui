@@ -1,3 +1,4 @@
+@use '../variables' as *;
 @mixin make-animation($keyframeName, $timingFun: $animation-timing-fun, $duration: $animation-duration) {
   .#{$keyframeName}-enter-active,
   .#{$keyframeName}In,

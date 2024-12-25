@@ -1,5 +1,5 @@
-@import 'highlight.scss';
-
+@use 'index.scss' as *;
+@use 'sass:color';
 .doc-content-document {
   position: relative;
   min-width: 1000px;
@@ -22,11 +22,11 @@
     -webkit-font-smoothing: auto;
 
     &:hover {
-      color: darken($nutui-doc-blue, 10%);
+      color: color.scale($nutui-doc-blue, $lightness: -10%, $space: hsl); // 降低亮度 10%
     }
 
     &:active {
-      color: darken($nutui-doc-blue, 20%);
+      color: color.scale($nutui-doc-blue, $lightness: -20%, $space: hsl); // 降低亮度 20%
     }
   }
 

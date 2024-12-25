@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-step {
   flex-grow: 0;
   flex-shrink: 0;
@@ -17,15 +19,15 @@
     right: -50%;
     display: inline-block;
     height: 1px;
-    background: $steps-base-line-color;
+    background: vars.$steps-base-line-color;
   }
   &-icon {
     position: relative;
     display: flex;
-    width: $steps-base-icon-width;
-    height: $steps-base-icon-height;
-    line-height: $steps-base-icon-line-height;
-    font-size: $steps-base-icon-font-size;
+    width: vars.$steps-base-icon-width;
+    height: vars.$steps-base-icon-height;
+    line-height: vars.$steps-base-icon-line-height;
+    font-size: vars.$steps-base-icon-font-size;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -35,8 +37,8 @@
       align-items: center;
     }
     .nut-icon {
-      width: $steps-base-icon-font-size;
-      height: $steps-base-icon-font-size;
+      width: vars.$steps-base-icon-font-size;
+      height: vars.$steps-base-icon-font-size;
     }
     &.is-icon {
       border-radius: 50%;
@@ -52,14 +54,14 @@
   }
   &-title {
     display: block;
-    margin-bottom: $steps-base-title-margin-bottom;
-    font-size: $steps-base-title-font-size;
-    color: $steps-base-title-color;
+    margin-bottom: vars.$steps-base-title-margin-bottom;
+    font-size: vars.$steps-base-title-font-size;
+    color: vars.$steps-base-title-color;
   }
   &-content {
     display: block;
-    font-size: $steps-base-content-font-size;
-    color: $steps-base-content-color;
+    font-size: vars.$steps-base-content-font-size;
+    color: vars.$steps-base-content-color;
   }
   &:last-child {
     .nut-step-line {
@@ -68,45 +70,45 @@
   }
   &.nut-step-finish {
     .nut-step-head {
-      color: $steps-finish-head-color;
-      border-color: $steps-finish-head-border-color;
+      color: vars.$steps-finish-head-color;
+      border-color: vars.$steps-finish-head-border-color;
     }
     .nut-step-icon.is-icon {
-      background-color: $steps-finish-icon-text-color;
+      background-color: vars.$steps-finish-icon-text-color;
     }
     .nut-step-line {
-      background: $steps-finish-line-background;
+      background: vars.$steps-finish-line-background;
     }
     .nut-step-title {
-      color: $steps-finish-title-color;
+      color: vars.$steps-finish-title-color;
     }
   }
   &.nut-step-process {
     .nut-step-head {
-      color: $steps-process-head-color;
-      border-color: $steps-process-head-border-color;
+      color: vars.$steps-process-head-color;
+      border-color: vars.$steps-process-head-border-color;
     }
     .nut-step-icon.is-icon {
-      background-color: $steps-process-icon-text-color;
+      background-color: vars.$steps-process-icon-text-color;
     }
     .nut-step-title {
-      color: $steps-process-title-color;
+      color: vars.$steps-process-title-color;
     }
   }
   &.nut-step-wait {
     .nut-step-head {
-      color: $steps-wait-head-color;
-      border-color: $steps-wait-head-border-color;
+      color: vars.$steps-wait-head-color;
+      border-color: vars.$steps-wait-head-border-color;
     }
     .nut-step-icon.is-icon {
-      background-color: $steps-wait-icon-bg-color;
-      color: $steps-wait-icon-text-color;
+      background-color: vars.$steps-wait-icon-bg-color;
+      color: vars.$steps-wait-icon-text-color;
       .nut-icon {
-        color: $steps-wait-icon-color;
+        color: vars.$steps-wait-icon-color;
       }
     }
     .nut-step-content {
-      color: $steps-wait-content-color;
+      color: vars.$steps-wait-content-color;
     }
   }
 }
@@ -123,27 +125,27 @@
     .nut-step-icon {
       width: 8px;
       height: 8px;
-      background: $primary-color;
+      background: vars.$primary-color;
       border-radius: 50%;
       box-sizing: content-box;
     }
     .nut-step-wait {
       .nut-step-icon {
-        background-color: $steps-wait-icon-bg-color;
+        background-color: vars.$steps-wait-icon-bg-color;
       }
       .nut-step-content {
-        color: $steps-wait-content-color;
+        color: vars.$steps-wait-content-color;
       }
     }
     .nut-step-finish {
       .nut-step-icon {
-        background-color: $primary-color;
+        background-color: vars.$primary-color;
       }
     }
     .nut-step-process {
       .nut-step-icon {
         position: relative;
-        background-color: $primary-color;
+        background-color: vars.$primary-color;
         &:before {
           content: '';
           display: inline-block;
@@ -154,7 +156,7 @@
           margin-top: -7px;
           width: 14px;
           height: 14px;
-          background-color: $primary-color-end;
+          background-color: vars.$primary-color-end;
           border-radius: 50%;
           opacity: 0.23;
         }
@@ -192,27 +194,27 @@
     .nut-step-icon {
       width: 8px;
       height: 8px;
-      background: $primary-color;
+      background: vars.$primary-color;
       border-radius: 50%;
       box-sizing: content-box;
     }
     .nut-step-wait {
       .nut-step-icon {
-        background-color: $steps-wait-icon-bg-color;
+        background-color: vars.$steps-wait-icon-bg-color;
       }
       .nut-step-content {
-        color: $steps-wait-content-color;
+        color: vars.$steps-wait-content-color;
       }
     }
     .nut-step-finish {
       .nut-step-icon {
-        background-color: $primary-color;
+        background-color: vars.$primary-color;
       }
     }
     .nut-step-process {
       .nut-step-icon {
         position: relative;
-        background-color: $primary-color;
+        background-color: vars.$primary-color;
         &:before {
           content: '';
           display: inline-block;
@@ -223,7 +225,7 @@
           margin-top: -7px;
           width: 14px;
           height: 14px;
-          background-color: $primary-color-end;
+          background-color: vars.$primary-color-end;
           border-radius: 50%;
           opacity: 0.23;
         }

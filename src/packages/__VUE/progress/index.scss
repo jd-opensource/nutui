@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-progress {
   width: 100%;
   position: relative;
@@ -5,14 +7,14 @@
   align-items: center;
   .nut-progress-outer {
     flex: 1;
-    background-color: $progress-outer-background-color;
-    border-radius: $progress-outer-border-radius;
+    background-color: vars.$progress-outer-background-color;
+    border-radius: vars.$progress-outer-border-radius;
     height: 10px;
     .nut-progress-inner {
       width: 30%;
       height: 100%;
-      border-radius: $progress-outer-border-radius;
-      background: $progress-inner-background-color;
+      border-radius: vars.$progress-outer-border-radius;
+      background: vars.$progress-inner-background-color;
       -webkit-transition: all 0.4s;
       transition: all 0.4s;
       // position: relative;
@@ -36,7 +38,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border-radius: $progress-outer-border-radius;
+        border-radius: vars.$progress-outer-border-radius;
         animation: progressActive 2s ease-in-out infinite;
       }
     }
@@ -55,30 +57,30 @@
       }
     }
     &.nut-progress-small {
-      height: $progress-small-height;
+      height: vars.$progress-small-height;
       .nut-progress-text {
-        font-size: $progress-small-text-font-size;
-        line-height: $progress-small-text-line-height;
-        padding: $progress-small-text-padding;
-        // top: $progress-small-text-top;
+        font-size: vars.$progress-small-text-font-size;
+        line-height: vars.$progress-small-text-line-height;
+        padding: vars.$progress-small-text-padding;
+        // top: vars.$progress-small-text-top;
         top: 50%;
       }
     }
     &.nut-progress-base {
-      height: $progress-base-height;
+      height: vars.$progress-base-height;
       .nut-progress-text {
-        font-size: $progress-base-text-font-size;
-        line-height: $progress-base-text-line-height;
-        padding: $progress-base-text-padding;
+        font-size: vars.$progress-base-text-font-size;
+        line-height: vars.$progress-base-text-line-height;
+        padding: vars.$progress-base-text-padding;
         top: 50%;
       }
     }
     &.nut-progress-large {
-      height: $progress-large-height;
+      height: vars.$progress-large-height;
       .nut-progress-text {
-        font-size: $progress-large-text-font-size;
-        line-height: $progress-large-text-line-height;
-        padding: $progress-large-text-padding;
+        font-size: vars.$progress-large-text-font-size;
+        line-height: vars.$progress-large-text-line-height;
+        padding: vars.$progress-large-text-padding;
         top: 50%;
       }
     }
@@ -95,9 +97,9 @@
     align-items: center;
   }
   .nut-progress-insidetext {
-    padding: $progress-insidetext-padding;
-    background: $progress-insidetext-background;
-    border-radius: $progress-insidetext-border-radius;
+    padding: vars.$progress-insidetext-padding;
+    background: vars.$progress-insidetext-background;
+    border-radius: vars.$progress-insidetext-border-radius;
     position: absolute;
     transition: all 0.4s;
     top: 50%;

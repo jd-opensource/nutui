@@ -1,20 +1,22 @@
+@use '../../styles/variables.scss' as vars;
+
 .nut-theme-dark {
   .nut-radio {
     &__label {
-      color: $dark-color;
+      color: vars.$dark-color;
 
       &--disabled {
-        color: $radio-label-disable-color;
+        color: vars.$radio-label-disable-color;
       }
     }
 
     &__button {
-      background: $dark-background;
-      color: $dark-color;
+      background: vars.$dark-background;
+      color: vars.$dark-color;
 
       &--disabled {
-        color: $radio-label-disable-color;
-        border: 1px solid $radio-label-disable-color;
+        color: vars.$radio-label-disable-color;
+        border: 1px solid vars.$radio-label-disable-color;
       }
     }
   }
@@ -35,7 +37,7 @@
     flex-direction: row-reverse;
 
     .nut-radio__label {
-      margin-right: $radio-label-margin-left;
+      margin-right: vars.$radio-label-margin-left;
       margin-left: 0;
     }
   }
@@ -43,18 +45,18 @@
   &__button {
     display: inline-flex;
     align-items: center;
-    padding: $radio-button-padding;
-    font-size: $radio-button-font-size;
+    padding: vars.$radio-button-padding;
+    font-size: vars.$radio-button-font-size;
     background: #f6f7f9;
-    border-radius: $radio-button-border-radius;
-    color: $radio-label-font-color;
+    border-radius: vars.$radio-button-border-radius;
+    color: vars.$radio-label-font-color;
     box-sizing: border-box;
     border: 1px solid #f6f7f9;
 
     &--active {
       background: transparent;
-      color: $radio-label-font-active-color;
-      border: 1px solid $radio-label-button-border-color;
+      color: vars.$radio-label-font-active-color;
+      border: 1px solid vars.$radio-label-button-border-color;
       position: relative;
 
       &::after {
@@ -65,61 +67,61 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $radio-label-button-background;
-        border-radius: $radio-button-border-radius;
+        background-color: vars.$radio-label-button-background;
+        border-radius: vars.$radio-button-border-radius;
         opacity: 0.05;
         content: '';
       }
     }
 
     &--disabled {
-      color: $radio-label-disable-color;
+      color: vars.$radio-label-disable-color;
       border: none;
     }
 
     &--large {
-      height: $button-large-height;
-      line-height: $button-large-line-height;
-      font-size: $button-large-font-size;
+      height: vars.$button-large-height;
+      line-height: vars.$button-large-line-height;
+      font-size: vars.$button-large-font-size;
     }
 
     &--small {
-      height: $button-small-height;
-      line-height: $button-small-line-height;
-      padding: $button-small-padding;
-      font-size: $button-small-font-size;
+      height: vars.$button-small-height;
+      line-height: vars.$button-small-line-height;
+      padding: vars.$button-small-padding;
+      font-size: vars.$button-small-font-size;
     }
 
     &--mini {
-      height: $button-mini-height;
-      line-height: $button-mini-line-height;
-      padding: $button-mini-padding;
-      font-size: $button-mini-font-size;
+      height: vars.$button-mini-height;
+      line-height: vars.$button-mini-line-height;
+      padding: vars.$button-mini-padding;
+      font-size: vars.$button-mini-font-size;
     }
   }
 
   &__label {
     flex: 1;
-    margin-left: $radio-label-margin-left;
-    font-size: $radio-label-font-size;
-    color: $radio-label-font-color;
+    margin-left: vars.$radio-label-margin-left;
+    font-size: vars.$radio-label-font-size;
+    color: vars.$radio-label-font-color;
 
     &--disabled {
-      color: $radio-label-disable-color;
+      color: vars.$radio-label-disable-color;
     }
   }
 
   &__icon {
-    color: $radio-label-font-active-color;
+    color: vars.$radio-label-font-active-color;
     transition-duration: 0.3s;
     transition-property: color, border-color, background-color;
   }
 
   &__icon--unchecked {
-    color: $radio-icon-disable-color;
+    color: vars.$radio-icon-disable-color;
   }
 
   &__icon--disable {
-    color: $radio-icon-disable-color2;
+    color: vars.$radio-icon-disable-color2;
   }
 }

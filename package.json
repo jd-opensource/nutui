@@ -75,7 +75,7 @@
     "@nutui/icons-vue": "^0.1.1",
     "@nutui/icons-vue-taro": "^0.0.9",
     "@nutui/touch-emulator": "workspace:^",
-    "sass": "^1.77.6",
+    "sass": "^1.83.0",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
@@ -109,7 +109,7 @@
     "rimraf": "^6.0.0",
     "typescript": "^5.4.5",
     "unplugin-vue-components": "^0.27.2",
-    "vite": "^5.3.2",
+    "vite": "^5.4.11",
     "vite-plugin-vue-devtools": "^7.2.1",
     "vitest": "^2.0.1",
     "vitest-canvas-mock": "^0.3.3",

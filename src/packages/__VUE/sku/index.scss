@@ -1,20 +1,18 @@
-@import '../price/index.scss';
-@import '../inputnumber/index.scss';
-@import '../popup/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-sku {
-    background: $dark-background;
+    background: vars.$dark-background;
 
     &-select {
       &-item {
         &-title {
-          color: $dark-color;
+          color: vars.$dark-color;
         }
         &-skus {
           &-sku {
-            color: $dark-color;
-            background: $dark-background2;
+            color: vars.$dark-color;
+            background: vars.$dark-background2;
           }
         }
       }
@@ -22,21 +20,21 @@
 
     &-stepper {
       &-title {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
       &-limit {
-        color: $dark-color;
+        color: vars.$dark-color;
       }
       &-count {
         &-lowestBuy {
-          color: $primary-color;
+          color: vars.$primary-color;
         }
       }
     }
 
     &-operate {
       &-btn {
-        background: $dark-background2;
+        background: vars.$dark-background2;
       }
     }
   }
@@ -47,7 +45,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px;
-  background: $white;
+  background: vars.$white;
   &-header {
     height: 100px;
     display: flex;
@@ -55,11 +53,11 @@
     margin-top: 18px;
     padding: 0 18px;
     .nut-sku-header-img {
-      width: $sku-product-img-width;
-      height: $sku-product-img-height;
+      width: vars.$sku-product-img-width;
+      height: vars.$sku-product-img-height;
       flex-shrink: 0;
       margin-right: 12px;
-      border-radius: $sku-product-img-border-radius;
+      border-radius: vars.$sku-product-img-border-radius;
     }
     &-right {
       flex: 1;
@@ -68,7 +66,7 @@
       justify-content: flex-end;
       &-extra {
         font-size: 12px;
-        color: $text-color;
+        color: vars.$text-color;
       }
     }
   }
@@ -88,31 +86,31 @@
       flex-direction: column;
       &-title {
         height: 13px;
-        font-weight: $sku-spec-title-font-weight;
-        font-size: $sku-spec-title-font-size;
-        color: $sku-spec-title-color;
-        margin-bottom: $sku-spec-title-margin-bottom;
+        font-weight: vars.$sku-spec-title-font-weight;
+        font-size: vars.$sku-spec-title-font-size;
+        color: vars.$sku-spec-title-color;
+        margin-bottom: vars.$sku-spec-title-margin-bottom;
       }
       &-skus {
         display: flex;
         flex-wrap: wrap;
         &-sku {
-          margin-right: $sku-spec-margin-right;
-          height: $sku-spec-height;
-          line-height: $sku-spec-line-height;
-          padding: $sku-spec-padding;
+          margin-right: vars.$sku-spec-margin-right;
+          height: vars.$sku-spec-height;
+          line-height: vars.$sku-spec-line-height;
+          padding: vars.$sku-spec-padding;
           border-radius: 15px;
-          font-size: $sku-spec-font-size;
-          color: $sku-spec-color;
+          font-size: vars.$sku-spec-font-size;
+          color: vars.$sku-spec-color;
           flex-shrink: 0;
           margin-bottom: 12px;
-          background: $sku-spec-background;
+          background: vars.$sku-spec-background;
           border: 1px solid rgba(242, 242, 242, 1);
 
           &.active {
             background: transparent;
-            border: $sku-item-border;
-            color: $primary-color;
+            border: vars.$sku-item-border;
+            color: vars.$primary-color;
             position: relative;
             &::after {
               position: absolute;
@@ -123,14 +121,14 @@
               width: 100%;
               height: 100%;
               border-radius: 15px;
-              background-color: $sku-item-active-bg;
+              background-color: vars.$sku-item-active-bg;
               opacity: 0.15;
               content: '';
             }
           }
           &.disable {
-            color: $text-color;
-            text-decoration: $sku-item-disable-line;
+            color: vars.$text-color;
+            text-decoration: vars.$sku-item-disable-line;
           }
         }
       }
@@ -143,7 +141,7 @@
     &-title {
       font-weight: bold;
       font-size: 13px;
-      color: $black;
+      color: vars.$black;
       margin-right: 12px;
     }
     &-limit {
@@ -152,14 +150,14 @@
       align-items: center;
 
       font-size: 12px;
-      color: $text-color;
+      color: vars.$text-color;
     }
     &-count {
       display: flex;
       align-items: center;
       &-lowestBuy {
         font-size: 12px;
-        color: $primary-color;
+        color: vars.$primary-color;
       }
     }
   }
@@ -175,33 +173,33 @@
       font-size: 12px;
     }
     &-btn {
-      height: $sku-operate-btn-height;
+      height: vars.$sku-operate-btn-height;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: $white;
+      background: vars.$white;
       text-align: center;
       padding: 0 18px;
       box-sizing: border-box;
-      border-top: $sku-operate-btn-border-top;
+      border-top: vars.$sku-operate-btn-border-top;
       &-item {
         width: 100%;
-        height: $sku-operate-btn-item-height;
-        line-height: $sku-operate-btn-item-line-height;
+        height: vars.$sku-operate-btn-item-height;
+        line-height: vars.$sku-operate-btn-item-line-height;
         margin-right: 18px;
-        background: $sku-opetate-bg-default;
+        background: vars.$sku-opetate-bg-default;
         border-radius: 21px;
-        font-size: $sku-operate-btn-item-font-size;
-        font-weight: $sku-operate-btn-item-font-weight;
-        color: $white;
+        font-size: vars.$sku-operate-btn-item-font-size;
+        font-weight: vars.$sku-operate-btn-item-font-weight;
+        color: vars.$white;
         &:last-child {
           margin-right: 0;
         }
       }
 
       &-buy {
-        background: $sku-opetate-bg-buy;
+        background: vars.$sku-opetate-bg-buy;
       }
     }
   }

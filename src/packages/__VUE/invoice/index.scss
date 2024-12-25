@@ -1,13 +1,9 @@
-@import '../button/index.scss';
-@import '../radiogroup/index.scss';
-@import '../radio/index.scss';
-@import '../form/index.scss';
-@import '../formitem/index.scss';
+@use '../../styles/variables.scss' as vars;
 
 .nut-theme-dark {
   .nut-invoice {
     .nut-invoice__submit {
-      background: $dark-background2;
+      background: vars.$dark-background2;
     }
   }
 }
@@ -22,7 +18,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: $invoice-padding;
+    padding: vars.$invoice-padding;
     display: flex;
     align-items: center;
     justify-content: center;
