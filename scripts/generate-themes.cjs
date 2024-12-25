@@ -6,14 +6,12 @@ const sass = require('sass')
 
 let sassFileStr = ``
 let tasks = []
-if (!target) {
-  sassFileStr += `@import '@nutui/icons-vue/dist/style_icon.css';\n`
-}
+
 config.nav.map((item) => {
   item.packages.forEach((element) => {
     let folderName = element.name.toLowerCase()
     if (element.exclude != true) {
-      sassFileStr += `@import '../../packages/${folderName}/index.scss';\n`
+      sassFileStr += `@use '../../packages/${folderName}/index.scss' as ${folderName};\n`
     }
     tasks.push(
       fs
@@ -27,6 +25,10 @@ config.nav.map((item) => {
     )
   })
 })
+// use指令必须在前面，否则会报错
+if (!target) {
+  sassFileStr += `@import '@nutui/icons-vue/dist/style_icon.css';\n`
+}
 
 tasks.push(fs.copy(path.resolve(__dirname, '../src/packages/styles'), path.resolve(__dirname, '../dist/styles')))
 
@@ -49,7 +51,7 @@ const sassTocss = () => {
           // 写入main.scss，引入变量文件variables.scss和组件样式index.scss
           fs.outputFile(
             filePath,
-            `@import '../../styles/variables.scss';\n@import './index.scss';\n`,
+            `@use '../../styles/variables.scss' as vars;\n@use './index.scss';\n`,
             'utf8',
             (error) => {
               if (error) return console.error(error)
@@ -101,11 +103,11 @@ const parseFile = (filename, theme = 'default') => {
       }
     })
 
-    let fileContent = `@import './${themesEnum[theme]}.scss';\n:root {\n`
+    let fileContent = `@use './${themesEnum[theme]}.scss' as vars;\n:root {\n`
     for (const key in variables) {
       if (Object.prototype.hasOwnProperty.call(variables, key)) {
         const variableName = key.slice(1)
-        fileContent += `  --nut-${variableName}: #{$${variableName}};\n`
+        fileContent += `  --nut-${variableName}: #{vars.$${variableName}};\n` // 使用 vars.$variableName
       }
     }
     fileContent += `}`
@@ -138,10 +140,10 @@ const variablesResolver = () => {
 
 Promise.all(tasks).then(() => {
   let themes = [
-    { file: 'default.scss', sourcePath: `@import '../variables.scss';` },
-    { file: 'jdt.scss', sourcePath: `@import '../variables-jdt.scss';` },
-    { file: 'jdb.scss', sourcePath: `@import '../variables-jdb.scss';` },
-    { file: 'jddkh.scss', sourcePath: `@import '../variables-jddkh.scss';` }
+    { file: 'default.scss', sourcePath: `@use '../variables.scss' as vars;` },
+    { file: 'jdt.scss', sourcePath: `@use '../variables-jdt.scss' as vars;` },
+    { file: 'jdb.scss', sourcePath: `@use '../variables-jdb.scss' as vars;` },
+    { file: 'jddkh.scss', sourcePath: `@use '../variables-jddkh.scss' as vars;` }
   ]
   tasks = []
   themes.forEach((item) => {
