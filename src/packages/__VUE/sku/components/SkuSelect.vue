@@ -19,15 +19,9 @@
 <script lang="ts">
 import { ref, watch, onMounted } from 'vue'
 import { createComponent } from '@/packages/utils/create'
-const { create } = createComponent('sku-select')
+import { SkuInfo } from '../type'
 
-interface SkuInfo {
-  name: string
-  id: number
-  active: boolean
-  disable: boolean
-  [props: string]: any
-}
+const { create } = createComponent('sku-select')
 export default create({
   props: {
     sku: {

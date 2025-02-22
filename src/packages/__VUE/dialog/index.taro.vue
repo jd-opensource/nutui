@@ -69,7 +69,7 @@ export default create({
     ...popupProps,
     closeOnClickOverlay: {
       type: Boolean,
-      default: true
+      default: false
     },
     title: {
       type: String,

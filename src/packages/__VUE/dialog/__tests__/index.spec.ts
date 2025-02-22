@@ -63,7 +63,8 @@ test('Dialog: header slot', async () => {
 test('Dialog: closeOnClickOverlay', async () => {
   const wrapper1 = mount(Dialog, {
     props: {
-      visible: true
+      visible: true,
+      closeOnClickOverlay: true
     }
   })
   const wrapper2 = mount(Dialog, {

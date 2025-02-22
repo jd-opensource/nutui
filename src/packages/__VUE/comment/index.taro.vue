@@ -50,17 +50,7 @@ import CommentHeader from './components/CmtHeader.taro.vue'
 import CommentImages from './components/CmtImages.taro.vue'
 import CommentBottom from './components/CmtBottom.taro.vue'
 import { useLocale } from '@/packages/utils/useLocale'
-
-interface VideosType {
-  id?: number | string
-  mainUrl: string
-  videoUrl: string
-}
-interface ImagesType {
-  smallImgUrl: string
-  bigImgUrl: string
-  imgUrl: string
-}
+import { VideosType, ImagesType } from './type'
 
 const { create } = createComponent('comment')
 const cN = 'NutComment'

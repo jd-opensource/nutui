@@ -140,7 +140,7 @@ const verticalClick = () => {
 | title | 标题 | string | - |
 | content | 内容，支持 `HTML` 和组件 | string \| VNode | - |
 | teleport | 指定挂载节点 | string | `"body"` |
-| close-on-click-overlay | 点击蒙层是否关闭对话框 | boolean | `true` |
+| close-on-click-overlay | 点击蒙层是否关闭对话框 | boolean | `false` |
 | no-footer | 是否隐藏底部按钮栏 | boolean | `false` |
 | no-ok-btn | 是否隐藏确定按钮 | boolean | `false` |
 | no-cancel-btn | 是否隐藏取消按钮 | boolean | `false` |
@@ -148,7 +148,7 @@ const verticalClick = () => {
 | ok-text | 确定按钮文案 | string | `”确 定“` |
 | cancel-auto-close | 取消按钮是否默认关闭弹窗 | boolean | `true` |
 | ok-auto-close`4.2.1` | 确认按钮是否默认关闭弹窗 | boolean | `true` |
-| text-align | 文字对齐方向，可选值同 `css` 的 `text-align ` | string | `"center"` |
+| text-align | 文字对齐方向，可选值同 `css` 的 `text-align` | string | `"center"` |
 | close-on-popstate | 是否在页面回退时自动关闭 | boolean | `false` |
 | lock-scroll | 背景是否锁定 | boolean | `true` |
 | footer-direction | 使用横纵方向 可选值 `horizontal`、`vertical` | string | `horizontal` |

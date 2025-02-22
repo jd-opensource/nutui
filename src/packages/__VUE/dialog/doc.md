@@ -225,7 +225,7 @@ const teleportClick = (teleport) => {
 | title | 标题 | string | - |
 | content | 内容，支持 HTML 和组件 | string \| VNode |  |
 | teleport | 指定挂载节点 | string | `"body"` |
-| close-on-click-overlay | 点击蒙层是否关闭对话框 | boolean | `true` |
+| close-on-click-overlay | 点击蒙层是否关闭对话框 | boolean | `false` |
 | no-footer | 是否隐藏底部按钮栏 | boolean | `false` |
 | no-ok-btn | 是否隐藏确定按钮 | boolean | `false` |
 | no-cancel-btn | 是否隐藏取消按钮 | boolean | `false` |

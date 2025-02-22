@@ -94,7 +94,7 @@
 | [@nutui/icons-vue](https://github.com/jdf2e/nutui-icons) | `@nutui/nutui` 使用的图标库 | ![nutui](https://img.shields.io/npm/v/@nutui/icons-vue.svg?label=%20) |
 | [@nutui/icons-vue-taro](https://github.com/jdf2e/nutui-icons) | `@nutui/nutui-taro` 使用的图标库 | ![nutui](https://img.shields.io/npm/v/@nutui/icons-vue-taro.svg?label=%20) |
 | [@nutui/touch-emulator](packages/nutui-touch-emulator) | 在桌面端使用 NutUI 的辅助库 | ![nutui](https://img.shields.io/npm/v/@nutui/touch-emulator.svg?label=%20) |
-| [@nutui/auto-import-resolver](packages/nutui-auto-import-resolver) | `unplugin-auto-import` 插件的 reolver 配置 | ![nutui](https://img.shields.io/npm/v/@nutui/auto-import-resolver.svg?label=%20) |
+| [@nutui/auto-import-resolver](packages/nutui-auto-import-resolver) | `unplugin-auto-import` 插件的 resolver 配置 | ![nutui](https://img.shields.io/npm/v/@nutui/auto-import-resolver.svg?label=%20) |
 | [@nutui/playground](packages/nutui-playground) | NutUI 在线 Playground | - |
 | [nutui-demo](https://github.com/jdf2e/nutui-demo) | NutUI 官方示例合集 | - |
 

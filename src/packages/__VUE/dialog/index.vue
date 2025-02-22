@@ -69,7 +69,7 @@ export default create({
     ...popupProps,
     closeOnClickOverlay: {
       type: Boolean,
-      default: true
+      default: false
     },
     title: {
       type: String,
@@ -182,7 +182,10 @@ export default create({
     }
 
     const onClickOverlay = () => {
+      console.log(1)
+      console.log(props.closeOnClickOverlay)
       if (props.closeOnClickOverlay) {
+        console.log(2)
         closed('')
       }
     }

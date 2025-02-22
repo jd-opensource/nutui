@@ -20,7 +20,6 @@ import { ref, onMounted } from 'vue'
 import { createComponent } from '@/packages/utils/create'
 import NutInputNumber from '../../inputnumber'
 const { create } = createComponent('sku-stepper')
-
 export default create({
   props: {
     // 购买数量最大值
@@ -47,7 +46,6 @@ export default create({
     }
   },
   emits: ['click', 'changeSku', 'changeStepper', 'clickBtnOptions', 'overLimit', 'reduce', 'add'],
-
   components: {
     NutInputNumber
   },

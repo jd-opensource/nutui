@@ -11,7 +11,7 @@
       <view class="nut-comment-images__play"></view>
     </view>
     <!-- images -->
-    <template v-for="(itI, index) in images" :key="itI.id">
+    <template v-for="(itI, index) in images" :key="index">
       <view
         v-if="(type == 'multi' && videos.length + index < 9) || type != 'multi'"
         class="nut-comment-images__item nut-comment-images__item--imgbox"
@@ -37,16 +37,7 @@ import { createComponent } from '@/packages/utils/create'
 const { create } = createComponent('comment-images')
 import { Right } from '@nutui/icons-vue'
 
-interface VideosType {
-  id?: number | string
-  mainUrl: string
-  videoUrl: string
-}
-interface ImagesType {
-  smallImgUrl: string
-  bigImgUrl: string
-  imgUrl: string
-}
+import { VideosType, ImagesType } from '../type'
 export default create({
   props: {
     type: {
