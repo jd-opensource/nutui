@@ -25,6 +25,8 @@ app.use(Notify)
 <script setup>
 import { ref } from 'vue'
 import { showNotify } from '@nutui/nutui'
+// vite使用按引入插件时使用下边的引入方式
+// import '@nutui/nutui/dist/packages/notify/index.css'
 import '@nutui/nutui/dist/packages/notify/style'
 const baseNotify = (msg) => {
   showNotify.text(msg, {
