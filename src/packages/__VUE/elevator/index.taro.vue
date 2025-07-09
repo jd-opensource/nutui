@@ -32,10 +32,10 @@
       </view>
     </nut-scroll-view>
     <view v-show="scrollY > 2 && isSticky" class="nut-elevator__list__fixed">
-      <view class="nut-elevator__list__fixed-title">{{ indexList[currentIndex][acceptKey] }}</view>
+      <view class="nut-elevator__list__fixed-title">{{ indexList?.[currentIndex]?.[acceptKey] }}</view>
     </view>
     <view v-show="scrollStart" v-if="indexList.length > 0" class="nut-elevator__code--current">
-      {{ indexList[codeIndex][acceptKey] }}
+      {{ indexList?.[codeIndex]?.[acceptKey] }}
     </view>
     <view class="nut-elevator__bars" @touchstart="touchStart" @touchmove.stop.prevent="touchMove" @touchend="touchEnd">
       <view class="nut-elevator__bars__inner">
