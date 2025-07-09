@@ -61,6 +61,10 @@ const classes = computed(() => {
 })
 
 const init = () => {
+  if (typeof document === 'undefined' || typeof window === 'undefined') {
+    console.warn('当前环境不支持创建 Canvas 元素')
+    return
+  }
   const canvas = document.createElement('canvas')
   const ratio = window.devicePixelRatio
   const ctx = canvas.getContext('2d')
