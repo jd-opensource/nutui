@@ -85,7 +85,7 @@ importers:
         specifier: ^11.2.0
         version: 11.2.0
       happy-dom:
-        specifier: 14.12.3
+        specifier: ^14.12.3
         version: 14.12.3
       husky:
         specifier: ^9.0.11
