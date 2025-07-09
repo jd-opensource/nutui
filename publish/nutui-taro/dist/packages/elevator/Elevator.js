@@ -197,6 +197,7 @@ const _hoisted_6 = { class: "nut-elevator__list__fixed-title" };
 const _hoisted_7 = { class: "nut-elevator__bars__inner" };
 const _hoisted_8 = ["data-index", "onClick"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _a, _b, _c, _d;
   const _component_nut_scroll_view = resolveComponent("nut-scroll-view");
   return openBlock(), createElementBlock("view", _hoisted_1, [
     createVNode(_component_nut_scroll_view, {
@@ -243,7 +244,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }, 8, ["scroll-top", "style", "onScroll"]),
     _cache[4] || (_cache[4] = createTextVNode()),
     withDirectives(createElementVNode("view", _hoisted_5, [
-      createElementVNode("view", _hoisted_6, toDisplayString(_ctx.indexList[_ctx.currentIndex][_ctx.acceptKey]), 1)
+      createElementVNode("view", _hoisted_6, toDisplayString((_b = (_a = _ctx.indexList) == null ? void 0 : _a[_ctx.currentIndex]) == null ? void 0 : _b[_ctx.acceptKey]), 1)
     ], 512), [
       [vShow, _ctx.scrollY > 2 && _ctx.isSticky]
     ]),
@@ -251,7 +252,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     _ctx.indexList.length > 0 ? withDirectives((openBlock(), createElementBlock("view", {
       key: 0,
       class: "nut-elevator__code--current"
-    }, toDisplayString(_ctx.indexList[_ctx.codeIndex][_ctx.acceptKey]), 513)), [
+    }, toDisplayString((_d = (_c = _ctx.indexList) == null ? void 0 : _c[_ctx.codeIndex]) == null ? void 0 : _d[_ctx.acceptKey]), 513)), [
       [vShow, _ctx.scrollStart]
     ]) : createCommentVNode("", true),
     _cache[6] || (_cache[6] = createTextVNode()),

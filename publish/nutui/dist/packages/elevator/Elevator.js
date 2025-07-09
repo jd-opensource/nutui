@@ -197,7 +197,7 @@ const _hoisted_6 = { class: "nut-elevator__list__fixed-title" };
 const _hoisted_7 = { class: "nut-elevator__bars__inner" };
 const _hoisted_8 = ["data-index", "onClick"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _a, _b;
+  var _a, _b, _c, _d;
   return openBlock(), createElementBlock("view", _hoisted_1, [
     createElementVNode("view", {
       ref: "listview",
@@ -240,7 +240,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     _ctx.indexList.length ? withDirectives((openBlock(), createElementBlock("view", {
       key: 0,
       class: "nut-elevator__code--current"
-    }, toDisplayString(_ctx.indexList[_ctx.codeIndex][_ctx.acceptKey]), 513)), [
+    }, toDisplayString((_d = (_c = _ctx.indexList) == null ? void 0 : _c[_ctx.codeIndex]) == null ? void 0 : _d[_ctx.acceptKey]), 513)), [
       [vShow, _ctx.scrollStart]
     ]) : createCommentVNode("", true),
     createElementVNode("view", {

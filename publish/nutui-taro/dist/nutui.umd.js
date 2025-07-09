@@ -2571,6 +2571,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_7$i = { class: "nut-elevator__bars__inner" };
   const _hoisted_8$c = ["data-index", "onClick"];
   function _sfc_render$W(_ctx, _cache, $props, $setup, $data, $options) {
+    var _a, _b, _c, _d;
     const _component_nut_scroll_view = vue.resolveComponent("nut-scroll-view");
     return vue.openBlock(), vue.createElementBlock("view", _hoisted_1$16, [
       vue.createVNode(_component_nut_scroll_view, {
@@ -2617,7 +2618,7 @@ var __async = (__this, __arguments, generator) => {
       }, 8, ["scroll-top", "style", "onScroll"]),
       _cache[4] || (_cache[4] = vue.createTextVNode()),
       vue.withDirectives(vue.createElementVNode("view", _hoisted_5$q, [
-        vue.createElementVNode("view", _hoisted_6$j, vue.toDisplayString(_ctx.indexList[_ctx.currentIndex][_ctx.acceptKey]), 1)
+        vue.createElementVNode("view", _hoisted_6$j, vue.toDisplayString((_b = (_a = _ctx.indexList) == null ? void 0 : _a[_ctx.currentIndex]) == null ? void 0 : _b[_ctx.acceptKey]), 1)
       ], 512), [
         [vue.vShow, _ctx.scrollY > 2 && _ctx.isSticky]
       ]),
@@ -2625,7 +2626,7 @@ var __async = (__this, __arguments, generator) => {
       _ctx.indexList.length > 0 ? vue.withDirectives((vue.openBlock(), vue.createElementBlock("view", {
         key: 0,
         class: "nut-elevator__code--current"
-      }, vue.toDisplayString(_ctx.indexList[_ctx.codeIndex][_ctx.acceptKey]), 513)), [
+      }, vue.toDisplayString((_d = (_c = _ctx.indexList) == null ? void 0 : _c[_ctx.codeIndex]) == null ? void 0 : _d[_ctx.acceptKey]), 513)), [
         [vue.vShow, _ctx.scrollStart]
       ]) : vue.createCommentVNode("", true),
       _cache[6] || (_cache[6] = vue.createTextVNode()),
