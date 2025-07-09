@@ -5,7 +5,7 @@ import 'vitest-canvas-mock'
 
 test('WaterMark: fullPage = true', async () => {
   const wrapper = mount(() => {
-    return <Watermark font-color="#fa2c19" content="nut-ui"></Watermark>
+    return <Watermark fontColor="#fa2c19" content="nut-ui"></Watermark>
   })
   await nextTick()
 
