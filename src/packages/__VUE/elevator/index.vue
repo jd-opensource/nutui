@@ -22,7 +22,7 @@
     </view>
     <view v-show="scrollStart" v-if="indexList.length" class="nut-elevator__code--current">
       {{
-        indexList[codeIndex][acceptKey]
+        indexList?.[codeIndex]?.[acceptKey]
       }}
     </view>
     <view class="nut-elevator__bars" @touchstart="touchStart" @touchmove.stop.prevent="touchMove" @touchend="touchEnd">
