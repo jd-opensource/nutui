@@ -18,7 +18,6 @@
         :init-page="initNo"
         :pagination-visible="paginationVisible"
         :pagination-color="paginationColor"
-        :height="rootHeight"
         @change="setActive"
       >
         <image-preview-item
@@ -45,7 +44,7 @@
   </nut-popup>
 </template>
 <script lang="ts">
-import { toRefs, reactive, watch, onMounted, onUnmounted, ref, computed, nextTick } from 'vue'
+import { toRefs, reactive, watch, onMounted, ref, computed, nextTick } from 'vue'
 import type { PropType } from 'vue'
 import { createComponent } from '@/packages/utils/create'
 import { isArray } from '@/packages/utils/util'
@@ -114,21 +113,6 @@ export default create({
       return props.images
     })
 
-    // 横竖屏切换
-    const width = ref(window.innerWidth)
-    const height = ref(window.innerHeight)
-    const updateDimensions = () => {
-      width.value = window.innerWidth
-      height.value = window.innerHeight
-    }
-
-    // 监听 width 和 height 的变化
-    watch([width, height], () => {
-      nextTick(() => {
-        init()
-      })
-    })
-
     // 设置当前选中第几个
     const setActive = (active: number) => {
       if (active !== state.active) {
@@ -181,12 +165,6 @@ export default create({
 
     onMounted(() => {
       setActive(props.initNo)
-      window.addEventListener('resize', updateDimensions)
-      updateDimensions() // 初始化尺寸
-    })
-
-    onUnmounted(() => {
-      window.removeEventListener('resize', updateDimensions)
     })
 
     return {

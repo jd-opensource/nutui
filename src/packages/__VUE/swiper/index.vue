@@ -36,6 +36,8 @@ import {
   nextTick,
   ref,
   watch,
+  onMounted,
+  onUnmounted,
   VNode
 } from 'vue'
 import { createComponent } from '@/packages/utils/create'
@@ -427,15 +429,6 @@ export default create({
     )
 
     watch(
-      () => window.innerHeight < window.innerWidth,
-      () => {
-        nextTick(() => {
-          init()
-        })
-      }
-    )
-
-    watch(
       () => state.children.length,
       () => {
         nextTick(() => {
@@ -450,6 +443,30 @@ export default create({
         +val > 0 ? autoplay() : stopAutoPlay()
       }
     )
+
+    // 横竖屏切换
+    const width = ref(window.innerWidth)
+    const height = ref(window.innerHeight)
+    const updateDimensions = () => {
+      width.value = window.innerWidth
+      height.value = window.innerHeight
+    }
+
+    // 监听 width 和 height 的变化
+    watch([width, height], () => {
+      nextTick(() => {
+        init()
+      })
+    })
+
+    onMounted(() => {
+      window.addEventListener('resize', updateDimensions)
+      updateDimensions() // 初始化尺寸
+    })
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', updateDimensions)
+    })
 
     return {
       state,
