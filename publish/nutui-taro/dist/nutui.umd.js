@@ -13028,6 +13028,27 @@ var __async = (__this, __arguments, generator) => {
           Number(val) > 0 ? autoplay() : stopAutoPlay();
         }
       );
+      const width = vue.ref(window.innerWidth);
+      const height = vue.ref(window.innerHeight);
+      const updateDimensions = () => {
+        width.value = window.innerWidth;
+        height.value = window.innerHeight;
+      };
+      vue.watch([width, height], () => {
+        Taro.nextTick(() => {
+          init();
+        });
+        Taro.eventCenter.once(Taro.getCurrentInstance().router.onReady, () => {
+          init();
+        });
+      });
+      vue.onMounted(() => {
+        window.addEventListener("resize", updateDimensions);
+        updateDimensions();
+      });
+      vue.onUnmounted(() => {
+        window.removeEventListener("resize", updateDimensions);
+      });
       return {
         state,
         refRandomId,

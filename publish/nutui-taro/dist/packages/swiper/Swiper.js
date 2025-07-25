@@ -18,7 +18,7 @@ var __async = (__this, __arguments, generator) => {
     step((generator = generator.apply(__this, __arguments)).next());
   });
 };
-import { ref, reactive, computed, provide, onDeactivated, onBeforeUnmount, watch, openBlock, createElementBlock, createElementVNode, normalizeClass, normalizeStyle, renderSlot, createTextVNode, Fragment, renderList, createCommentVNode } from "vue";
+import { ref, reactive, computed, provide, onDeactivated, onBeforeUnmount, watch, onMounted, onUnmounted, openBlock, createElementBlock, createElementVNode, normalizeClass, normalizeStyle, renderSlot, createTextVNode, Fragment, renderList, createCommentVNode } from "vue";
 import { c as createComponent } from "../component-DQf3CENX.js";
 import { c as clamp } from "../util-2G3mRQeF.js";
 import { u as useTouch } from "../index-I8tfW3Kf.js";
@@ -394,6 +394,27 @@ const _sfc_main = create({
         Number(val) > 0 ? autoplay() : stopAutoPlay();
       }
     );
+    const width = ref(window.innerWidth);
+    const height = ref(window.innerHeight);
+    const updateDimensions = () => {
+      width.value = window.innerWidth;
+      height.value = window.innerHeight;
+    };
+    watch([width, height], () => {
+      Taro.nextTick(() => {
+        init();
+      });
+      eventCenter.once(getCurrentInstance().router.onReady, () => {
+        init();
+      });
+    });
+    onMounted(() => {
+      window.addEventListener("resize", updateDimensions);
+      updateDimensions();
+    });
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateDimensions);
+    });
     return {
       state,
       refRandomId,

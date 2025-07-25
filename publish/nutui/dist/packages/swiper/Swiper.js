@@ -1,4 +1,4 @@
-import { ref, reactive, computed, provide, onDeactivated, onBeforeUnmount, watch, nextTick, openBlock, createElementBlock, createElementVNode, normalizeClass, normalizeStyle, renderSlot, Fragment, renderList, createCommentVNode } from "vue";
+import { ref, reactive, computed, provide, onDeactivated, onBeforeUnmount, watch, nextTick, onMounted, onUnmounted, openBlock, createElementBlock, createElementVNode, normalizeClass, normalizeStyle, renderSlot, Fragment, renderList, createCommentVNode } from "vue";
 import { c as createComponent } from "../component-DQf3CENX.js";
 import { e as clamp } from "../util-D1pvnUYu.js";
 import { u as useTouch } from "../index-I8tfW3Kf.js";
@@ -354,6 +354,24 @@ const _sfc_main = create({
         +val > 0 ? autoplay() : stopAutoPlay();
       }
     );
+    const width = ref(window.innerWidth);
+    const height = ref(window.innerHeight);
+    const updateDimensions = () => {
+      width.value = window.innerWidth;
+      height.value = window.innerHeight;
+    };
+    watch([width, height], () => {
+      nextTick(() => {
+        init();
+      });
+    });
+    onMounted(() => {
+      window.addEventListener("resize", updateDimensions);
+      updateDimensions();
+    });
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateDimensions);
+    });
     return {
       state,
       classesInner,
