@@ -19348,6 +19348,7 @@ var __async = (__this, __arguments, generator) => {
         drawImage.value = drawImg;
         state.defScale = cropperWidth / (isPortrait ? drawImg.width : drawImg.height);
         resetScale();
+        yield Promise.resolve();
         draw();
       });
       const chooseImage = () => {

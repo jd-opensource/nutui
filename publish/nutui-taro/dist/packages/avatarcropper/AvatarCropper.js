@@ -328,6 +328,7 @@ const _sfc_main = create({
       drawImage.value = drawImg;
       state.defScale = cropperWidth / (isPortrait ? drawImg.width : drawImg.height);
       resetScale();
+      yield Promise.resolve();
       draw();
     });
     const chooseImage = () => {
