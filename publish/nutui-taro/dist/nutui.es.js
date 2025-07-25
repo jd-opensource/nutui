@@ -207,7 +207,7 @@ export function install(app) {
     }
   });
 }
-export const version = '4.3.14-beta.1';
+export const version = '4.3.14-beta.2';
 export default {
   install,
   version
