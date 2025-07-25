@@ -427,6 +427,15 @@ export default create({
     )
 
     watch(
+      () => window.innerHeight < window.innerWidth,
+      () => {
+        nextTick(() => {
+          init()
+        })
+      }
+    )
+
+    watch(
       () => state.children.length,
       () => {
         nextTick(() => {
