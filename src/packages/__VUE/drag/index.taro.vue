@@ -223,9 +223,9 @@ export default create({
     })
     onDeactivated(() => {
       state.keepAlive = true
-      ;(myDrag as any).value.removeEventListener('touchstart', touchStart)
-      ;(myDrag as any).value.removeEventListener('touchmove', touchMove)
-      ;(myDrag as any).value.removeEventListener('touchend', touchEnd)
+      ;(myDrag as any).value?.removeEventListener('touchstart', touchStart)
+      ;(myDrag as any).value?.removeEventListener('touchmove', touchMove)
+      ;(myDrag as any).value?.removeEventListener('touchend', touchEnd)
     })
     return {
       myDrag,
