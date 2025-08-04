@@ -10846,10 +10846,11 @@ var __async = (__this, __arguments, generator) => {
         }
       });
       vue.onDeactivated(() => {
+        var _a, _b, _c;
         state.keepAlive = true;
-        myDrag.value.removeEventListener("touchstart", touchStart);
-        myDrag.value.removeEventListener("touchmove", touchMove);
-        myDrag.value.removeEventListener("touchend", touchEnd);
+        (_a = myDrag.value) == null ? void 0 : _a.removeEventListener("touchstart", touchStart);
+        (_b = myDrag.value) == null ? void 0 : _b.removeEventListener("touchmove", touchMove);
+        (_c = myDrag.value) == null ? void 0 : _c.removeEventListener("touchend", touchEnd);
       });
       return {
         myDrag,

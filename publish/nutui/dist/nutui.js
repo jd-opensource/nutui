@@ -8532,7 +8532,8 @@ const { create: t1 } = ne("drag"), n1 = t1({
     }), Tt(() => {
       n.keepAlive && (n.keepAlive = !1);
     }), _t(() => {
-      n.keepAlive = !0, t.value.removeEventListener("touchstart", i), t.value.removeEventListener("touchmove", a), t.value.removeEventListener("touchend", r);
+      var p, d, y;
+      n.keepAlive = !0, (p = t.value) == null || p.removeEventListener("touchstart", i), (d = t.value) == null || d.removeEventListener("touchmove", a), (y = t.value) == null || y.removeEventListener("touchend", r);
     }), {
       myDrag: t,
       touchStart: i,
