@@ -38,6 +38,6 @@ jobs:
           branch: new-site # action 应该部署到的分支 。
           folder: site_docs #操作应该部署的文件夹 。
           clean: false
-          repository-name: jd-opensource/nutui-docs
+          repository-name: jdf2e/nutui-docs
           token: ${{ secrets.GIT_ACTION }}
           target-folder: src/docs_vue
