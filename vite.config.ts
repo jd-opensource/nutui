@@ -71,6 +71,7 @@ export default defineConfig((env: ConfigEnv) => ({
       provider: 'v8'
     },
     include: ['src/packages/__VUE/**/*.(test|spec).(ts|tsx)'],
-    reporters: ['default', 'html']
+    reporters: ['default', 'html'],
+    setupFiles: ['./test-setup.ts']
   }
 }) as UserConfig)
