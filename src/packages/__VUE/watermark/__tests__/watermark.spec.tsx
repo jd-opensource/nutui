@@ -1,7 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { Watermark } from '@nutui/nutui'
 import { nextTick } from 'vue'
-import 'vitest-canvas-mock'
 
 test('WaterMark: fullPage = true', async () => {
   const wrapper = mount(() => {

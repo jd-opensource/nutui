@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils'
 import { Signature } from '@nutui/nutui'
-import 'vitest-canvas-mock'
 
 test('props custom-class', async () => {
   const wrapper = mount(() => {
