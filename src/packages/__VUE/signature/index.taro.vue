@@ -164,7 +164,7 @@ export default create({
     onMounted(() => {
       Taro.nextTick(() => {
         setTimeout(() => {
-          if (Taro.getEnv() === 'WEAPP' || Taro.getEnv() === 'JD') {
+          if (['WEAPP', 'JD', 'TT', 'SWAN', 'ALIPAY', 'QQ'].includes(Taro.getEnv())) {
             Taro.createSelectorQuery()
               .select('#' + canvasSetId)
               .fields(
