@@ -258,7 +258,7 @@ const _sfc_main = create({
           document.body.appendChild(obj);
         }
       }
-      if (Taro.getEnv() == "WEAPP") {
+      if (["WEAPP", "ASCF"].includes(Taro.getEnv())) {
         Taro.chooseMedia({
           /** 最多可以选择的文件个数 */
           count: props.multiple ? Number(props.maximum) - fileList.value.length : 1,
