@@ -198,8 +198,8 @@ export default create({
           document.body.appendChild(obj)
         }
       }
-      if (Taro.getEnv() == 'WEAPP') {
-        // chooseMedia 目前只支持微信小程序原生，其余端全部使用 chooseImage API
+      if (['WEAPP', 'ASCF'].includes(Taro.getEnv())) {
+        // chooseMedia 目前只支持微信小程序原生和ASCF，其余端全部使用 chooseImage API
         Taro.chooseMedia({
           /** 最多可以选择的文件个数 */
           count: props.multiple ? Number(props.maximum) - fileList.value.length : 1,
