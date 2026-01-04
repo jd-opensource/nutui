@@ -185,20 +185,22 @@ export default create({
     }
 
     const executeUpload = (fileItem: FileItem, index: number) => {
+      const formData = new FormData()
+      for (const [key, value] of Object.entries(props.data)) {
+        formData.append(key, value)
+      }
+      formData.append(props.name, fileItem.sourceFile!)
+
       const uploadOption = new UploadOptions()
       uploadOption.url = props.url
-      uploadOption.formData = fileItem.formData
+      uploadOption.formData = formData
       uploadOption.timeout = (props.timeout as number) * 1
       uploadOption.method = props.method
       uploadOption.xhrState = props.xhrState as number
       uploadOption.headers = props.headers
       uploadOption.withCredentials = props.withCredentials
       uploadOption.beforeXhrUpload = props.beforeXhrUpload
-      try {
-        uploadOption.sourceFile = fileItem.formData.get(props.name)
-      } catch (error) {
-        console.warn('[NutUI] <Uploader> formData.get(name)', error)
-      }
+      uploadOption.sourceFile = fileItem.sourceFile
       uploadOption.onStart = (option: UploadOptions) => {
         fileItem.status = 'ready'
         fileItem.message = translate('readyUpload')
@@ -260,17 +262,11 @@ export default create({
 
     const readFile = (files: File[]) => {
       files.forEach((file: File, index: number) => {
-        const formData = new FormData()
-        for (const [key, value] of Object.entries(props.data)) {
-          formData.append(key, value)
-        }
-        formData.append(props.name, file)
-
         const fileItem = reactive(new FileItem())
         fileItem.name = file.name
         fileItem.status = 'ready'
         fileItem.type = file.type
-        fileItem.formData = formData
+        fileItem.sourceFile = file
         fileItem.message = translate('waitingUpload')
         executeUpload(fileItem, index)
 

@@ -366,8 +366,8 @@ const clearUpload = () => {
 | name | File name | - |
 | url | File path | - |
 | type | File type | `"image/jpeg" ` |
-| formData | Upload the required data | `new FormData()` |
 | percentage | Upload percentage | `0` |
+| sourceFile | Upload the required file | - |
 
 ### Events
 

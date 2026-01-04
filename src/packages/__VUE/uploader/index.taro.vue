@@ -281,10 +281,21 @@ export default create({
 
     const executeUpload = (fileItem: FileItem, index: number) => {
       const uploadOption = new UploadOptions()
+
+      if (Taro.getEnv() == 'WEB') {
+        const formData = new FormData()
+        for (const [key, value] of Object.entries(props.data)) {
+          formData.append(key, value)
+        }
+        formData.append(props.name, fileItem.sourceFile!)
+        uploadOption.formData = formData
+      } else {
+        uploadOption.formData = props.data as FormData
+      }
+
       uploadOption.name = props.name
       uploadOption.url = props.url
       uploadOption.fileType = fileItem.type
-      uploadOption.formData = fileItem.formData
       uploadOption.timeout = (props.timeout as number) * 1
       uploadOption.method = props.method
       uploadOption.xhrState = props.xhrState as number
@@ -381,18 +392,13 @@ export default create({
         fileItem.status = 'ready'
         fileItem.message = translate('waitingUpload')
         fileItem.type = fileType
+
         if (Taro.getEnv() == 'WEB') {
-          const formData = new FormData()
-          for (const [key, value] of Object.entries(props.data)) {
-            formData.append(key, value)
-          }
-          formData.append(props.name, file.originalFileObj as Blob)
+          fileItem.sourceFile = file.originalFileObj
           fileItem.name = file.originalFileObj?.name
           fileItem.type = file.originalFileObj?.type
-          fileItem.formData = formData
-        } else {
-          fileItem.formData = props.data
         }
+
         if (props.isPreview) {
           fileItem.url = fileType == 'video' ? file.thumbTempFilePath : filepath
         }

@@ -367,8 +367,8 @@ const clearUpload = () => {
 | name | 文件名称 | - |
 | url | 文件路径 | - |
 | type | 文件类型 | `"image/jpeg"` |
-| formData | 上传所需的 data | `new FormData() ` |
 | percentage | 上传百分比 | `0` |
+| sourceFile | 上传所需的 file | - |
 
 ### Events
 
