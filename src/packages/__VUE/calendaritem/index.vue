@@ -778,7 +778,7 @@ export default create({
           current -= 1
         }
       } else {
-        const viewPosition = Math.round(currentScrollTop + viewHeight.value)
+        const viewPosition = Math.round(currentScrollTop + Math.max(viewHeight.value, state.monthsData[current].cssHeight))  
         if (
           viewPosition < state.monthsData[current].cssScrollHeight + state.monthsData[current].cssHeight
           && currentScrollTop > state.monthsData[current - 1].cssScrollHeight
