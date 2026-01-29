@@ -124,7 +124,7 @@ NutUI 已经投入了我们的生产环境中使用，业界也在广泛地使�
 
 | 微信群 |内部咚咚群 |
 | --- |--- |
-| <img src="https://storage.360buyimg.com/nutui-static/image/wx-code.png" width="100" /> 添加好友并回复「NutUI Vue」 | 82957939
+| <img src="https://storage.360buyimg.com/imgtools/17c67beff6-4acf07c0-609c-11ed-a6ef-69df15b605e4.png" width="100" /> 添加好友并回复「NutUI Vue」 | 82957939
 
 ## 参与共建
 
