@@ -6,6 +6,7 @@
         ref="spcanvas"
         class="spcanvas"
         :canvasId="canvasSetId"
+        :canvas-id="canvasSetId"
         type="2d"
         disable-scroll="true"
         @touchstart="startEventHandler"
