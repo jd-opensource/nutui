@@ -16843,7 +16843,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_1$k = {
     class: /* @__PURE__ */ vue.normalizeClass(["nut-signature-inner", "spcanvas_WEAPP"])
   };
-  const _hoisted_2$i = ["id", "canvasId"];
+  const _hoisted_2$i = ["id", "canvasId", "canvas-id"];
   function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_nut_button = vue.resolveComponent("nut-button");
     return vue.openBlock(), vue.createElementBlock("view", {
@@ -16855,6 +16855,7 @@ var __async = (__this, __arguments, generator) => {
           ref: "spcanvas",
           class: "spcanvas",
           canvasId: _ctx.canvasSetId,
+          "canvas-id": _ctx.canvasSetId,
           type: "2d",
           "disable-scroll": "true",
           onTouchstart: _cache[0] || (_cache[0] = (...args) => _ctx.startEventHandler && _ctx.startEventHandler(...args)),

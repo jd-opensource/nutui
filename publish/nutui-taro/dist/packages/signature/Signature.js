@@ -201,7 +201,7 @@ const _sfc_main = create({
 const _hoisted_1 = {
   class: /* @__PURE__ */ normalizeClass(["nut-signature-inner", "spcanvas_WEAPP"])
 };
-const _hoisted_2 = ["id", "canvasId"];
+const _hoisted_2 = ["id", "canvasId", "canvas-id"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_nut_button = resolveComponent("nut-button");
   return openBlock(), createElementBlock("view", {
@@ -213,6 +213,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         ref: "spcanvas",
         class: "spcanvas",
         canvasId: _ctx.canvasSetId,
+        "canvas-id": _ctx.canvasSetId,
         type: "2d",
         "disable-scroll": "true",
         onTouchstart: _cache[0] || (_cache[0] = (...args) => _ctx.startEventHandler && _ctx.startEventHandler(...args)),
