@@ -120,7 +120,7 @@ NutUI has been used in our production environment, and widely used in the indust
 
 | WeChat Group | JD Dongdong Group |
 | --- |--- |
-| <img src="https://storage.360buyimg.com/nutui-static/image/wx-code.png" width="100" /> Reply 'NutUI' after following | 82957939 |
+| <img src="https://storage.360buyimg.com/imgtools/17c67beff6-4acf07c0-609c-11ed-a6ef-69df15b605e4.png" width="100" /> Reply 'NutUI' after following | 82957939 |
 
 ## Join Us
 
