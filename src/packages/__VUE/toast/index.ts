@@ -28,17 +28,16 @@ let idsMap: string[] = []
 let optsMap: any[] = []
 const clearToast = (id?: string) => {
   if (id) {
-    const container = document.getElementById(id)
+    const opts = optsMap.find(item => item.id === id)
+    if (opts && opts._unmount) {
+      opts._unmount()
+    }
     optsMap = optsMap.filter(item => item.id !== id)
     idsMap = idsMap.filter(item => item !== id)
-    if (container) {
-      document.body.removeChild(container)
-    }
   } else {
-    idsMap.forEach((item) => {
-      const container = document.getElementById(item)
-      if (container) {
-        document.body.removeChild(container)
+    optsMap.forEach((opts) => {
+      if (opts._unmount) {
+        opts._unmount()
       }
     })
     optsMap = []
@@ -78,9 +77,10 @@ const mountToast = (opts: any) => {
   idsMap.push(opts.id)
   optsMap.push(opts)
 
-  CreateComponent(opts, {
+  const { unmount } = CreateComponent(opts, {
     wrapper: Toast
   })
+  opts._unmount = unmount
 
   return showToast
 }
