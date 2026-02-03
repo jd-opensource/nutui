@@ -8773,6 +8773,7 @@ class d1 {
     O(this, "lockScroll", !0);
     O(this, "cancelAutoClose", !0);
     O(this, "okAutoClose", !0);
+    O(this, "zIndex", 2e3);
   }
 }
 class f1 {

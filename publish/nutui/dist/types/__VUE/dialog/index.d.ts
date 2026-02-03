@@ -30,6 +30,7 @@ export declare class DialogOptions {
     lockScroll?: boolean | undefined;
     cancelAutoClose?: boolean | undefined;
     okAutoClose?: boolean | undefined;
+    zIndex?: number | string;
 }
 declare class DialogFunction {
     options: DialogOptions;

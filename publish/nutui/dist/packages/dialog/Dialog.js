@@ -281,6 +281,7 @@ class DialogOptions {
     __publicField(this, "lockScroll", true);
     __publicField(this, "cancelAutoClose", true);
     __publicField(this, "okAutoClose", true);
+    __publicField(this, "zIndex", 2e3);
   }
 }
 class DialogFunction {
