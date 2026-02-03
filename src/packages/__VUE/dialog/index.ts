@@ -38,6 +38,8 @@ export class DialogOptions {
 
   cancelAutoClose? = true
   okAutoClose? = true
+
+  zIndex?: number | string = 2000
 }
 
 class DialogFunction {
