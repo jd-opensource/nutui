@@ -116,7 +116,7 @@
 
 NutUI 已经投入了我们的生产环境中使用，业界也在广泛地使用 NutUI 开发多端应用。
 <p>
-<img src="https://raw.githubusercontent.com/jd-opensource/nutui-user-cases/master/user-cases.jpg" alt="NutUI" />
+<img src="https://github.com/jdf2e/nutui-user-cases/blob/master/user-cases.jpg" alt="NutUI" />
 </p>
 <p><a href="https://nutui.jd.com/#/case">更多案例</a></p>
 
