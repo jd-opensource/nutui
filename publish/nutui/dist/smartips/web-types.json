@@ -2276,6 +2276,15 @@
               }
             },
             {
+              "name": "zIndex",
+              "default": "2000",
+              "description": "自定义 `popup` 层级",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
               "name": "onUpdate",
               "default": "`false`",
               "description": "更新",
