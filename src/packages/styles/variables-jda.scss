@@ -267,22 +267,22 @@ $countdown-color: var(--nut-countdown-color, inherit) !default;
 $countdown-font-size: var(--nut-countdown-font-size, initial) !default;
 
 //large price
-$price-symbol-big-size: var(--nut-price-symbol-big-size, 18px) !default;
-$price-big-size: var(--nut-price-big-size, 24px) !default;
-$price-decimal-big-size: var(--nut-price-decimal-big-size, 18px) !default;
+$price-symbol-big-size: var(--nut-price-symbol-big-size, 12px) !default;
+$price-big-size: var(--nut-price-big-size, 28px) !default;
+$price-decimal-big-size: var(--nut-price-decimal-big-size, 14px) !default;
 
 //normal price
-$price-symbol-medium-size: var(--nut-price-symbol-medium-size, 14px) !default;
-$price-medium-size: var(--nut-price-medium-size, 16px) !default;
+$price-symbol-medium-size: var(--nut-price-symbol-medium-size, 12px) !default;
+$price-medium-size: var(--nut-price-medium-size, 20px) !default;
 $price-decimal-medium-size: var(--nut-price-decimal-medium-size, 14px) !default;
 
 // small price
 $price-symbol-small-size: var(--nut-price-symbol-small-size, 10px) !default;
-$price-small-size: var(--nut-price-small-size, 12px) !default;
-$price-decimal-small-size: var(--nut-price-decimal-small-size, 10px) !default;
+$price-small-size: var(--nut-price-small-size, 16px) !default;
+$price-decimal-small-size: var(--nut-price-decimal-small-size, 11px) !default;
 
 //avatar
-$avatar-square: var(--nut-avatar-square, 5px) !default;
+$avatar-square: var(--nut-avatar-square, 6px) !default;
 $avatar-large-width: var(--nut-avatar-large-width, 60px) !default;
 $avatar-large-height: var(--nut-avatar-large-height, 60px) !default;
 $avatar-small-width: var(--nut-avatar-small-width, 32px) !default;
@@ -489,15 +489,15 @@ $fixednav-btn-bg: var(
 $fixednav-item-active-color: var(--nut-fixednav-item-active-color, $primary-color) !default;
 
 // NoticeBar
-$noticebar-background: var(--nut-noticebar-background, rgba(251, 248, 220, 1)) !default;
-$noticebar-color: var(--nut-noticebar-color, #d9500b) !default;
-$noticebar-font-size: var(--nut-noticebar-font-size, 14px) !default;
-$noticebar-across-height: var(--nut-noticebar-across-height, 40px) !default;
+$noticebar-background: var(--nut-noticebar-background, #fff9e0) !default;
+$noticebar-color: var(--nut-noticebar-color, #b26b00) !default;
+$noticebar-font-size: var(--nut-noticebar-font-size, 12px) !default;
+$noticebar-across-height: var(--nut-noticebar-across-height, 36px) !default;
 $noticebar-across-line-height: var(--nut-noticebar-across-line-height, 24px) !default;
 $noticebar-box-padding: var(--nut-noticebar-box-padding, 0 16px) !default;
-$noticebar-wrapable-padding: var(--nut-noticebar-wrapable-padding, 16px) !default;
-$noticebar-lefticon-margin: var(--nut-noticebar-lefticon-margin, 0px 10px) !default;
-$noticebar-righticon-margin: var(--nut-noticebar-righticon-margin, 0px 10px) !default;
+$noticebar-wrapable-padding: var(--nut-noticebar-wrapable-padding, 12px) !default;
+$noticebar-lefticon-margin: var(--nut-noticebar-lefticon-margin, 0 6px 0 0) !default;
+$noticebar-righticon-margin: var(--nut-noticebar-righticon-margin, 0 0 0 6px) !default;
 
 // TimeSelect
 $timeselect-title-font-size: var(--nut-timeselect-title-font-size, $font-size-2) !default;
@@ -548,15 +548,12 @@ $tag-plain-background-color: var(--nut-tag-plain-background-color, #fff) !defaul
 $tag-height: var(--nut-tag-height, auto) !default;
 
 //badge
-$badge-background-color: var(
-  --nut-badge-background-color,
-  linear-gradient(135deg, $primary-color 0%, $primary-color-end 100%)
-) !default;
+$badge-background-color: var(--nut-badge-background-color, $primary-color) !default;
 $badge-color: var(--nut-badge-color, #fff) !default;
-$badge-font-size: var(--nut-badge-font-size, $font-size-1) !default;
+$badge-font-size: var(--nut-badge-font-size, $font-size-0) !default;
 $badge-border-radius: var(--nut-badge-border-radius, 14px) !default;
 $badge-icon-padding: var(--nut-badge-icon-padding, 4px) !default;
-$badge-padding: var(--nut-badge-padding, 0 5px) !default;
+$badge-padding: var(--nut-badge-padding, 0 4px) !default;
 $badge-content-transform: var(--nut-badge-content-transform, translate(50%, -50%)) !default;
 $badge-z-index: var(--nut-badge-z-index, 1) !default;
 $badge-dot-width: var(--nut-badge-dot-width, 7px) !default;
@@ -576,9 +573,9 @@ $badge-dot-padding: var(--nut-badge-dot-padding, 0px) !default;
 
 $popover-white-background-color: var(--nut-popover-white-background-color, rgba(255, 255, 255, 1)) !default;
 $popover-dark-background-color: var(--nut-popover-dark-background-color, rgba(75, 76, 77, 1)) !default;
-$popover-border-bottom-color: var(--nut-popover-border-bottom-color, rgba(229, 229, 229, 1)) !default;
+$popover-border-bottom-color: var(--nut-popover-border-bottom-color, $line-color) !default;
 $popover-primary-text-color: var(--nut-popover-primary-text-color, rgba(51, 51, 51, 1)) !default;
-$popover-disable-color: var(--nut-popover-disable-color, rgba(154, 155, 157, 1)) !default;
+$popover-disable-color: var(--nut-popover-disable-color, $disable-color) !default;
 $popover-menu-item-padding: var(--nut-popover-menu-item-padding, 8px 0) !default;
 $popover-menu-item-margin: var(--nut-popover-menu-item-margin, 0 8px) !default;
 $popover-menu-name-line-height: var(--nut-popover-menu-name-line-height, normal) !default;
@@ -589,7 +586,7 @@ $progress-inner-background-color: var(
   linear-gradient(135deg, $primary-color 0%, $primary-color-end 100%)
 ) !default;
 $progress-insidetext-background: var(--nut-progress-insidetext-background, $progress-inner-background-color) !default;
-$progress-outer-background-color: var(--nut-progress-outer-background-color, #f3f3f3) !default;
+$progress-outer-background-color: var(--nut-progress-outer-background-color, #e9eaed) !default;
 $progress-outer-border-radius: var(--nut-progress-outer-border-radius, 12px) !default;
 $progress-insidetext-border-radius: var(--nut-progress-insidetext-border-radius, 5px) !default;
 $progress-insidetext-padding: var(--nut-progress-insidetext-padding, 3px 5px 3px 6px) !default;
@@ -674,16 +671,16 @@ $menu-scroll-fixed-z-index: var(--nut-menu-scroll-fixed-z-index, 1000) !default;
 $menu-active-item-font-weight: var(--nut-menu-active-item-font-weight, 500) !default;
 
 // collapse
-$collapse-item-padding: var(--nut-collapse-item-padding, 13px 36px 13px 26px) !default;
+$collapse-item-padding: var(--nut-collapse-item-padding, 13px 16px) !default;
 $collapse-item-color: var(--nut-collapse-item-color, $title-color) !default;
 $collapse-item-disabled-color: var(--nut-collapse-item-disabled-color, $disable-color) !default;
 $collapse-item-icon-color: var(--nut-collapse-item-icon-color, $title-color2) !default;
 $collapse-item-font-size: var(--nut-collapse-item-font-size, $font-size-2) !default;
 $collapse-item-line-height: var(--nut-collapse-item-line-height, 24px) !default;
 $collapse-item-sub-title-color: var(--nut-collapse-item-sub-title-color, $title-color2) !default;
-$collapse-wrapper-content-padding: var(--nut-collapse-wrapper-content-padding, 12px 26px) !default;
-$collapse-wrapper-empty-content-padding: var(--nut-collapse-wrapper-empty-content-padding, 0 26px) !default;
-$collapse-wrapper-content-color: var(--nut-collapse-wrapper-content-color, $title-color) !default;
+$collapse-wrapper-content-padding: var(--nut-collapse-wrapper-content-padding, 12px 16px) !default;
+$collapse-wrapper-empty-content-padding: var(--nut-collapse-wrapper-empty-content-padding, 0 16px) !default;
+$collapse-wrapper-content-color: var(--nut-collapse-wrapper-content-color, $text-color) !default;
 $collapse-wrapper-content-font-size: var(--nut-collapse-wrapper-content-font-size, $font-size-2) !default;
 $collapse-wrapper-content-line-height: var(--nut-collapse-wrapper-content-line-height, 1.5) !default;
 $collapse-wrapper-content-background-color: var(--nut-collapse-wrapper-content-background-color, $white) !default;
@@ -704,7 +701,7 @@ $searchbar-input-bar-placeholder-color: var(--nut-searchbar-input-bar-placeholde
 
 // empty
 $empty-padding: var(--nut-empty-padding, 32px 0) !default;
-$empty-image-size: var(--nut-empty-image-size, 170px) !default;
+$empty-image-size: var(--nut-empty-image-size, 160px) !default;
 $empty-description-margin-top: var(--nut-empty-description-margin-top, 4px) !default;
 $empty-description-color: var(--nut-empty-description-color, $title-color2) !default;
 $empty-description-font-size: var(--nut-empty-description-font-size, 14px) !default;
@@ -740,8 +737,8 @@ $form-item-tip-font-size: var(--nut-form-item-tip-font-size, 12px) !default;
 $form-item-tip-text-align: var(--nut-form-item-tip-text-align, left) !default;
 
 // skeleton
-$skeleton-content-avatar-background-color: var(--nut-skeleton-content-avatar-background-color, #efefef) !default;
-$skeleton-content-line-background-color: var(--nut-skeleton-content-line-background-color, #efefef) !default;
+$skeleton-content-avatar-background-color: var(--nut-skeleton-content-avatar-background-color, #e9eaed) !default;
+$skeleton-content-line-background-color: var(--nut-skeleton-content-line-background-color, #e9eaed) !default;
 $skeleton-animation-background-color: var(
   --nut-skeleton-animation-background-color,
   linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.5) 50%, hsla(0, 0%, 100%, 0) 80%)
@@ -919,7 +916,7 @@ $category-pane-title-color: var(--nut-category-pane-title-color, $title-color) !
 
 // circleProgress
 $circleprogress-primary-color: var(--nut-circleprogress-primary-color, $primary-color) !default;
-$circleprogress-path-color: var(--nut-circleprogress-path-color, #e5e9f2) !default;
+$circleprogress-path-color: var(--nut-circleprogress-path-color, #e9eaed) !default;
 $circleprogress-text-color: var(--nut-circleprogress-text-color, $title-color) !default;
 $circleprogress-text-size: var(--nut-circleprogress-text-size, $font-size-3) !default;
 
