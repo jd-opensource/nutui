@@ -399,13 +399,13 @@ $address-region-tab-line: var(
 $address-icon-color: var(--nut-address-icon-color, $primary-color) !default;
 $address-header-title-font-size: var(--nut-address-header-title-font-size, 18px) !default;
 $address-header-title-color: var(--nut-address-header-title-color, $title-color) !default;
-$address-region-tab-font-size: var(--nut-address-region-tab-font-size, 13px) !default;
+$address-region-tab-font-size: var(--nut-address-region-tab-font-size, 15px) !default;
 $address-region-tab-color: var(--nut-address-region-tab-color, $title-color) !default;
 $address-region-tab-active-item-font-weight: var(--nut-address-region-tab-active-item-font-weight, bold) !default;
 $address-region-tab-line-border-radius: var(--nut-address-region-tab-line-border-radius, 0) !default;
 $address-region-tab-line-opacity: var(--nut-address-region-tab-line-opacity, 1) !default;
 $address-region-item-color: var(--nut-address-region-item-color, $title-color) !default;
-$address-region-item-font-size: var(--nut-address-region-item-font-size, $font-size-1) !default;
+$address-region-item-font-size: var(--nut-address-region-item-font-size, $font-size-2) !default;
 $address-item-margin-right: var(--nut-address-item-margin-right, 9px) !default;
 
 //steps
@@ -500,12 +500,12 @@ $noticebar-lefticon-margin: var(--nut-noticebar-lefticon-margin, 0 6px 0 0) !def
 $noticebar-righticon-margin: var(--nut-noticebar-righticon-margin, 0 0 0 6px) !default;
 
 // TimeSelect
-$timeselect-title-font-size: var(--nut-timeselect-title-font-size, $font-size-2) !default;
+$timeselect-title-font-size: var(--nut-timeselect-title-font-size, $font-size-4) !default;
 $timeselect-title-color: var(--nut-timeselect-title-color, $title-color) !default;
 $timeselect-title-width: var(--nut-timeselect-title-width, 100%) !default;
 $timeselect-title-height: var(--nut-timeselect-title-height, 50px) !default;
 $timeselect-title-line-height: var(--nut-timeselect-title-line-height, 50px) !default;
-$timeselect-pannel-bg-color: var(--nut-timeselect-pannel-bg-color, #f6f7f9) !default;
+$timeselect-pannel-bg-color: var(--nut-timeselect-pannel-bg-color, $bg-color) !default;
 
 // TimePannel
 $timeselect-timepannel-text-color: var(--nut-timeselect-timepannel-text-color, $title-color2) !default;
@@ -521,11 +521,11 @@ $timeselect-timedetail-padding: var(--nut-timeselect-timedetail-padding, 0 5px 5
 $timeselect-timedetail-item-width: var(--nut-timeselect-timedetail-item-width, 100px) !default;
 $timeselect-timedetail-item-height: var(--nut-timeselect-timedetail-item-height, 50px) !default;
 $timeselect-timedetail-item-line-height: var(--nut-timeselect-timedetail-item-line-height, 50px) !default;
-$timeselect-timedetail-item-bg-color: var(--nut-timeselect-timedetail-item-bg-color, #f6f7f9) !default;
+$timeselect-timedetail-item-bg-color: var(--nut-timeselect-timedetail-item-bg-color, $bg-color) !default;
 $timeselect-timedetail-item-border-radius: var(--nut-timeselect-timedetail-item-border-radius, 5px) !default;
-$timeselect-timedetail-item-text-color: var(--nut-timeselect-timedetail-item-text-color, $title-color) !default;
+$timeselect-timedetail-item-text-color: var(--nut-timeselect-timedetail-item-text-color, $title-color2) !default;
 $timeselect-timedetail-item-text-font-size: var(--nut-timeselect-timedetail-item-text-font-size, $font-size-2) !default;
-$timeselect-timedetail-item-cur-bg-color: var(--nut-timeselect-timedetail-item-cur-bg-color, $primary-color) !default;
+$timeselect-timedetail-item-cur-bg-color: var(--nut-timeselect-timedetail-item-cur-bg-color, #ff9bc0) !default;
 $timeselect-timedetail-item-cur-border: var(--nut-timeselect-timedetail-item-cur-border, $primary-color) !default;
 $timeselect-timedetail-item-cur-text-color: var(
   --nut-timeselect-timedetail-item-cur-text-color,
@@ -533,11 +533,11 @@ $timeselect-timedetail-item-cur-text-color: var(
 ) !default;
 
 //tag
-$tag-font-size: var(--nut-tag-font-size, 12px) !default;
-$tag-default-border-radius: var(--nut-tag-default-border-radius, 4px) !default;
+$tag-font-size: var(--nut-tag-font-size, 10px) !default;
+$tag-default-border-radius: var(--nut-tag-default-border-radius, 2px) !default;
 $tag-round-border-radius: var(--nut-tag-round-border-radius, 8px) !default;
 $tag-default-background-color: var(--nut-tag-default-background-color, #000000) !default;
-$tag-primary-background-color: var(--nut-tag-primary-background-color, $info-color) !default;
+$tag-primary-background-color: var(--nut-tag-primary-background-color, $primary-color) !default;
 $tag-success-background-color: var(--nut-tag-success-background-color, $success-color) !default;
 $tag-danger-background-color: var(--nut-tag-danger-background-color, $danger-color) !default;
 $tag-danger-background-color-plain: var(--nut-tag-danger-background-color-plain, $danger-color) !default;
