@@ -24,3 +24,15 @@ test('should emit complete when finish input', async () => {
   await nextTick()
   expect(wrapper.emitted().complete[0]).toEqual(['321123'])
 })
+
+test('should emit tips when clicking tips text', async () => {
+  const wrapper = mount(ShortPassword, {
+    props: {
+      visible: true,
+      tips: '忘记密码'
+    }
+  })
+  const tipsEl = wrapper.find('.nut-short-password--forget')
+  await tipsEl.trigger('click')
+  expect(wrapper.emitted().tips).toBeTruthy()
+})

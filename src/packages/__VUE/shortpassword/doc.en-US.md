@@ -53,6 +53,7 @@ app.use(NumberKeyboard)
 | close | Trigger an event when the close icon is clicked | - |
 | complete | Input complete callback | `value:string` |
 | focus | Emitted when input is focused | - |
+| tips | Emitted when tips is clicked | - |
 
 ## Theming
 
