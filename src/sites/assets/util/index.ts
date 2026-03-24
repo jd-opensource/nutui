@@ -9,7 +9,10 @@ const isJDB = () => {
 const isJDDKH = () => {
   return window.parent.location.href.includes('jddkh')
 }
-export { isMobile, isJDT, isJDB, isJDDKH }
+const isJDA = () => {
+  return window.parent.location.href.includes('jda')
+}
+export { isMobile, isJDT, isJDB, isJDDKH, isJDA }
 
 export const reorder = (packages: Array<any>) => {
   return packages.sort(function (x: any, y: any) {

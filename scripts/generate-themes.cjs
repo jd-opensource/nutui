@@ -33,7 +33,8 @@ tasks.push(fs.copy(path.resolve(__dirname, '../src/packages/styles'), path.resol
 const themesEnum = {
   jdt: 'variables-jdt',
   jdb: 'variables-jdb',
-  jddkh: 'variables-jddkh'
+  jddkh: 'variables-jddkh',
+  jda: 'variables-jda'
 }
 
 // 将scss文件额外转换一份css
@@ -141,7 +142,8 @@ Promise.all(tasks).then(() => {
     { file: 'default.scss', sourcePath: `@import '../variables.scss';` },
     { file: 'jdt.scss', sourcePath: `@import '../variables-jdt.scss';` },
     { file: 'jdb.scss', sourcePath: `@import '../variables-jdb.scss';` },
-    { file: 'jddkh.scss', sourcePath: `@import '../variables-jddkh.scss';` }
+    { file: 'jddkh.scss', sourcePath: `@import '../variables-jddkh.scss';` },
+    { file: 'jda.scss', sourcePath: `@import '../variables-jda.scss';` }
   ]
   tasks = []
   themes.forEach((item) => {
