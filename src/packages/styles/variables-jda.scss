@@ -198,11 +198,11 @@ $textarea-disabled-color: var(--nut-textarea-disabled-color, $disable-color) !de
 
 $inputnumber-icon-color: var(--nut-inputnumber-icon-color, $title-color) !default;
 $inputnumber-icon-void-color: var(--nut-inputnumber-icon-void-color, $disable-color) !default;
-$inputnumber-icon-size: var(--nut-inputnumber-icon-size, 20px) !default;
-$inputnumber-input-font-size: var(--nut-inputnumber-input-font-size, 12px) !default;
+$inputnumber-icon-size: var(--nut-inputnumber-icon-size, 14px) !default;
+$inputnumber-input-font-size: var(--nut-inputnumber-input-font-size, 14px) !default;
 $inputnumber-input-font-color: var(--nut-inputnumber-input-font-color, $title-color) !default;
 $inputnumber-input-background-color: var(--nut-inputnumber-input-background-color, $bg-color) !default;
-$inputnumber-input-border-radius: var(--nut-inputnumber-input-border-radius, 4px) !default;
+$inputnumber-input-border-radius: var(--nut-inputnumber-input-border-radius, 6px) !default;
 $inputnumber-input-width: var(--nut-inputnumber-input-width, 40px) !default;
 $inputnumber-input-margin: var(--nut-inputnumber-input-margin, 0 6px) !default;
 $inputnumber-input-border: var(--nut-inputnumber-input-border, 0) !default;
@@ -268,18 +268,18 @@ $countdown-font-size: var(--nut-countdown-font-size, initial) !default;
 
 //large price
 $price-symbol-big-size: var(--nut-price-symbol-big-size, 12px) !default;
-$price-big-size: var(--nut-price-big-size, 28px) !default;
-$price-decimal-big-size: var(--nut-price-decimal-big-size, 14px) !default;
+$price-big-size: var(--nut-price-big-size, 24px) !default;
+$price-decimal-big-size: var(--nut-price-decimal-big-size, 12px) !default;
 
 //normal price
 $price-symbol-medium-size: var(--nut-price-symbol-medium-size, 12px) !default;
 $price-medium-size: var(--nut-price-medium-size, 20px) !default;
-$price-decimal-medium-size: var(--nut-price-decimal-medium-size, 14px) !default;
+$price-decimal-medium-size: var(--nut-price-decimal-medium-size, 12px) !default;
 
 // small price
-$price-symbol-small-size: var(--nut-price-symbol-small-size, 10px) !default;
-$price-small-size: var(--nut-price-small-size, 16px) !default;
-$price-decimal-small-size: var(--nut-price-decimal-small-size, 11px) !default;
+$price-symbol-small-size: var(--nut-price-symbol-small-size, 12px) !default;
+$price-small-size: var(--nut-price-small-size, 18px) !default;
+$price-decimal-small-size: var(--nut-price-decimal-small-size, 12px) !default;
 
 //avatar
 $avatar-square: var(--nut-avatar-square, 6px) !default;
@@ -690,7 +690,7 @@ $searchbar-background: var(--nut-searchbar-background, $white) !default;
 $searchbar-right-out-color: var(--nut-searchbar-right-out-color, $black) !default;
 $searchbar-padding: var(--nut-searchbar-padding, 9px 12px) !default;
 $searchbar-width: var(--nut-searchbar-width, 100%) !default;
-$searchbar-input-background: var(--nut-searchbar-input-background, #f7f7f7) !default;
+$searchbar-input-background: var(--nut-searchbar-input-background, #f7f8fc) !default;
 $searchbar-input-padding: var(--nut-searchbar-input-padding, 0 0 0 12px) !default;
 $searchbar-input-height: var(--nut-searchbar-input-height, 32px) !default;
 $searchbar-input-width: var(--nut-searchbar-input-width, 100%) !default;
