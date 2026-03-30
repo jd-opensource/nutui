@@ -1,3 +1,22 @@
+- ## v4.3.15
+
+`2026-03-30`
+ Bug Fixes
+
+- fix: 修复拖拽报错 (#3285)
+- fix: resolve CI relative problems (#3287)
+- fix(signature): 修复抖音支付宝等小程序无法获取到canvas节点 (#3289)
+
+Features
+
+- feat: 兼容canvas-id属性 (#3308)
+- feat(dialog): 添加 zIndex 属性以支持自定义对话框层级 (#3313)
+- feat: 京东保险主题定制 (#3318)
+
+  Other Changes
+
+- chore(ascf): 支持ASCF鸿蒙元服务
+
 - ## v4.3.14
 
 `2025-07-25`

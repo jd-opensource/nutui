@@ -1,3 +1,35 @@
+- ## v4.3.15
+
+`2026-03-30`
+ Bug Fixes
+
+- fix: 修复拖拽报错 (#3285)
+- fix: resolve CI relative problems (#3287)
+- fix(signature): 修复抖音支付宝等小程序无法获取到canvas节点 (#3289)
+
+Features
+
+- feat: 兼容canvas-id属性 (#3308)
+- feat(dialog): 添加 zIndex 属性以支持自定义对话框层级 (#3313)
+- feat: 京东保险主题定制 (#3318)
+
+  Other Changes
+
+- chore(ascf): 支持ASCF鸿蒙元服务
+
+- ## v4.3.14
+
+`2025-07-25`
+Bug Fixes
+
+- fix: 横竖屏切换时height侦听事件增加 (#3284)
+- fix(elevator): resolve error while switching index and selection (#3282)
+- fix: ios avatarcropper cannot render picture
+- fix(dialog): closeOnClickOverlay default props
+  Other Changes
+- chore(deps): update vue/core to v3.5.10 (#3206)
+- chore: replace local prettier plugin with npm package (#3197)
+
 - ## v4.3.13
 
 `2024-09-14`
@@ -756,8 +788,8 @@ NutUI 非常感谢您对开源事业做出的贡献！🌷🌷🌷
 - :zap: feat(list): 优化虚拟列表，支持不固定高度 #1658 #1382 @szg2008
 - :zap: feat(uploader): 微信小程序支持上传视频文件、录制时长等功能 #2119 @richard1015
 - :zap: feat(address): 地址组件新增功能 #2101 (#2113) @yangxiaolu1993
-- :zap: feat(noticebar): 公告栏组件添加省略号功能 (#2114)  @yangxiaolu1993
-- :zap: feat: input 新增 blur 后清除按钮是否展示字段  @lkjh3214
+- :zap: feat(noticebar): 公告栏组件添加省略号功能 (#2114) @yangxiaolu1993
+- :zap: feat: input 新增 blur 后清除按钮是否展示字段 @lkjh3214
 - :bug: fix(tabs): change event emit bug #1884 @richard1015
 - :bug: fix(shortpassword): theme-dark style optimization @Drjingfubo
 - :bug: fix(form): modify validation rules @Drjingfubo
@@ -784,19 +816,19 @@ NutUI 非常感谢您对开源事业做出的贡献！🌷🌷🌷
 - :zap: feat(checkbox): add checkbox new props of shape (#1978) @mikasayw
 - :zap: feat(tabs): title bar supports automatic scrolling (#2035) @gyt95
 - :zap: feat: calendar 添加自定义方法 (#2084) @lkjh3214
-- :zap: feat: 增加 unplugin 插件配置导出 (#2097)  @eiinu
-- :zap: feat: 日历组件新增 周选择功能 (#2102)   @lkjh3214
-- :zap: feat(input): 新增slots (#2098)  @lkjh3214
+- :zap: feat: 增加 unplugin 插件配置导出 (#2097) @eiinu
+- :zap: feat: 日历组件新增 周选择功能 (#2102) @lkjh3214
+- :zap: feat(input): 新增slots (#2098) @lkjh3214
 - :zap: feat(badge): 新增bubble样式 (#2091) @dongj0316
 - :bug: fix(list): list 虚拟列表未设置height，滚动加载有问题 #2088 @szg2008
 - :bug: fix(list): 虚拟列表在ios手机上，滚动条滚动到顶部会出现白屏。 #2031 @szg2008
 - :bug: fix: barrage，sinature demo修改 @Ymm0008
-- :bug: fix(address): 地址问题修改 (#2054)  @yangxiaolu1993
+- :bug: fix(address): 地址问题修改 (#2054) @yangxiaolu1993
 - :bug: fix: drag，configprovide，badge 修改demo @Drjingfubo
 - :bug: fix: taro h5 demo修改 @szg2008
 - :bug: fix: jdt-style error @Drjingfubo
-- :bug: fix: sku组件修改 (#2056)  @yangxiaolu1993
-- :bug: fix: collapse,textarea 优化  @Ymm0008
+- :bug: fix: sku组件修改 (#2056) @yangxiaolu1993
+- :bug: fix: collapse,textarea 优化 @Ymm0008
 - :bug: fix(tour): demo style edit @Drjingfubo
 - :bug: fix(menu): change style @Drjingfubo
 - :bug: fix(calendar): demo样式修改，文档修改 (#2052) @lkjh3214
@@ -812,12 +844,12 @@ NutUI 非常感谢您对开源事业做出的贡献！🌷🌷🌷
 - :bug: fix: 公告栏demo修改 (#2105) @yangxiaolu1993
 - :bug: fix: timer ts error resolve @szg2008
 - :bug: fix: 签名组件交互优化 @Ymm0008
-- 📖 docs(addresslist): taro env use edit  @richard1015
+- 📖 docs(addresslist): taro env use edit @richard1015
 - 📖 docs: popover修改 (#2053) @yangxiaolu1993
-- 📖 docs: price 文档问题 (#2064)  @ailululu
+- 📖 docs: price 文档问题 (#2064) @ailululu
 - 📖 docs: card edit @Drjingfubo
 - 📖 docs(tabbar): taro add punctuation @Drjingfubo
-- 📖 docs: 新增4.0介绍 (#2086)  @yangxiaolu1993
+- 📖 docs: 新增4.0介绍 (#2086) @yangxiaolu1993
 
 ## v4.0.0 🚀
 

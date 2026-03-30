@@ -1,6 +1,6 @@
 {
   "name": "@nutui/nutui-taro",
-  "version": "4.3.14",
+  "version": "4.3.15",
   "description": "京东风格的轻量级移动端 Vue2、Vue3 组件库（支持小程序开发）",
   "main": "dist/nutui.umd.js",
   "module": "dist/nutui.es.js",
