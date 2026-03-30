@@ -227,7 +227,6 @@ toast.hide()
 | loading-rotate | Whether the loading icon is rotated, only valid for the loading type | boolean | `true` |
 | close | Callback function after close | function | `null` |
 | close-on-click-overlay | Whether to close when overlay is clicked | boolean | `false` |
-| custom-class | Custom Class | string | - |
 
 ## Theming
 
