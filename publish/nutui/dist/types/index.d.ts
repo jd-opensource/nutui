@@ -154,7 +154,7 @@ import Invoice from './__VUE/invoice/index';
 export * from './__VUE/invoice/index';
 import AvatarCropper from './__VUE/avatarcropper/index.vue';
 declare function install(app: App): void;
-declare const version = "4.3.15";
+declare const version = "4.3.16";
 export { install, version, Locale, Button, Cell, CellGroup, Overlay, Popup, ConfigProvider, Image, Layout, Col, Row, Sticky, Divider, Grid, GridItem, Space, Navbar, FixedNav, Menu, MenuItem, Tabbar, TabbarItem, Elevator, Pagination, Tabs, TabPane, Indicator, SideNavbar, SideNavbarItem, SubSideNavbar, Range, Searchbar, Cascader, Calendar, CalendarCard, Checkbox, CheckboxGroup, DatePicker, InputNumber, Input, Radio, RadioGroup, Rate, Picker, ShortPassword, Textarea, Uploader, NumberKeyboard, Form, FormItem, Swipe, SwipeGroup, ActionSheet, Backtop, Drag, Dialog, InfiniteLoading, PullRefresh, Notify, Switch, Toast, Audio, AudioOperate, Avatar, AvatarGroup, List, Progress, CircleProgress, Noticebar, Empty, Video, Steps, Step, Swiper, SwiperItem, Price, ImagePreview, Countup, Countdown, Badge, Tag, Popover, Skeleton, Collapse, CollapseItem, Table, Animate, Ellipsis, Watermark, TrendArrow, Tour, Address, Barrage, Signature, TimeSelect, TimePannel, TimeDetail, Sku, Card, Ecard, AddressList, Category, CategoryPane, Comment, Invoice, AvatarCropper, showDialog, showNotify, showToast, showImagePreview };
 declare const _default: {
     install: typeof install;
