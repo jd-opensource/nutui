@@ -33,7 +33,7 @@
   </Transition>
 </template>
 <script lang="ts">
-import { Component, computed, PropType, watch } from 'vue'
+import { Component, computed, PropType, reactive, watch } from 'vue'
 import { createComponent, renderIcon } from '@/packages/utils/create'
 const { create } = createComponent('toast')
 import { Failure, Loading, Success, Tips } from '@nutui/icons-vue-taro'
@@ -112,12 +112,18 @@ export default create({
         timer = null
       }
     }
+    const state = reactive({
+      closed: false
+    })
     const hide = () => {
+      if (state.closed) return
+      state.closed = true
       emit('update:visible', false)
       emit('closed')
     }
     const show = () => {
       clearTimer()
+      state.closed = false
       if (props.duration) {
         timer = setTimeout(() => {
           hide()
