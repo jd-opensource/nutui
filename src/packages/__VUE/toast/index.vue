@@ -93,10 +93,11 @@ export default create({
     }
   },
   emits: ['close'],
-  setup(props, { emit }) {
+  setup(props) {
     let timer: null | number | undefined
     const state = reactive({
-      mounted: false
+      mounted: false,
+      closing: false
     })
     onMounted(() => {
       state.mounted = true
@@ -109,9 +110,11 @@ export default create({
     }
     const hide = () => {
       state.mounted = false
+      state.closing = true
     }
     const show = () => {
       clearTimer()
+      state.closing = false
       if (props.duration) {
         timer = window.setTimeout(() => {
           hide()
@@ -119,10 +122,8 @@ export default create({
       }
     }
     const clickCover = () => {
-      if (props.closeOnClickOverlay) {
-        hide()
-        emit('close')
-      }
+      if (!props.closeOnClickOverlay || state.closing) return // 点击遮罩时如果正在关闭中，则不触发关闭事件，避免重复调用close事件
+      hide()
     }
 
     if (props.duration) {
