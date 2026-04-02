@@ -122,6 +122,13 @@ textarea {
     cursor: pointer;
     margin: 0 4px;
   }
+  &-eye {
+    width: 16px;
+    height: 16px;
+    color: #000;
+    cursor: pointer;
+    margin: 0 4px;
+  }
   &--required {
     &::before {
       position: absolute;

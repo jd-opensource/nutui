@@ -44,6 +44,10 @@
             </MaskClose>
           </slot>
         </view>
+        <view v-if="type === 'password' && !readonly" class="nut-input-eye">
+          <Marshalling v-if="isPassword" v-bind="$attrs" size="15" @click="updateStatus"> </Marshalling>
+          <Eye v-else v-bind="$attrs" size="15" @click="updateStatus"> </Eye>
+        </view>
         <view class="nut-input-right-box">
           <slot name="right"> </slot>
         </view>
@@ -53,7 +57,7 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted, watch, ComputedRef, h, toRef } from 'vue'
-import { MaskClose } from '@nutui/icons-vue'
+import { MaskClose, Marshalling, Eye } from '@nutui/icons-vue'
 import { formatNumber, mapInputType } from './util'
 import { useFormDisabled } from '../form/common'
 
@@ -109,9 +113,15 @@ const emit = defineEmits(['update:modelValue', 'blur', 'focus', 'clear', 'keypre
 const disabled = useFormDisabled(toRef(props, 'disabled'))
 const active = ref(false)
 const inputRef = ref()
+const isPassword = ref(true)
 const getModelValue = () => String(props.modelValue ?? '')
 
-const renderInput = (type: InputType) => h('input', { ...mapInputType(type) })
+const renderInput = (type: InputType) => {
+  if (type === 'password') {
+    return h('input', { ...mapInputType(isPassword.value ? 'password' : 'text') })
+  }
+  return h('input', { ...mapInputType(type) })
+}
 
 const state = reactive({
   focused: false,
@@ -209,6 +219,12 @@ const resetValidation = () => {
   }
 }
 
+const updateStatus = () => {
+  console.log('updateStatus', isPassword.value)
+
+  isPassword.value = !isPassword.value
+}
+
 const onClickInput = (event: MouseEvent) => {
   if (disabled.value) {
     return
@@ -221,12 +237,12 @@ const onClick = (event: MouseEvent) => {
 }
 
 const startComposing = ({ target }: Event) => {
-  (target as InputTarget)!.composing = true
+  ;(target as InputTarget)!.composing = true
 }
 
 const endComposing = ({ target }: Event) => {
   if ((target as InputTarget)!.composing) {
-    (target as InputTarget)!.composing = false
+    ;(target as InputTarget)!.composing = false
     ;(target as InputTarget)!.dispatchEvent(new Event('input'))
   }
 }
