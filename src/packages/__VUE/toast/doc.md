@@ -227,7 +227,6 @@ toast.hide()
 | loading-rotate | loading 图标是否旋转，仅对 loading 类型生效 | boolean | `true` |
 | close | 关闭时触发的事件 | function | `null` |
 | close-on-click-overlay | 是否在点击遮罩层后关闭提示 | boolean | `false` |
-| custom-class | 提示框 class | string | - |
 
 ## 主题定制
 

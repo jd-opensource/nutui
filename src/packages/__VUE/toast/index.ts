@@ -2,6 +2,25 @@ import { createVNode, render } from 'vue'
 import Toast from './index.vue'
 import { CreateComponent } from '@/packages/utils/create'
 import { Failure, Loading, Success, Tips } from '@nutui/icons-vue'
+
+interface ToastOptions {
+  id: string | number
+  duration: number
+  title: string
+  center: boolean
+  bottom: string
+  textAlignCenter: boolean
+  bgColor: string
+  customClass: string
+  icon: any
+  size: string
+  cover: boolean
+  coverColor: string
+  loadingRotate: boolean
+  close: any
+  closeOnClickverlay: boolean
+}
+
 const defaultOptions = {
   msg: '',
   id: '',
@@ -93,23 +112,23 @@ const errorMsg = (msg: string) => {
 }
 
 const showToast = {
-  text(msg: string, opts = {}) {
+  text(msg: string, opts: Partial<ToastOptions> = {}) {
     errorMsg(msg)
     return mountToast({ ...opts, type: 'text', msg })
   },
-  success(msg: string, opts = {}) {
+  success(msg: string, opts: Partial<ToastOptions> = {}) {
     errorMsg(msg)
     return mountToast({ icon: Success, ...opts, msg, type: 'success' })
   },
-  fail(msg: string, opts = {}) {
+  fail(msg: string, opts: Partial<ToastOptions> = {}) {
     errorMsg(msg)
     return mountToast({ icon: Failure, ...opts, msg, type: 'fail' })
   },
-  warn(msg: string, opts = {}) {
+  warn(msg: string, opts: Partial<ToastOptions> = {}) {
     errorMsg(msg)
     return mountToast({ icon: Tips, ...opts, msg, type: 'warn' })
   },
-  loading(msg: string, opts = {}) {
+  loading(msg: string, opts: Partial<ToastOptions> = {}) {
     return mountToast({
       icon: Loading,
       ...opts,
