@@ -7,9 +7,9 @@
       <nut-popup
         v-model:visible="showPopup"
         :pop-class="`nut-popover-content nut-popover-content--${location}`"
-        :style="{ background: bgColor }"
+        :style="{ background: bgColor, '--transform-scale': DEFAULT_SCALE_TRANSITION }"
         position=""
-        transition="nut-popover"
+        transition="nut-popover-content"
         :overlay="overlay"
         :duration="duration"
         :overlay-style="overlayStyle"
@@ -71,6 +71,8 @@ export default create({
 
     const rootPosition = ref<PopoverRootPosition>()
 
+    const DEFAULT_SCALE_TRANSITION = 0.8
+
     const elRect = ref({
       width: 0,
       height: 0
@@ -130,7 +132,10 @@ export default create({
 
     const getRootPosition = computed(() => {
       const styles: CSSProperties = {}
-      if (!rootPosition.value) return {}
+      if (!rootPosition.value) {
+        styles.visibility = 'hidden'
+        return styles
+      }
 
       const contentWidth = elRect.value.width
       const contentHeight = elRect.value.height
@@ -174,6 +179,11 @@ export default create({
         }
       }
 
+      if (elRect.value.width === 0) {
+        styles.visibility = 'hidden'
+      } else {
+        styles.visibility = 'initial'
+      }
       return styles
     })
 
@@ -258,7 +268,8 @@ export default create({
       popoverContentRef,
       getRootPosition,
       popoverArrowStyle,
-      renderIcon
+      renderIcon,
+      DEFAULT_SCALE_TRANSITION
     }
   }
 })

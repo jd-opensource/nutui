@@ -6,16 +6,15 @@
     class="nut-popover-wrapper"
     @click="openPopover"
   >
-    <slot name="reference"></slot
-    >
+    <slot name="reference"></slot>
   </view>
   <view :class="['nut-popover', `nut-popover--${theme}`, `${customClass}`]" :style="getRootPosition">
     <nut-popup
       v-model:visible="showPopup"
       :pop-class="`nut-popover-content nut-popover-content--${location}`"
-      :style="{ background: bgColor }"
+      :style="{ background: bgColor, '--transform-scale': DEFAULT_SCALE_TRANSITION }"
       position=""
-      transition="nut-popover"
+      transition="nut-popover-content"
       :overlay="overlay"
       :duration="duration"
       :overlay-style="overlayStyle"
@@ -41,9 +40,9 @@
   </view>
 </template>
 <script lang="ts">
-import { onMounted, computed, watch, ref, PropType, CSSProperties } from 'vue'
+import { onMounted, computed, watch, ref, PropType, CSSProperties, nextTick } from 'vue'
 import { createComponent, renderIcon } from '@/packages/utils/create'
-import { useTaroRect, useTaroRectById } from '@/packages/utils/useTaroRect'
+import { rectTaro, useTaroRect, useTaroRectById } from '@/packages/utils/useTaroRect'
 import { PopoverList, PopoverTheme, PopoverLocation, PopoverRootPosition } from './type'
 import NutPopup from '../popup/index.taro.vue'
 import Taro from '@tarojs/taro'
@@ -78,6 +77,8 @@ export default create({
     const showPopup = ref(props.visible)
 
     const rootPosition = ref<PopoverRootPosition>()
+
+    const DEFAULT_SCALE_TRANSITION = 0.8
 
     const elRect = ref({
       width: 0,
@@ -131,9 +132,7 @@ export default create({
     })
 
     const upperCaseFirst = (str: string) => {
-      str = str.toLowerCase()
-      str = str.replace(/\b\w+\b/g, word => word.substring(0, 1).toUpperCase() + word.substring(1))
-      return str
+      return str.toLowerCase().replace(/\b\w+\b/g, word => word.substring(0, 1).toUpperCase() + word.substring(1))
     }
 
     const getRootPosition = computed(() => {
@@ -194,73 +193,56 @@ export default create({
     })
 
     const getPopoverContentW = async () => {
-      useTaroRect(popoverContentRef).then(
-        (rect: { width: number, height: number }) => {
-          elRect.value = {
-            height: rect.height,
-            width: rect.width
-          }
-        },
-        () => {}
-      )
+      try {
+        const rect = await useTaroRect(popoverContentRef)
+        elRect.value = {
+          height: rect.height / DEFAULT_SCALE_TRANSITION,
+          width: rect.width / DEFAULT_SCALE_TRANSITION
+        }
+      } catch (error) {
+        console.warn('[NutUI] Failed to get rect:', error)
+      }
     }
 
     // 获取宽度
-    const getContentWidth = () => {
+    const getContentWidth = async () => {
+      getPopoverContentW()
       Taro.createSelectorQuery()
         .selectViewport()
-        .scrollOffset((res) => {
-          const distance = res.scrollTop
-
+        .scrollOffset(async (result) => {
+          const distance = result.scrollTop
           if (props.targetId) {
-            useTaroRectById(props.targetId).then(
-              (rect: any) => {
-                rootPosition.value = {
-                  width: rect?.width,
-                  height: rect?.height,
-                  left: rect?.left,
-                  top: rect?.top + distance,
-                  right: rect?.right
-                }
-              },
-              () => {}
-            )
+            const rect = (await useTaroRectById(props.targetId)) as rectTaro
+            rootPosition.value = {
+              width: rect?.width,
+              height: rect?.height,
+              left: rect?.left,
+              top: rect?.top + distance,
+              right: rect?.right
+            }
           } else {
-            useTaroRect(popoverRef).then(
-              (rect: any) => {
-                rootPosition.value = {
-                  width: rect?.width,
-                  height: rect?.height,
-                  left: rect?.left,
-                  top: rect?.top + distance,
-                  right: rect?.right
-                }
-              },
-              () => {}
-            )
+            const rect = await useTaroRect(popoverRef)
+            rootPosition.value = {
+              width: rect?.width,
+              height: rect?.height,
+              left: rect?.left,
+              top: rect?.top + distance,
+              right: rect?.right
+            }
           }
         })
         .exec()
-      setTimeout(() => {
-        getPopoverContentW()
-      }, 300)
     }
 
     onMounted(() => {
-      setTimeout(() => {
-        getContentWidth()
-      }, 300)
+      getContentWidth()
     })
 
     watch(
       () => props.visible,
       (value) => {
         showPopup.value = value
-        if (value) {
-          Taro.nextTick(() => {
-            getContentWidth()
-          })
-        }
+        if (value) nextTick(() => getContentWidth())
       }
     )
 
@@ -306,7 +288,8 @@ export default create({
       popoverArrowStyle,
       renderIcon,
       refRandomId,
-      clickAway
+      clickAway,
+      DEFAULT_SCALE_TRANSITION
     }
   }
 })
