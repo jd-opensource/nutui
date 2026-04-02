@@ -2,8 +2,8 @@
   <view>
     <nut-overlay v-if="overlay" :visible="visible" :close-on-click-overlay="closeOnClickOverlay" :z-index="zIndex"
                  :lock-scroll="lockScroll" :duration="duration" :overlay-class="overlayClass" :overlay-style="overlayStyle"
-                 v-bind="$attrs" @click="onClickOverlay" />
-    <Transition :name="transitionName" @after-enter="onOpened" @after-leave="onClosed">
+                 v-bind="$attrs" appear @click="onClickOverlay" />
+    <Transition appear :name="transitionName" @after-enter="onOpened" @after-leave="onClosed">
       <view v-show="visible" :class="classes" :style="popStyle" @click="onClick">
         <slot v-if="showSlot"></slot>
         <view v-if="closed" class="nut-popup__close-icon" :class="'nut-popup__close-icon--' + closeIconPosition"
@@ -128,6 +128,9 @@ export default create({
         if (!props.visible && opened) {
           close()
         }
+      },
+      {
+        immediate: true
       }
     )
     watchEffect(() => {
