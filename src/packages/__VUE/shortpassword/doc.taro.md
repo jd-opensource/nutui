@@ -53,6 +53,7 @@ app.use(NumberKeyboard)
 | close | 点击关闭图标或者遮罩时触发事件 | - |
 | complete | 输入完成的回调 | `value:string` |
 | focus | 输入框聚焦时触发 | - |
+| tips | 点击提示语时触发 | - |
 
 ## 主题定制
 
