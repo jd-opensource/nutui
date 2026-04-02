@@ -10,7 +10,7 @@
 
 .nut-menu-item {
   position: fixed;
-  z-index: $menu-bar-opened-z-index;
+  z-index: calc($menu-bar-opened-z-index - 1);
   left: 0;
   right: 0;
   height: 100vh;
@@ -55,6 +55,6 @@
   position: fixed;
   left: 0;
   right: 0;
-  z-index: $menu-bar-opened-z-index;
+  z-index: calc($menu-bar-opened-z-index - 1);
   background-color: transparent;
 }

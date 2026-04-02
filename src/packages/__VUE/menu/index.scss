@@ -23,7 +23,10 @@
     display: flex;
     line-height: $menu-bar-line-height;
     background-color: $white;
-    box-shadow: $menu-bar-box-shadow;
+
+    &:not(.opened) {
+      box-shadow: $menu-bar-box-shadow;
+    }
 
     &.opened {
       z-index: $menu-bar-opened-z-index;
