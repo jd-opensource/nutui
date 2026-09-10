@@ -4,22 +4,31 @@
       <a class="logo-link" href="#" @click="toHome"></a>
     </div>
     <div class="tabs">
-      <div class="tab-item" @click="switchTo('h5')">h5</div>
-      <div class="tab-item" @click="switchTo('taro')">taro</div>
+      <div
+        v-for="type in tabs"
+        :key="type"
+        class="tab-item"
+        :class="{ cur: activeTab === type }"
+        @click="router.push(route.path.replace(/^\/(h5|taro)\//, `/${type}/`))"
+      >
+        {{ type }}
+      </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { RefData } from '@/sites/assets/util/ref'
+const route = useRoute()
+const router = useRouter()
+const tabs = ['h5', 'taro'] as const
+// route.path 是响应式的，路由切换时自动更新选中态
+const activeTab = computed<'h5' | 'taro'>(() => {
+  return route.path.startsWith('/taro/') ? 'taro' : 'h5'
+})
 const toHome = () => {
   RefData.getInstance().currentRoute.value = '/'
-}
-const switchTo = (type: 'h5' | 'taro') => {
-  if (type === 'h5') {
-    location.href = location.href.replace('taro', 'h5')
-  } else {
-    location.href = location.href.replace('h5', 'taro')
-  }
 }
 </script>
 
