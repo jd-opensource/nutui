@@ -121,3 +121,17 @@ test('should emit "update:modelValue" event after dragging button', () => {
   triggerDrag(button, 50, 0)
   expect(wrapper.emitted('update:modelValue')!.pop()).toEqual([100])
 })
+
+test('keeps a coarse-step release inside bounds changed during dragging', async () => {
+  const wrapper = mount(Range, {
+    props: { modelValue: 0, min: 0, max: 100, step: 40 }
+  })
+  const api = wrapper.vm as any
+  api.root.getBoundingClientRect = () => ({ width: 100, height: 100 })
+  api.onTouchStart({ touches: [{ clientX: 0, clientY: 0 }] })
+  api.onTouchMove({ touches: [{ clientX: 80, clientY: 0 }] })
+  await wrapper.setProps({ max: 60 })
+  api.onTouchEnd()
+  expect(wrapper.emitted('change')?.pop()).toEqual([60])
+  wrapper.unmount()
+})
